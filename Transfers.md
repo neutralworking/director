@@ -7,11 +7,14 @@ clubID: 0
 targets: []
 }
 
+# TransferScore Calculation
+
+Requirement Satisfaction
 Reputation Level
 Technical Score
-Hype
 
-- If a player is on a lot of shortlists, then their hype increases which multiplies their baseValue
+# ValueCalculation
 
-PlayerClubStatus will determine a lot with regard to TransferScore
-Players with a very high PlayerClubStatus will be much more expensive.
+
+
+# Stage Two -

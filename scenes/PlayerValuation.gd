@@ -1,6 +1,17 @@
 # PlayerValuation.gd
 extends Node
 
+# Stage One - Market Value
+
+Starting points is Basevalue
+Add age multiplier
+Add PlayerHealth multiplier
+Add PlayerHype multiplier
+Add PlayerClubStatus multiplier
+
+# Stage Two - Analysed Value To Club (AVTC) is a currency value that extrapolates the player's OverallTransferScore, a metric for suitability for a specific club. This will ultimately be displayed on the scouting report.
+The Director will look to buy players that have a much higher AVTC than Market Value.
+
 # Core attributes influencing the player's valuation
 var base_value = 1000000  # Initial base value in currency
 var current_form = 0.0  # Performance metric, ranges from 0.0 (poor) to 1.0 (excellent)
@@ -46,3 +57,4 @@ func calculate_valuation():
 func _ready():
     var player_value = calculate_valuation()
     print("Player Valuation: %d" % player_value)
+

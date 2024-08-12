@@ -31,3 +31,6 @@ func update_player_value(player):
     # Adjust player value based on market demand
 func adjust_value_based_on_market_demand(player):
     player.current_value *= demand_factor
+    
+ Hype
+- If a player is on a lot of shortlists, then their hype increases which multiplies their baseValue   
