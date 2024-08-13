@@ -1,4 +1,4 @@
-I want to make thi final push towards the products that are on the way.
+I want to make the final push towards the products that are on the way.
 Director is coming along but I don't have an MVP, let alone something close to a beta.
 Soft Power is in its 6th or 7th year now and it is maturing.
 My database has been nascient for a while but the game itself only just started coming together.
@@ -7,44 +7,18 @@ That will be the side project in the short-term.
 CHIEF SCOUT has to be the name, I have the dof website but it will expire soon and that's the name of the game.
 CHIEF SCOUT 1.0 will be the scouting radar I think.
 
-1. Assess clubs
-2. Assess requirements
-3. Make suggestions
-4. Track progress
+Chief Scout website workflow can probably be directly through Airtable.
+From where it is now I need to do some more tables that will house calculations, and also delete some tables that I'm not using to clear it up a little bit.
 
-# Assess clubs
-Each club needs scores for each position
+I need to take the overall scores that I have and create clubOverallScores, clubPositionalScores etc
+I need to add ages in
+I can probably do some sort of remaining contract length scrapping from transfermarkt but it's not super important, I can do that manually for now 
+Once the requirements, base values and market values are created, I can display some unique information.
+Creating these algos are next.
+I should do it in python if it's going online as well.
+I could probably convert everything at this stage.
 
-const ChiefScoutAssessClubRequirements = function (ClubID, ClubPositionScores){
 
-}
 
-const ClubPositionScores = {
-    ClubID:
-    ClubFormation:
-    ClubGKScore:
-    ClubDRScore:
-    ClubDCScore:
-    ClubDLScore:
-    ClubWBRScore:
-    ClubDMScore:
-    ClubWBLScore:
-    ClubMRScore:
-    ClubMCScore:
-    ClubMLScore:
-    ClubAMRScore:
-    ClubAMCScore:
-    ClubAMLScore:
-    ClubRFScore:
-    ClubCFScore:
-    ClubLFScore:
-}
-
-Each position score is calcluated by taking the average score of the top two players at the club and then applying other factors such as their ages and contract length. For the MVP we can just use the average.
-
-# Determine Requirements
-When ClubPositionScores has been calculated, the Chief Scout can create positional requirements by taking the median of the positional scores and looking to address the weakest scores. The weakest position in the team is automatically added to the requirements list, as well as any significantly weak positions and positions when the strongest's player in the position has an expiring contract. 
-
-# Suggest players
-Once requirements have been set, the chief scout needs to look at the scouting pool and suggest players that could fulfill the requirements.
-These players go onto the primary shortlist. 
+DOF
+I need to creata  new dummy database, but it probably pointless until I have the player class finalised.
