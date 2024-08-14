@@ -1,3 +1,9 @@
+Mechanics that I want to create
+Training Update: User receives a notification that the daily Training Report is in
+Players have a chance to receive a regrading every day, which affects their Scores and changes their likelihood to play.
+ 
+
+
 I want to make the final push towards the products that are on the way.
 Director is coming along but I don't have an MVP, let alone something close to a beta.
 Soft Power is in its 6th or 7th year now and it is maturing.
