@@ -18,7 +18,13 @@ Creating these algos are next.
 I should do it in python if it's going online as well.
 I could probably convert everything at this stage.
 
+ClubHistoricalLevel
+I can assign points for each year in the top season and then multiply by the league reputation level.
 
 
 DOF
 I need to creata  new dummy database, but it probably pointless until I have the player class finalised.
+
+
+
+
