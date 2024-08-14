@@ -1,16 +1,28 @@
-Mechanics that I want to create
-Training Update: User receives a notification that the daily Training Report is in
-Players have a chance to receive a regrading every day, which affects their Scores and changes their likelihood to play.
- 
+# Feedback Mechanics
+
+[] Training Update: User receives a notification that the daily Training Report is in
+    - From Assistant Manager
+    - Players have a chance to receive a regrading every day, which affects their Scores and changes their likelihood to play.
+    - Players might experience a ranking or status change, this should be included in the report.
+
+[] Market Update: 
+    - From Chief Scout
+
+[] Medical Update: 
+    - From Head of Medical
+
+[] Board Update:
+    - From Chairman
+
+[]Competition Update:
+    - From Manager
+
+[] Supporter Update:
+    - From Head of Commercial
 
 
-I want to make the final push towards the products that are on the way.
-Director is coming along but I don't have an MVP, let alone something close to a beta.
-Soft Power is in its 6th or 7th year now and it is maturing.
-My database has been nascient for a while but the game itself only just started coming together.
-The database is grindable for a weekend and then I can stick it into a React app and go.
-That will be the side project in the short-term.
-CHIEF SCOUT has to be the name, I have the dof website but it will expire soon and that's the name of the game.
+---
+
 CHIEF SCOUT 1.0 will be the scouting radar I think.
 
 Chief Scout website workflow can probably be directly through Airtable.
@@ -27,9 +39,6 @@ I could probably convert everything at this stage.
 ClubHistoricalLevel
 I can assign points for each year in the top season and then multiply by the league reputation level.
 
-
-DOF
-I need to creata  new dummy database, but it probably pointless until I have the player class finalised.
 
 
 
