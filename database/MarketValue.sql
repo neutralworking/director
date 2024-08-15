@@ -20,15 +20,15 @@ BEGIN
     DECLARE nation_modifier DECIMAL(10,2);
     
     -- Base value calculated from playing level
-    SET base_value = PlayingLevel * 100000;  -- Assuming each playing level unit is worth 100,000
+    SET base_value = (PlayingLevel - 70 ) * 100000;  -- Assuming each playing level unit above 70 is worth 100,000
 
     -- Modifier based on potential level
-    IF PotentialLevel > PlayingLevel THEN
+    IF PotentialLevel > (PlayingLevel + 10) THEN
         SET potential_modifier = 1.2;
-    ELSEIF PotentialLevel = PlayingLevel THEN
-        SET potential_modifier = 1.0;
+    ELSEIF PotentialLevel > (PlayingLevel + 5) THEN
+        SET potential_modifier = 1.2;
     ELSE
-        SET potential_modifier = 0.9;
+        SET potential_modifier = 1.0;
     END IF;
 
     -- Modifier based on career stage

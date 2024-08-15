@@ -7,6 +7,11 @@
 
 [] Market Update: 
     - From Chief Scout
+    - New Additions to Scouting Radar
+
+[] Value Update
+    - From Chief Analyst
+    - Which players have changed in value over the time period
 
 [] Medical Update: 
     - From Head of Medical
@@ -23,23 +28,41 @@
 
 ---
 
-CHIEF SCOUT 1.0 will be the scouting radar I think.
-
-Chief Scout website workflow can probably be directly through Airtable.
-From where it is now I need to do some more tables that will house calculations, and also delete some tables that I'm not using to clear it up a little bit.
-
-I need to take the overall scores that I have and create clubOverallScores, clubPositionalScores etc
-I need to add ages in
-I can probably do some sort of remaining contract length scrapping from transfermarkt but it's not super important, I can do that manually for now 
-Once the requirements, base values and market values are created, I can display some unique information.
-Creating these algos are next.
-I should do it in python if it's going online as well.
-I could probably convert everything at this stage.
 
 ClubHistoricalLevel
 I can assign points for each year in the top season and then multiply by the league reputation level.
 
 
+
+Every player should have a TransferScore relative to every team.
+The TransferScore is the highest score that the player has on any of the club's requirements.
+TransferScores need to all update when requirements update probably.
+There won't be many teams so this can probably be its own table for each team.
+The transferScore determines the targetStatus, found on/linked to the clubTarget table.
+
+var clubTargets: {
+clubID: 0
+targets: []
+}
+
+# TransferScore Calculation
+
+Requirement Satisfaction
+Reputation Level
+Technical Score
+
+# ValueCalculation
+
+# Stage Two -
+
+The Director submits a report to the board when they want the green light to bid for a player.
+Once they have the financial conditions (max bid and max wage) from the board, they can create a bid and send it to the club or speak to the agent and guage interest.
+If the director doesn't already have the agent's or club's contact details, they will have to ask their staff or ask the secretary to find the contact details. They will already have the contact details if they are in the same league.
+You can also arrange a face-to-face negotiation and try to do a deal more quickly.
+
+Once a fee is agreed, the use can negotiate a contract with the player and their agent.
+Once contract fees are agreed, the player can do a PlayerMedical.
+Once the user has received a PlayerMedicalReport and a PlayerPersonalityReport, the transfer can be confirmed, negotiated or cancelled.
 
 
 
