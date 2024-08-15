@@ -1,0 +1,20 @@
+CREATE TABLE PlayerContractHistory (
+    history_id INT AUTO_INCREMENT PRIMARY KEY,
+    contract_id INT,
+    player_id INT,
+    club_id INT,
+    contract_start DATE,
+    contract_end DATE,
+    weekly_wage DECIMAL(10, 2),
+    signing_bonus DECIMAL(10, 2),
+    release_clause DECIMAL(15, 2),
+    appearance_bonus DECIMAL(10, 2),
+    goal_bonus DECIMAL(10, 2),
+    clean_sheet_bonus DECIMAL(10, 2),
+    renewal_option BOOLEAN,
+    termination_clause DECIMAL(15, 2),
+    is_active BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (contract_id) REFERENCES PlayerContract(contract_id),
+    FOREIGN KEY (player_id) REFERENCES Player(player_id),
+    FOREIGN KEY (club_id) REFERENCES Club(club_id)
+);
