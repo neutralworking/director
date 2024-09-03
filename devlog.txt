@@ -7,34 +7,6 @@ Finish the set of classic players and then have a solid 10,000k DB that will be 
 Set number of leagues (Top 5 plus Championship maybe)
 
 
-# Feedback Mechanics
-
-[] Training Update: User receives a notification that the daily Training Report is in
-    - From Assistant Manager
-    - Players have a chance to receive a regrading every day, which affects their Scores and changes their likelihood to play.
-    - Players might experience a ranking or status change, this should be included in the report.
-
-[] Market Update: 
-    - From Chief Scout
-    - New Additions to Scouting Radar
-
-[] Value Update
-    - From Chief Analyst
-    - Which players have changed in value over the time period
-
-[] Medical Update: 
-    - From Head of Medical
-
-[] Board Update:
-    - From Chairman
-
-[]Competition Update:
-    - From Manager
-
-[] Supporter Update:
-    - From Head of Commercial
-
-
 ---
 
 
@@ -43,11 +15,7 @@ I can assign points for each year in the top season and then multiply by the lea
 
 
 
-Every player should have a TransferScore relative to every team.
-The TransferScore is the highest score that the player has on any of the club's requirements.
-TransferScores need to all update when requirements update probably.
-There won't be many teams so this can probably be its own table for each team.
-The transferScore determines the targetStatus, found on/linked to the clubTarget table.
+
 
 var clubTargets: {
 clubID: 0
