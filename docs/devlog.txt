@@ -1,11 +1,9 @@
 Director of Football
 Godot + static DB with data updates and periodic new builds to app stores
-
 Marketing Website Online App to query database - dof.gg
 
 Finish the set of classic players and then have a solid 10,000k DB that will be the base database.
 Set number of leagues (Top 5 plus Championship maybe)
-
 
 ---
 

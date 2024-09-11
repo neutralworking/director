@@ -1,5 +1,49 @@
 extends Node
 
+extends Node
+
+var time_system: TimeProgressionSystem
+var event_queue: EventQueueSystem
+var match_system: MatchSimulationSystem
+
+func _ready():
+    time_system = TimeProgressionSystem.new()
+    event_queue = EventQueueSystem.new()
+    match_system = MatchSimulationSystem.new()
+
+    add_child(time_system)
+    add_child(event_queue)
+    add_child(match_system)
+
+    time_system.connect("date_changed", self, "_on_date_changed")
+
+    # Schedule some events
+    schedule_match(GameDate.new(15, 7, 2024), team_a, team_b)
+
+    time_system.start()
+
+func _on_date_changed(new_date):
+    event_queue.process_events(new_date)
+
+func schedule_match(match_date, home_team, away_team):
+    var match_data = {
+        "home_team": home_team,
+        "away_team": away_team
+    }
+    event_queue.add_event(EventQueueSystem.Event.new(
+        EventQueueSystem.EventType.MATCH, 
+        match_date, 
+        self, 
+        "handle_match_event", 
+        match_data
+    ))
+
+func handle_match_event(match_data):
+    var result = match_system.simulate_match(match_data.home_team, match_data.away_team)
+    match_system.update_team_stats(result)
+    var report = match_system.generate_match_report(result)
+    print(report)  # Or update UI, log, etc.
+
 var game_clock = preload("res://GameClock.gd").new()
 var transfer_market = preload("res://TransferMarket.gd").new()
 var scouting_network = preload("res://ScoutingNetwork.gd").new()

@@ -1,5 +1,32 @@
 extends Node
 
+flowchart TD
+    A[Football Transfer Market]
+    A --> B[Player Factors]
+    A --> C[Club Factors]
+    A --> D[Market Factors]
+    A --> E[External Factors]
+    
+    B --> B1[Performance]
+    B --> B2[Potential]
+    B --> B3[Age]
+    B --> B4[Versatility]
+    B --> B5[Marketability]
+    
+    C --> C1[Financial Situation]
+    C --> C2[Squad Needs]
+    C --> C3[Playing Style]
+    C --> C4[Competition Level]
+    
+    D --> D1[Supply and Demand]
+    D --> D2[Comparable Transfers]
+    D --> D3[Economic Climate]
+    
+    E --> E1[Media Influence]
+    E --> E2[Agent Negotiations]
+    E --> E3[Regulatory Changes]
+    E --> E4[Global Events]
+
 # Reference to the agent class
 var agent_script = preload("res://Agent.gd")
 var player_score = (club_needs_weight * club_needs_score) +

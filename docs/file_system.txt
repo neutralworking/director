@@ -1,0 +1,116 @@
+project_root/
+├── assets/
+│   ├── audio/
+│   │   ├── music/
+│   │   │   ├── main_theme.ogg
+│   │   │   └── match_ambience.ogg
+│   │   └── sfx/
+│   │       ├── button_click.wav
+│   │       └── notification.wav
+│   ├── fonts/
+│   │   ├── main_font.ttf
+│   │   └── header_font.ttf
+│   ├── images/
+│   │   ├── logos/
+│   │   │   ├── game_logo.png
+│   │   │   └── club_logos/
+│   │   ├── player_portraits/
+│   │   ├── stadiums/
+│   │   └── ui/
+│   │       ├── icons/
+│   │       └── backgrounds/
+│   └── shaders/
+│       └── blur.gdshader
+├── data/
+│   ├── club/
+│   │   ├── objectives.json
+│   │   ├── facilities.json
+│   │   └── league_rules.json
+│   ├── player/
+│   │   ├── attributes.json
+│   │   ├── personalities.json
+│   │   ├── traits.json
+│   │   └── objectives.json
+│   ├── staff/
+│   │   ├── roles.json
+│   │   └── attributes.json
+│   ├── director/
+│   │   ├── attributes.json
+│   │   └── objectives.json
+│   ├── transfer/
+│   │   ├── statuses.json
+│   │   └── clauses.json
+│   ├── match/
+│   │   ├── events.json
+│   │   └── commentary.json
+│   ├── game_rules/
+│   │   ├── financial_fair_play.json
+│   │   └── youth_development.json
+│   └── names/
+│       ├── english_names.json
+│       └── spanish_names.json
+├── resources/
+│   ├── emails/
+│   │   ├── analyst_reports.json
+│   │   ├── training_reports.json
+│   │   ├── medical_updates.json
+│   │   └── board_communications.json
+│   ├── notifications/
+│   │   └── templates.json
+│   └── dialogues/
+│       ├── player_interactions.json
+│       └── media_interviews.json
+├── scenes/
+│   ├── main_menu/
+│   │   ├── main_menu.tscn
+│   │   └── main_menu.gd
+│   ├── game/
+│   │   ├── game.tscn
+│   │   └── game.gd
+│   ├── match/
+│   │   ├── match_view.tscn
+│   │   └── match_view.gd
+│   └── ui/
+│       ├── player_profile.tscn
+│       ├── club_info.tscn
+│       ├── transfer_negotiation.tscn
+│       └── inbox.tscn
+├── scripts/
+│   ├── autoload/
+│   │   ├── game_manager.gd
+│   │   └── data_manager.gd
+│   ├── classes/
+│   │   ├── player.gd
+│   │   ├── club.gd
+│   │   ├── director.gd
+│   │   ├── staff.gd
+│   │   └── match.gd
+│   ├── systems/
+│   │   ├── transfer_system.gd
+│   │   ├── finance_system.gd
+│   │   ├── youth_academy_system.gd
+│   │   ├── match_engine.gd
+│   │   ├── report_generator.gd
+│   │   └── ai_director.gd
+│   └── utilities/
+│       ├── constants.gd
+│       └── helpers.gd
+├── addons/
+│   └── your_custom_plugin/
+├── translations/
+│   ├── en.po
+│   └── es.po
+├── user_data/
+│   └── saves/
+│       └── [user_save_files]
+├── tests/
+│   ├── unit/
+│   │   └── test_player.gd
+│   └── integration/
+│       └── test_transfer_system.gd
+├── docs/
+│   ├── GDD.md
+│   └── api/
+├── export_presets.cfg
+├── project.godot
+└── README.md
