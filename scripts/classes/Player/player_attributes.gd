@@ -15,15 +15,15 @@ const MENTAL_ATTRIBUTES = [
 ]
 
 const PHYSICAL_ATTRIBUTES = [
-    "Aggression", "Duels", "Shielding", "Throwing", "Acceleration",
+  "Duels", "Shielding", "Throwing", "Acceleration",
     "Balance", "Movement", "Pace", "Aerial Duels", "Heading",
-    "Jumping", "Volleys"
+    "Jumping", "Volleys", "Weak Foot"
 ]
 
 const TACTICAL_ATTRIBUTES = [
-    "Awareness", "Discipline", "Interceptions", "Positioning", "Blocking",
+    "Aggression", "Awareness", "Discipline", "Interceptions", "Positioning", "Blocking",
     "Clearances", "Marking", "Tackling", "Intensity", "Pressing",
-    "Stamina", "Versatility"
+    "Stamina"
 ]
 
 const TECHNICAL_ATTRIBUTES = [
