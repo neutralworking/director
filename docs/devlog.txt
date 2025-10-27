@@ -1,3 +1,9 @@
+27/10/2025
+After giving up on game dev and Godot, I have returned after realising that creating DOF will be easier than creating Chief Scout.
+This will take time and effort, which I have in small amounts, whereas Chief Scout will take money, which I don't really.
+
+
+
 Director of Football
 Godot + static DB with data updates and periodic new builds to app stores
 Marketing Website Online App to query database - dof.gg
@@ -10,9 +16,6 @@ Set number of leagues (Top 5 plus Championship maybe)
 
 ClubHistoricalLevel
 I can assign points for each year in the top season and then multiply by the league reputation level.
-
-
-
 
 
 var clubTargets: {
