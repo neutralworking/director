@@ -195,3 +195,78 @@ func start_game():
     func complete_objective(objective):
         club_objectives.update_objective(objective, "Complete")
     display_objectives()
+
+
+# Main.gd
+extends Node
+
+var current_date: Dictionary = {"year": 2025, "month": 10, "day": 29, "hour": 9}
+
+onready var event_system: EventQueueSystem = $EventQueueSystem
+
+func _ready():
+	_schedule_initial_events()
+	_update_ui()
+
+func advance_time(hours: int = 0, days: int = 1):
+	# Simple day/hour advancement
+	if hours > 0:
+		current_date["hour"] += hours
+		if current_date["hour"] >= 24:
+			current_date["hour"] = 0
+			current_date["day"] += 1
+	else:
+		current_date["day"] += days
+		# TODO: Handle month/year rollovers
+	
+	var todays_events = event_system.get_events_for_date(current_date)
+	if todays_events.size() > 0:
+		for event in todays_events:
+			_process_event(event)
+	else:
+		_update_ui("No events today. Advance time again or view club.")
+
+func skip_to_next_event():
+	var next_event = event_system.get_next_event(current_date)
+	if next_event:
+		current_date = next_event.date
+		_process_event(next_event)
+	else:
+		_update_ui("No upcoming events scheduled.")
+
+func _process_event(event: Dictionary):
+	match event.type:
+		event_system.EventType.MATCH:
+			_show_match_screen(event.data)
+		event_system.EventType.TRANSFER:
+			_show_transfer_screen(event.data)
+		event_system.EventType.CONTRACT:
+			_show_contract_screen(event.data)
+		event_system.EventType.MEETING:
+			_show_meeting_screen(event.data)
+
+func _schedule_initial_events():
+	# Example: Schedule a match and a meeting
+	event_system.schedule_event({"year":2025, "month":10, "day":30, "hour":18}, event_system.EventType.MATCH, {"vs":"Rival FC"})
+	event_system.schedule_event({"year":2025, "month":10, "day":31, "hour":10}, event_system.EventType.MEETING, {"subject":"Chairman Budget Review"})
+
+func _update_ui(extra_text: String = ""):
+	# Refresh UI with current date and next events
+	var display = "Current Date: %s/%s/%s %s:00\n" % [current_date["day"], current_date["month"], current_date["year"], current_date.get("hour", 0)]
+	display += "Upcoming Events:\n"
+	var futures = []
+	for i in range(3):
+		var ev = event_system.get_next_event(current_date)
+		if not ev: break
+		futures.append("%s on %s/%s %s:00" % [str(ev.type), ev.date["day"], ev.date["month"], ev.date.get("hour",0)])
+	display += futures.join("\n")
+	if extra_text != "":
+		display += "\n" + extra_text
+	print(display)
+	# TODO: Hook to UI text label
+
+# Placeholder functions for event UIs
+func _show_match_screen(data): print("Match screen stub vs %s" % data["vs"])
+func _show_transfer_screen(data): print("Transfer screen stub")
+func _show_contract_screen(data): print("Contract negotiation stub")
+func _show_meeting_screen(data): print("Meeting stub: %s" % data["subject"])
