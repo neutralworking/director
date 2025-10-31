@@ -1,0 +1,17 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dlv41wtdgp64t"
+
+[deps]
+
+files=["res://resources/ENG1Players.Name.translation", "res://resources/ENG1Players.Blueprint.translation", "res://resources/ENG1Players.Age.translation", "res://resources/ENG1Players.Nation.translation", "res://resources/ENG1Players.Club.translation", "res://resources/ENG1Players.Physique.translation", "res://resources/ENG1Players.Character.translation", "res://resources/ENG1Players.Primary Class.translation", "res://resources/ENG1Players.Secondary Class.translation", "res://resources/ENG1Players.Position.translation", "res://resources/ENG1Players.Model.translation", "res://resources/ENG1Players.Level.translation", "res://resources/ENG1Players.Value.translation"]
+
+source_file="res://resources/ENG1Players.csv"
+dest_files=["res://resources/ENG1Players.Name.translation", "res://resources/ENG1Players.Blueprint.translation", "res://resources/ENG1Players.Age.translation", "res://resources/ENG1Players.Nation.translation", "res://resources/ENG1Players.Club.translation", "res://resources/ENG1Players.Physique.translation", "res://resources/ENG1Players.Character.translation", "res://resources/ENG1Players.Primary Class.translation", "res://resources/ENG1Players.Secondary Class.translation", "res://resources/ENG1Players.Position.translation", "res://resources/ENG1Players.Model.translation", "res://resources/ENG1Players.Level.translation", "res://resources/ENG1Players.Value.translation"]
+
+[params]
+
+compress=true
+delimiter=0

@@ -14,11 +14,11 @@ var board_confidence: float = 75.0
 var dof_reputation: int = 0
 var career_stats: Dictionary = {}
 
-@onready var transfer_manager = $TransferManager
-@onready var squad_manager = $SquadManager
-@onready var staff_manager = $StaffManager
-@onready var contract_manager = $ContractManager
-@onready var board_manager = $BoardManager
+# @onready var transfer_manager = $TransferManager
+# @onready var squad_manager = $SquadManager
+# @onready var staff_manager = $StaffManager
+# @onready var contract_manager = $ContractManager
+# @onready var board_manager = $BoardManager
 
 func _ready() -> void:
 	initialize_game()
@@ -41,14 +41,14 @@ func advance_season() -> void:
 	current_season += 1
 	career_stats.total_seasons += 1
 	
-	var season_review = board_manager.evaluate_season_performance()
-	emit_signal("season_ended", season_review)
+#	var season_review = board_manager.evaluate_season_performance()
+#	emit_signal("season_ended", season_review)
 	
-	if season_review.objectives_met >= 0.7:
-		modify_board_confidence(10.0)
-		award_xp(1000 + season_review.bonus_xp)
-	else:
-		modify_board_confidence(-15.0)
+#	if season_review.objectives_met >= 0.7:
+#		modify_board_confidence(10.0)
+#		award_xp(1000 + season_review.bonus_xp)
+#	else:
+#		modify_board_confidence(-15.0)
 	
 	check_contract_status()
 
@@ -64,3 +64,18 @@ func award_xp(amount: int) -> void:
 	career_stats.total_xp += amount
 	check_reputation_tier()
 	check_badge_unlocks()
+
+func load_or_create_career():
+	print("Stub: load_or_create_career")
+
+func check_contract_status():
+	print("Stub: check_contract_status")
+
+func handle_dismissal_risk():
+	print("Stub: handle_dismissal_risk")
+
+func check_reputation_tier():
+	print("Stub: check_reputation_tier")
+
+func check_badge_unlocks():
+	print("Stub: check_badge_unlocks")

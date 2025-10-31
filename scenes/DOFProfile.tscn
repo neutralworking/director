@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqn8t4khp1515"]
+
+[ext_resource type="Script" path="res://scripts/DOFProfile.gd" id="1_w1rrf"]
+
+[node name="DOFProfilePanel" type="Panel"]
+script = ExtResource("1_w1rrf")
+
+[node name="CloseButton" type="Button" parent="."]
+layout_mode = 2
+offset_top = 135.0
+offset_right = 40.0
+offset_bottom = 143.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="NameLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="ReputationLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BoardConfidenceLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="StateLabel" type="Label" parent="VBoxContainer"]
+layout_mode = 2

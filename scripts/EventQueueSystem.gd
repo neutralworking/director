@@ -25,14 +25,18 @@ func get_events_for_date(current_date: Dictionary) -> Array:
 
 # Get the next scheduled event after current date/time
 func get_next_event(current_date: Dictionary) -> Dictionary:
+	# Find all future events after current_date
 	var future_events = []
 	for event in event_queue:
 		if _is_later(event.date, current_date):
 			future_events.append(event)
-	if future_events.empty():
-		return null
-	future_events.sort_custom(self, "_compare_dates")
+	if future_events.is_empty():
+		return {}  # Return an empty dictionary instead of null
+	
+	future_events.sort_custom(Callable(self, "_compare_dates"))
 	return future_events[0]
+
+
 
 # Helper: returns true if a is later than b
 func _is_later(a: Dictionary, b: Dictionary) -> bool:
