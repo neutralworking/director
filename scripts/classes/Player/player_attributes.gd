@@ -1,319 +1,89 @@
 # player_attributes.gd
 
-{
-  "attributes": [
-    {
-      "name": "Acceleration",
-      "type": "physical",
-      "benchmark": "Theo Walcott",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Aerial Duels",
-      "type": "physical",
-      "benchmark": "Peter Crouch",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Aggression",
-      "type": "tactical",
-      "benchmark": "Roy Keane",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Agility",
-      "type": "keeper",
-      "benchmark": "Manuel Neuer",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Anticipation",
-      "type": "mental",
-      "benchmark": "Vincent Kompany",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Awareness",
-      "type": "tactical",
-      "benchmark": "N'Golo Kante",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Balance",
-      "type": "physical",
-      "benchmark": "Eden Hazard",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Blocking",
-      "type": "tactical",
-      "benchmark": "Virgil van Dijk",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Carries",
-      "type": "technical",
-      "benchmark": "Luka Modric",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Clearances",
-      "type": "tactical",
-      "benchmark": "Raphael Varane",
-      "multiplier": 1.0
-    },
-    {
-      "name": "CloseRange",
-      "type": "technical",
-      "benchmark": "Roberto Firmino",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Communication",
-      "type": "mental",
-      "benchmark": "Jordan Henderson",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Composure",
-      "type": "mental",
-      "benchmark": "Thiago Alcantara",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Concentration",
-      "type": "mental",
-      "benchmark": "Sergio Busquets",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Creativity",
-      "type": "mental",
-      "benchmark": "Kevin De Bruyne",
-      "multiplier": 1.2
-    },
-    {
-      "name": "Crossing",
-      "type": "technical",
-      "benchmark": "Trent Alexander-Arnold",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Decisions",
-      "type": "mental",
-      "benchmark": "Jorginho",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Discipline",
-      "type": "tactical",
-      "benchmark": "Fabinho",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Duels",
-      "type": "physical",
-      "benchmark": "Casemiro",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Drive",
-      "type": "mental",
-      "benchmark": "James Milner",
-      "multiplier": 1.0
-    },
-    {
-      "name": "First Touch",
-      "type": "technical",
-      "benchmark": "Bernardo Silva",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Footwork",
-      "type": "keeper",
-      "benchmark": "Edouard Mendy",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Handling",
-      "type": "keeper",
-      "benchmark": "Edouard Mendy",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Heading",
-      "type": "physical",
-      "benchmark": "Virgil van Dijk",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Intensity",
-      "type": "tactical",
-      "benchmark": "Sadio Mane",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Interceptions",
-      "type": "tactical",
-      "benchmark": "Rodri",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Jumping",
-      "type": "physical",
-      "benchmark": "Virgil van Dijk",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Leadership",
-      "type": "mental",
-      "benchmark": "Jordan Henderson",
-      "multiplier": 1.1
-    },
-    {
-      "name": "LongRange",
-      "type": "technical",
-      "benchmark": "Toni Kroos",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Marking",
-      "type": "tactical",
-      "benchmark": "Ruben Dias",
-      "multiplier": 1.0
-    },
-    {
-      "name": "MidRange",
-      "type": "technical",
-      "benchmark": "Kevin De Bruyne",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Movement",
-      "type": "physical",
-      "benchmark": "Sadio Mane",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Pace",
-      "type": "physical",
-      "benchmark": "Kylian Mbappe",
-      "multiplier": 1.2
-    },
-    {
-      "name": "PassAccuracy",
-      "type": "technical",
-      "benchmark": "Toni Kroos",
-      "multiplier": 1.1
-    },
-    {
-      "name": "PassRange",
-      "type": "technical",
-      "benchmark": "Toni Kroos",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Penalties",
-      "type": "technical",
-      "benchmark": "Jorginho",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Positioning",
-      "type": "tactical",
-      "benchmark": "Virgil van Dijk",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Pressing",
-      "type": "tactical",
-      "benchmark": "Luis Suarez",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Reactions",
-      "type": "keeper",
-      "benchmark": "Edouard Mendy",
-      "multiplier": 1.2
-    },
-    {
-      "name": "Set Pieces",
-      "type": "mental",
-      "benchmark": "Trent Alexander-Arnold",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Shielding",
-      "type": "physical",
-      "benchmark": "Olivier Giroud",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Skills",
-      "type": "technical",
-      "benchmark": "Neymar",
-      "multiplier": 1.2
-    },
-    {
-      "name": "Stamina",
-      "type": "tactical",
-      "benchmark": "N'Golo Kante",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Tackling",
-      "type": "tactical",
-      "benchmark": "Virgil van Dijk",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Takeons",
-      "type": "technical",
-      "benchmark": "Neymar",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Tempo",
-      "type": "mental",
-      "benchmark": "Kevin De Bruyne",
-      "multiplier": 1.0
-    },
-    {
-      "name": "Throwing",
-      "type": "physical",
-      "benchmark": "Edouard Mendy",
-      "multiplier": 1.0
-    },
-    {
-      "name": "ThroughBalls",
-      "type": "technical",
-      "benchmark": "Kevin De Bruyne",
-      "multiplier": 1.2
-    },
-    {
-      "name": "Unpredictability",
-      "type": "mental",
-      "benchmark": "Lionel Messi",
-      "multiplier": 1.2
-    },
-    {
-      "name": "Volleys",
-      "type": "physical",
-      "benchmark": "Karim Benzema",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Vision",
-      "type": "mental",
-      "benchmark": "Kevin De Bruyne",
-      "multiplier": 1.1
-    },
-    {
-      "name": "Weak Foot",
-      "type": "physical",
-      "benchmark": "Lionel Messi",
-      "multiplier": 1.1
-    }
-  ]
-}
-```​​​​​​​
+# --- Basic Info
+var name = "" # Player name
+var age = 0
+var nationality = ""
+var club = ""
+var position = ""
+var level = 1
+var background = ""
+
+# --- Core Attributes (1-100)
+var prowess = 50            # Technical mastery
+var athleticism = 50        # Coordination, agility, reflexes
+var constitution = 50       # Strength, endurance
+var intellect = 50          # Tactical understanding
+var wisdom = 50             # Game awareness
+var charisma = 50           # Leadership & influence
+var temperament = 50        # Mental resilience
+
+# --- Prowess Proficiencies (Technical Skills)
+var shooting = 50
+var first_touch = 50
+var dribbling = 50
+var crossing = 50
+var passing = 50
+var set_pieces = 50
+var heading = 50
+var ball_skills = 50
+
+# --- Athleticism Proficiencies (Physical Coordination)
+var pace = 50
+var agility = 50
+var balance = 50
+var coordination = 50
+var reflexes = 50
+var jumping = 50
+var flexibility = 50
+var acceleration = 50
+
+# --- Constitution Proficiencies (Physical Strength & Defense)
+var stamina = 50
+var pressing = 50
+var tackling = 50
+var marking = 50
+var blocking = 50
+var aerial_duels = 50
+var physicality = 50
+var injury_resistance = 50
+
+# --- Intellect Proficiencies (Tactical Understanding)
+var positioning = 50
+var tactical_adaptation = 50
+var pattern_recognition = 50
+var space_recognition = 50
+var timing = 50
+var system_understanding = 50
+var off_the_ball = 50
+var game_management = 50
+
+# --- Wisdom Proficiencies (Game Awareness)
+var anticipation = 50
+var vision = 50
+var decision_making = 50
+var awareness = 50
+var reactions = 50
+var danger_sense = 50
+var opportunity_recognition = 50
+var game_reading = 50
+
+# --- Charisma Proficiencies (Leadership & Influence)
+var leadership = 50
+var communication = 50
+var intimidation = 50
+var inspiration = 50
+var media_handling = 50
+var referee_relations = 50
+var crowd_connection = 50
+var team_chemistry = 50
+
+# --- Temperament Proficiencies (Mental Resilience)
+var composure = 50
+var discipline = 50
+var focus = 50
+var pressure_handling = 50
+var mental_resilience = 50
+var consistency = 50
+var clutch_performance = 50
+var emotional_control = 50

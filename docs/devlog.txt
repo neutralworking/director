@@ -2,6 +2,218 @@
 After giving up on game dev and Godot, I have returned after realising that creating DOF will be easier than creating Chief Scout.
 This will take time and effort, which I have in small amounts, whereas Chief Scout will take money, which I don't really.
 
+Refactor List
+
+Director of Football - MVP Refactoring & Development Plan
+Based on your stated MVP goals of running a club through multiple seasons with player trading, contract negotiations, staff/chairman meetings, and match simulation, here's your strategic roadmap:
+
+Critical MVP Features (Priority Order)
+Phase 1: Core Data Layer (Week 1-2)
+Must Build First:
+
+Player Data Structure: Create a clean Player class/resource with essential attributes only (name, age, position, 3-5 key stats like overall rating, potential, wages, contract expiry)
+
+Club Data Structure: Basic club class with squad array, budget, reputation
+
+Save/Load System: Simple JSON-based save system for game state persistence
+
+Data Generator: Script to generate realistic player and club databases for testing
+
+Why This First: Everything else depends on having player and club data. Keep it minimal - resist adding complex stat systems now.
+
+Phase 2: Season Loop & Time Management (Week 2-3)
+Build the Core Game Flow:
+
+Calendar/Date System: Simple date progression (weekly increments)
+
+Season Manager: Controls season start/end, fixture generation, league table
+
+Main Game Loop: Weekly cycle where you process matches, then access menus
+
+Basic UI Shell: Main menu with buttons for: Squad, Transfers, Calendar, Finances
+
+Why This Next: This creates the skeleton that everything else plugs into. You need the loop before adding features.
+
+Phase 3: Match Simulation (Week 3-4)
+Minimal Match Engine:
+
+Simple Match Sim: Algorithm that takes two squads and generates a scoreline based on team ratings (no need for play-by-play initially)
+
+Match Report Screen: Simple UI showing final score, goalscorers, basic stats
+
+Result Processing: Update league table, player morale/fitness
+
+Keep It Simple: Don't get lost in complex match simulation. A basic algorithm that feels somewhat realistic is enough for MVP.
+
+Phase 4: Transfer System (Week 4-5)
+Player Trading Basics:
+
+Transfer Market Screen: Scrollable list of available players with filters (position, price range)
+
+Buy Player Flow: Make offer → simple acceptance logic → add to squad
+
+Sell Player Flow: List player → receive offers → accept/reject
+
+Budget Management: Ensure transactions affect club finances
+
+Scope Control: No loan system, no installments, no release clauses yet. Just cash purchases.
+
+Phase 5: Contract System (Week 5-6)
+Contract Negotiations:
+
+Contract Negotiation UI: Offer wages and contract length
+
+Player Response Logic: Simple acceptance based on wages vs. player rating
+
+Contract Expiry Warnings: Alert when contracts running out
+
+Free Agent Signing: Pick up players whose contracts expired
+
+Keep Minimal: One wage figure, one contract length. Don't add bonuses, clauses, or complex negotiations yet.
+
+Phase 6: Meetings System (Week 6-7)
+Staff & Chairman Interactions:
+
+Meeting Scheduler: Trigger meetings based on events (poor form, budget requests, etc.)
+
+Meeting UI: Dialogue-style interface with multiple choice responses
+
+Chairman Meeting: Request budget increases, discuss objectives
+
+Staff Meetings: Basic morale updates, training feedback
+
+Content Light: Write 3-4 meeting scenarios maximum. Focus on system working, not content volume.
+
+Architecture Recommendations
+Clean Separation of Concerns
+Godot Project Structure:
+
+text
+director/
+├── game/                    # Pure game logic (no UI)
+│   ├── models/             # Data classes
+│   │   ├── Player.gd
+│   │   ├── Club.gd
+│   │   ├── Contract.gd
+│   │   └── Match.gd
+│   ├── managers/           # Game systems
+│   │   ├── SeasonManager.gd
+│   │   ├── TransferManager.gd
+│   │   ├── MatchEngine.gd
+│   │   ├── ContractManager.gd
+│   │   └── MeetingManager.gd
+│   └── data/               # Data loading/saving
+│       ├── SaveManager.gd
+│       └── DataGenerator.gd
+├── ui/                     # All UI scenes and scripts
+│   ├── screens/
+│   │   ├── MainMenu.tscn
+│   │   ├── SquadScreen.tscn
+│   │   ├── TransferMarket.tscn
+│   │   ├── ContractNegotiation.tscn
+│   │   ├── MeetingScreen.tscn
+│   │   └── MatchReport.tscn
+│   └── components/         # Reusable UI elements
+│       ├── PlayerCard.tscn
+│       ├── ConfirmDialog.tscn
+│       └── StatDisplay.tscn
+└── assets/                 # Graphics, fonts, sounds
+
+
+Key Architectural Principles
+Singleton Pattern for Managers: Use Godot autoload for SeasonManager, TransferManager, etc. This gives you global access without tight coupling.
+
+Signal-Based Communication: Use Godot signals for events (player_signed, match_completed, contract_expired). This decouples systems.
+
+Scene-Based UI: Each major screen is its own scene. No mega-scene with everything.
+
+Data-Driven Approach: Store player/club data in JSON or Godot Resources, not hardcoded in scripts.
+
+What to Remove/Avoid (Bloat Reduction)
+Delete or Deprioritize:
+Complex Training Systems: Skip detailed training mechanics for MVP
+
+Detailed Tactics: No formation customization or tactical instructions initially
+
+Youth Academy: Can wait until post-MVP
+
+Scouting System: Use simple "browse all players" instead
+
+Injuries & Morale: Skip or make extremely simple
+
+Media/Press Conferences: Not essential for core gameplay
+
+Staff Hiring: Assume you have fixed staff
+
+Stadium Management: Ignore completely for MVP
+
+Multiple Leagues/Competitions: One league only
+
+Resist Feature Creep:
+Every time you think of adding a feature, ask: "Can I play 2 seasons without this?" If yes, it's not MVP.
+
+Development Best Practices
+Weekly Milestones:
+Set one clear goal per week
+
+Build vertically (one complete feature) not horizontally (half of everything)
+
+Playtest weekly - can you "play" the game at end of each week?
+
+Code Quality:
+Comment your code as you write it
+
+Keep functions small (under 50 lines)
+
+Use meaningful variable names
+
+Don't optimize prematurely
+
+Version Control:
+Commit daily with clear messages
+
+Create branches for major features
+
+Tag versions when features are complete
+
+Testing Your MVP
+MVP is complete when you can:
+
+Start a new game and select a club
+
+View your squad and finances
+
+Progress through weeks using a "Next Week" button
+
+Watch match results for your fixtures
+
+Browse transfer market and buy a player
+
+Negotiate and sign a player to a contract
+
+Sell a player
+
+Have a meeting with chairman
+
+Complete 2 full seasons
+
+Save and load your game
+
+If you can do all 10 things, you have an MVP.
+
+Next Steps for You
+Immediate Actions:
+
+Audit Current Code: List every .gd file in your repo and categorize as "Essential for MVP" or "Not MVP"
+
+Create MVP Branch: Branch from main, start fresh refactor
+
+Build Skeleton First: Get the season loop working with dummy data before adding features
+
+One Feature at a Time: Don't work on transfers and contracts simultaneously
+
+Playtest Constantly: Every Friday, try to "play" what you've built that week
+
 
 
 Director of Football

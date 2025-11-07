@@ -1,0 +1,106 @@
+{
+  "meta": {
+    "version": "0.2.0",
+    "family_limits": {
+      "max_active_per_match": 2,
+      "families": ["performance", "mental", "physical"],
+      "per_player_attribute_effect_cap": 8
+    },
+    "stacking_rules": {
+      "order": ["permanent", "temporary"],
+      "per_attribute_cap": 20,
+      "global_cap": 25,
+      "percent_then_flat": true
+    },
+    "decay": {
+      "per_day": 0.0,
+      "per_90_mins_played": 1
+    }
+  },
+  "positive": {
+    "Speedy": {
+      "family": "physical",
+      "type": "temporary_or_permanent",
+      "priority": 40,
+      "bonuses": {
+        "Acceleration": { "flat": 3, "percent": 0.0 },
+        "Pace": { "flat": 3, "percent": 0.0 },
+        "Movement": { "flat": 2, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": null,
+      "source": "trait",
+      "stacking": "family_cap"
+    },
+    "InForm": {
+      "family": "performance",
+      "type": "temporary",
+      "priority": 35,
+      "bonuses": {
+        "Composure": { "flat": 2, "percent": 0.0 },
+        "ShortRange": { "flat": 2, "percent": 0.0 },
+        "PassAccuracy": { "flat": 2, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": 14,
+      "source": "performance",
+      "stacking": "family_cap"
+    },
+    "Focused": {
+      "family": "mental",
+      "type": "temporary",
+      "priority": 30,
+      "bonuses": {
+        "Concentration": { "flat": 3, "percent": 0.0 },
+        "Decisions": { "flat": 2, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": 7,
+      "source": "mental_state",
+      "stacking": "family_cap"
+    }
+  },
+  "negative": {
+    "Sluggish": {
+      "family": "physical",
+      "type": "temporary",
+      "priority": 45,
+      "penalties": {
+        "Intensity": { "flat": -3, "percent": 0.0 },
+        "Anticipation": { "flat": -2, "percent": 0.0 },
+        "Acceleration": { "flat": -2, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": 3,
+      "source": "fatigue_or_cold_weather",
+      "stacking": "no_stack"
+    },
+    "Nervy": {
+      "family": "mental",
+      "type": "temporary",
+      "priority": 42,
+      "penalties": {
+        "Composure": { "flat": -3, "percent": 0.0 },
+        "Decisions": { "flat": -2, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": 5,
+      "source": "pressure",
+      "stacking": "family_cap"
+    },
+    "MinorKnock": {
+      "family": "physical",
+      "type": "temporary",
+      "priority": 38,
+      "penalties": {
+        "Pace": { "flat": -2, "percent": 0.0 },
+        "Agility": { "flat": -2, "percent": 0.0 },
+        "Duels": { "flat": -1, "percent": 0.0 }
+      },
+      "max_attributes_affected": 3,
+      "duration_days": 10,
+      "source": "injury",
+      "stacking": "no_stack"
+    }
+  }
+}

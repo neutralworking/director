@@ -1,0 +1,188 @@
+{
+  "meta": {
+    "version": "0.2.0",
+    "scale": "1-100",
+    "notes": "Synergy compressed to one attribute per class; second-class support via loader, not data."
+  },
+  "classes": {
+    "Mental": {
+      "Commander": {
+        "priority": 60,
+        "description": "Vocal organizer under pressure.",
+        "bonuses": {
+          "Communication": { "flat": 6, "percent": 0.0 },
+          "Concentration": { "flat": 4, "percent": 0.0 },
+          "Drive": { "flat": 5, "percent": 0.0 },
+          "Leadership": { "flat": 7, "percent": 0.0 },
+          "Synergy": {
+            "Tempo": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Controller": {
+        "priority": 55,
+        "description": "Sets rhythm, makes optimal choices.",
+        "bonuses": {
+          "Anticipation": { "flat": 4, "percent": 0.0 },
+          "Composure": { "flat": 6, "percent": 0.0 },
+          "Decisions": { "flat": 6, "percent": 0.0 },
+          "Tempo": { "flat": 5, "percent": 0.0 },
+          "Synergy": {
+            "Vision": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Creator": {
+        "priority": 50,
+        "description": "Inventive risk-taker.",
+        "bonuses": {
+          "Creativity": { "flat": 7, "percent": 0.0 },
+          "Guile": { "flat": 5, "percent": 0.0 },
+          "Unpredictability": { "flat": 5, "percent": 0.0 },
+          "Vision": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "ThroughBalls": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      }
+    },
+    "Physical": {
+      "Powerhouse": {
+        "priority": 60,
+        "description": "Imposes physically, protects the ball.",
+        "bonuses": {
+          "Aggression": { "flat": 5, "percent": 0.0 },
+          "Duels": { "flat": 6, "percent": 0.0 },
+          "Shielding": { "flat": 7, "percent": 0.0 },
+          "Throwing": { "flat": 3, "percent": 0.0 },
+          "Synergy": {
+            "Strength": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Sprinter": {
+        "priority": 55,
+        "description": "Explosive mover.",
+        "bonuses": {
+          "Acceleration": { "flat": 6, "percent": 0.0 },
+          "Balance": { "flat": 3, "percent": 0.0 },
+          "Movement": { "flat": 5, "percent": 0.0 },
+          "Pace": { "flat": 7, "percent": 0.0 },
+          "Synergy": {
+            "Agility": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Target": {
+        "priority": 50,
+        "description": "Dominant aerial focal point.",
+        "bonuses": {
+          "AerialDuels": { "flat": 7, "percent": 0.0 },
+          "Heading": { "flat": 6, "percent": 0.0 },
+          "Jumping": { "flat": 6, "percent": 0.0 },
+          "Volleys": { "flat": 3, "percent": 0.0 },
+          "Synergy": {
+            "Strength": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      }
+    },
+    "Tactical": {
+      "Cover": {
+        "priority": 60,
+        "description": "Sweeps danger, maintains structure.",
+        "bonuses": {
+          "Awareness": { "flat": 6, "percent": 0.0 },
+          "Discipline": { "flat": 5, "percent": 0.0 },
+          "Interceptions": { "flat": 6, "percent": 0.0 },
+          "Positioning": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "Anticipation": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Destroyer": {
+        "priority": 55,
+        "description": "Breaks up play aggressively.",
+        "bonuses": {
+          "Blocking": { "flat": 5, "percent": 0.0 },
+          "Clearances": { "flat": 5, "percent": 0.0 },
+          "Marking": { "flat": 5, "percent": 0.0 },
+          "Tackling": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "Pressing": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Engine": {
+        "priority": 50,
+        "description": "Sustains team intensity.",
+        "bonuses": {
+          "Intensity": { "flat": 6, "percent": 0.0 },
+          "Pressing": { "flat": 5, "percent": 0.0 },
+          "Stamina": { "flat": 7, "percent": 0.0 },
+          "Versatility": { "flat": 4, "percent": 0.0 },
+          "Synergy": {
+            "WorkRate": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      }
+    },
+    "Technical": {
+      "Dribbler": {
+        "priority": 60,
+        "description": "Beats players with skill.",
+        "bonuses": {
+          "Carries": { "flat": 6, "percent": 0.0 },
+          "FirstTouch": { "flat": 5, "percent": 0.0 },
+          "Skills": { "flat": 6, "percent": 0.0 },
+          "Takeons": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "Agility": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Passer": {
+        "priority": 55,
+        "description": "Accurate, varied distribution.",
+        "bonuses": {
+          "PassAccuracy": { "flat": 6, "percent": 0.0 },
+          "Crossing": { "flat": 4, "percent": 0.0 },
+          "PassRange": { "flat": 5, "percent": 0.0 },
+          "ThroughBalls": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "Vision": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      },
+      "Striker": {
+        "priority": 50,
+        "description": "Clinical finisher.",
+        "bonuses": {
+          "ShortRange": { "flat": 6, "percent": 0.0 },
+          "MidRange": { "flat": 5, "percent": 0.0 },
+          "LongRange": { "flat": 4, "percent": 0.0 },
+          "Penalties": { "flat": 5, "percent": 0.0 },
+          "Synergy": {
+            "OffTheBall": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      }
+    },
+    "Goalkeeper": {
+      "GK": {
+        "priority": 70,
+        "description": "Specialist goalkeeper base.",
+        "bonuses": {
+          "Agility": { "flat": 6, "percent": 0.0 },
+          "Footwork": { "flat": 5, "percent": 0.0 },
+          "Handling": { "flat": 6, "percent": 0.0 },
+          "Reactions": { "flat": 6, "percent": 0.0 },
+          "Synergy": {
+            "AerialDuels": { "flat": 1, "percent": 0.04 }
+          }
+        }
+      }
+    }
+  }
+}
