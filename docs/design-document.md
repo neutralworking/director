@@ -49,3 +49,15 @@ Market
 - League/World Transfer Updates
 - Shortlist Updates
 - Agent Correspondence Summary
+
+Player Profile
+- Overview: distilled and prioritized information from the other panels
+- Scout Report: Player's style and traits
+- Analyst Report: Player's seasonal and career metrics
+- Coach Report: Player's Personality, attitude, tactical fit
+- Medical Report: Player's fitness, condition and injuries
+- Player Liaison Officer: Player's relationships, and happiness
+- Contract: Contract Details, Promises
+- Transfer: Transfer Value, Value History, Interested Clubs
+- History
+

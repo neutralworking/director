@@ -10,7 +10,7 @@ var level = 1
 var background = ""
 
 # --- Core Attributes (1-100)
-var prowess = 50            # Technical mastery
+var technique = 50          # Technical mastery
 var athleticism = 50        # Coordination, agility, reflexes
 var constitution = 50       # Strength, endurance
 var intellect = 50          # Tactical understanding
@@ -18,7 +18,7 @@ var wisdom = 50             # Game awareness
 var charisma = 50           # Leadership & influence
 var temperament = 50        # Mental resilience
 
-# --- Prowess Proficiencies (Technical Skills)
+# --- Technical Proficiencies
 var shooting = 50
 var first_touch = 50
 var dribbling = 50
@@ -61,7 +61,7 @@ var game_management = 50
 # --- Wisdom Proficiencies (Game Awareness)
 var anticipation = 50
 var vision = 50
-var decision_making = 50
+var decisions = 50
 var awareness = 50
 var reactions = 50
 var danger_sense = 50
@@ -85,5 +85,5 @@ var focus = 50
 var pressure_handling = 50
 var mental_resilience = 50
 var consistency = 50
-var clutch_performance = 50
+var concentration = 50
 var emotional_control = 50

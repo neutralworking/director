@@ -1,0 +1,1522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marcus Silva - Player Profile | Director of Football</title>
+  <style>
+    :root {
+  /* Primitive Color Tokens */
+  --color-white: rgba(255, 255, 255, 1);
+  --color-black: rgba(0, 0, 0, 1);
+  --color-cream-50: rgba(252, 252, 249, 1);
+  --color-cream-100: rgba(255, 255, 253, 1);
+  --color-gray-200: rgba(245, 245, 245, 1);
+  --color-gray-300: rgba(167, 169, 169, 1);
+  --color-gray-400: rgba(119, 124, 124, 1);
+  --color-slate-500: rgba(98, 108, 113, 1);
+  --color-brown-600: rgba(94, 82, 64, 1);
+  --color-charcoal-700: rgba(31, 33, 33, 1);
+  --color-charcoal-800: rgba(38, 40, 40, 1);
+  --color-slate-900: rgba(19, 52, 59, 1);
+  --color-teal-300: rgba(50, 184, 198, 1);
+  --color-teal-400: rgba(45, 166, 178, 1);
+  --color-teal-500: rgba(33, 128, 141, 1);
+  --color-teal-600: rgba(29, 116, 128, 1);
+  --color-teal-700: rgba(26, 104, 115, 1);
+  --color-teal-800: rgba(41, 150, 161, 1);
+  --color-red-400: rgba(255, 84, 89, 1);
+  --color-red-500: rgba(192, 21, 47, 1);
+  --color-orange-400: rgba(230, 129, 97, 1);
+  --color-orange-500: rgba(168, 75, 47, 1);
+
+  /* RGB versions for opacity control */
+  --color-brown-600-rgb: 94, 82, 64;
+  --color-teal-500-rgb: 33, 128, 141;
+  --color-slate-900-rgb: 19, 52, 59;
+  --color-slate-500-rgb: 98, 108, 113;
+  --color-red-500-rgb: 192, 21, 47;
+  --color-red-400-rgb: 255, 84, 89;
+  --color-orange-500-rgb: 168, 75, 47;
+  --color-orange-400-rgb: 230, 129, 97;
+
+  /* Background color tokens (Light Mode) */
+  --color-bg-1: rgba(59, 130, 246, 0.08);
+  --color-bg-2: rgba(245, 158, 11, 0.08);
+  --color-bg-3: rgba(34, 197, 94, 0.08);
+  --color-bg-4: rgba(239, 68, 68, 0.08);
+  --color-bg-5: rgba(147, 51, 234, 0.08);
+  --color-bg-6: rgba(249, 115, 22, 0.08);
+  --color-bg-7: rgba(236, 72, 153, 0.08);
+  --color-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* Semantic Color Tokens (Light Mode) */
+  --color-background: var(--color-cream-50);
+  --color-surface: var(--color-cream-100);
+  --color-text: var(--color-slate-900);
+  --color-text-secondary: var(--color-slate-500);
+  --color-primary: var(--color-teal-500);
+  --color-primary-hover: var(--color-teal-600);
+  --color-primary-active: var(--color-teal-700);
+  --color-secondary: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-secondary-hover: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-secondary-active: rgba(var(--color-brown-600-rgb), 0.25);
+  --color-border: rgba(var(--color-brown-600-rgb), 0.2);
+  --color-btn-primary-text: var(--color-cream-50);
+  --color-card-border: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-card-border-inner: rgba(var(--color-brown-600-rgb), 0.12);
+  --color-error: var(--color-red-500);
+  --color-success: var(--color-teal-500);
+  --color-warning: var(--color-orange-500);
+  --color-info: var(--color-slate-500);
+  --color-focus-ring: rgba(var(--color-teal-500-rgb), 0.4);
+  --color-select-caret: rgba(var(--color-slate-900-rgb), 0.8);
+
+  /* Common style patterns */
+  --focus-ring: 0 0 0 3px var(--color-focus-ring);
+  --focus-outline: 2px solid var(--color-primary);
+  --status-bg-opacity: 0.15;
+  --status-border-opacity: 0.25;
+
+  /* RGB versions for opacity control */
+  --color-success-rgb: 33, 128, 141;
+  --color-error-rgb: 192, 21, 47;
+  --color-warning-rgb: 168, 75, 47;
+  --color-info-rgb: 98, 108, 113;
+
+  /* Typography */
+  --font-family-base: "FKGroteskNeue", "Geist", "Inter", -apple-system,
+    BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-family-mono: "Berkeley Mono", ui-monospace, SFMono-Regular, Menlo,
+    Monaco, Consolas, monospace;
+  --font-size-xs: 11px;
+  --font-size-sm: 12px;
+  --font-size-base: 14px;
+  --font-size-md: 14px;
+  --font-size-lg: 16px;
+  --font-size-xl: 18px;
+  --font-size-2xl: 20px;
+  --font-size-3xl: 24px;
+  --font-size-4xl: 30px;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 550;
+  --font-weight-bold: 600;
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --letter-spacing-tight: -0.01em;
+
+  /* Spacing */
+  --space-0: 0;
+  --space-1: 1px;
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-6: 6px;
+  --space-8: 8px;
+  --space-10: 10px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+
+  /* Border Radius */
+  --radius-sm: 6px;
+  --radius-base: 8px;
+  --radius-md: 10px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.04),
+    0 2px 4px -1px rgba(0, 0, 0, 0.02);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.04),
+    0 4px 6px -2px rgba(0, 0, 0, 0.02);
+  --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.15),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.03);
+
+  /* Animation */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --ease-standard: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Layout */
+  --container-sm: 640px;
+  --container-md: 768px;
+  --container-lg: 1024px;
+  --container-xl: 1280px;
+
+  /* Game-specific colors */
+  --game-bg: #0f1419;
+  --game-surface: #1a2028;
+  --game-card: #232c36;
+  --game-accent: #00d9ff;
+  --game-accent-secondary: #00ff88;
+  --game-border: rgba(255, 255, 255, 0.1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray-400-rgb: 119, 124, 124;
+    --color-teal-300-rgb: 50, 184, 198;
+    --color-gray-300-rgb: 167, 169, 169;
+    --color-gray-200-rgb: 245, 245, 245;
+
+    --color-bg-1: rgba(29, 78, 216, 0.15);
+    --color-bg-2: rgba(180, 83, 9, 0.15);
+    --color-bg-3: rgba(21, 128, 61, 0.15);
+    --color-bg-4: rgba(185, 28, 28, 0.15);
+    --color-bg-5: rgba(107, 33, 168, 0.15);
+    --color-bg-6: rgba(194, 65, 12, 0.15);
+    --color-bg-7: rgba(190, 24, 93, 0.15);
+    --color-bg-8: rgba(8, 145, 178, 0.15);
+
+    --color-background: var(--color-charcoal-700);
+    --color-surface: var(--color-charcoal-800);
+    --color-text: var(--color-gray-200);
+    --color-text-secondary: rgba(var(--color-gray-300-rgb), 0.7);
+    --color-primary: var(--color-teal-300);
+    --color-primary-hover: var(--color-teal-400);
+    --color-primary-active: var(--color-teal-800);
+    --color-secondary: rgba(var(--color-gray-400-rgb), 0.15);
+    --color-secondary-hover: rgba(var(--color-gray-400-rgb), 0.25);
+    --color-secondary-active: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-border: rgba(var(--color-gray-400-rgb), 0.3);
+    --color-error: var(--color-red-400);
+    --color-success: var(--color-teal-300);
+    --color-warning: var(--color-orange-400);
+    --color-info: var(--color-gray-300);
+    --color-focus-ring: rgba(var(--color-teal-300-rgb), 0.4);
+    --color-btn-primary-text: var(--color-slate-900);
+    --color-card-border: rgba(var(--color-gray-400-rgb), 0.2);
+    --color-card-border-inner: rgba(var(--color-gray-400-rgb), 0.15);
+    --shadow-inset-sm: inset 0 1px 0 rgba(255, 255, 255, 0.1),
+      inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+    --color-select-caret: rgba(var(--color-gray-200-rgb), 0.8);
+
+    --color-success-rgb: var(--color-teal-300-rgb);
+    --color-error-rgb: var(--color-red-400-rgb);
+    --color-warning-rgb: var(--color-orange-400-rgb);
+    --color-info-rgb: var(--color-gray-300-rgb);
+  }
+}
+
+@font-face {
+  font-family: 'FKGroteskNeue';
+  src: url('https://r2cdn.perplexity.ai/fonts/FKGroteskNeue.woff2')
+    format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-base);
+  background: var(--game-bg);
+  color: var(--color-text);
+  min-height: 100vh;
+  line-height: var(--line-height-normal);
+}
+
+.app-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Player Header */
+.player-header {
+  background: var(--game-surface);
+  border-bottom: 2px solid var(--game-border);
+  padding: var(--space-20);
+}
+
+.player-header-content {
+  display: flex;
+  align-items: center;
+  gap: var(--space-16);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.player-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--game-accent) 0%, var(--game-accent-secondary) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--game-bg);
+  flex-shrink: 0;
+}
+
+.player-info {
+  flex: 1;
+}
+
+.player-name {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--space-4);
+  color: var(--color-text);
+}
+
+.player-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-12);
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.player-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.player-rating {
+  background: var(--game-accent);
+  color: var(--game-bg);
+  padding: var(--space-8) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+/* Tab Navigation */
+.tab-nav {
+  background: var(--game-surface);
+  border-bottom: 2px solid var(--game-border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.tab-nav::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-list {
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-12) var(--space-16);
+  min-width: min-content;
+}
+
+.tab-button {
+  background: transparent;
+  border: none;
+  color: var(--color-text-secondary);
+  padding: var(--space-10) var(--space-16);
+  border-radius: var(--radius-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-standard);
+  white-space: nowrap;
+  font-family: var(--font-family-base);
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--color-text);
+}
+
+.tab-button.active {
+  background: var(--game-accent);
+  color: var(--game-bg);
+}
+
+/* Content Area */
+.content-area {
+  padding: var(--space-20);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.panel {
+  display: none;
+}
+
+.panel.active {
+  display: block;
+}
+
+/* Card Styles */
+.card {
+  background: var(--game-card);
+  border: 1px solid var(--game-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-20);
+  margin-bottom: var(--space-16);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-16);
+  color: var(--game-accent);
+}
+
+.card-section {
+  margin-bottom: var(--space-20);
+}
+
+.card-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-12);
+  color: var(--color-text);
+}
+
+/* Overview Specific */
+.overview-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-16);
+}
+
+@media (min-width: 768px) {
+  .overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-highlight {
+  background: var(--color-bg-1);
+  padding: var(--space-16);
+  border-radius: var(--radius-base);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.stat-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: var(--space-4);
+}
+
+.stat-value {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+}
+
+.strengths-list {
+  list-style: none;
+}
+
+.strengths-list li {
+  padding: var(--space-8) 0;
+  padding-left: var(--space-20);
+  position: relative;
+  color: var(--color-text);
+}
+
+.strengths-list li:before {
+  content: "⚽";
+  position: absolute;
+  left: 0;
+}
+
+/* Traits & Lists */
+.trait-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+}
+
+.trait-badge {
+  background: var(--color-bg-3);
+  color: var(--color-text);
+  padding: var(--space-6) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.info-list {
+  list-style: none;
+}
+
+.info-list li {
+  padding: var(--space-8) 0;
+  border-bottom: 1px solid var(--game-border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info-list li:last-child {
+  border-bottom: none;
+}
+
+.info-label {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.info-value {
+  color: var(--color-text);
+  font-weight: var(--font-weight-medium);
+}
+
+/* Progress Bars */
+.metric-bar {
+  margin-bottom: var(--space-12);
+}
+
+.metric-label {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+}
+
+.metric-name {
+  color: var(--color-text-secondary);
+}
+
+.metric-value {
+  color: var(--color-text);
+  font-weight: var(--font-weight-semibold);
+}
+
+.progress-bar {
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--game-accent) 0%, var(--game-accent-secondary) 100%);
+  border-radius: var(--radius-full);
+  transition: width var(--duration-normal) var(--ease-standard);
+}
+
+/* Tables */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.data-table th {
+  text-align: left;
+  padding: var(--space-12);
+  border-bottom: 2px solid var(--game-border);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-semibold);
+  text-transform: uppercase;
+  font-size: var(--font-size-xs);
+  letter-spacing: 0.5px;
+}
+
+.data-table td {
+  padding: var(--space-12);
+  border-bottom: 1px solid var(--game-border);
+  color: var(--color-text);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.status-badge.success {
+  background: rgba(34, 197, 94, 0.15);
+  color: #00ff88;
+  border: 1px solid rgba(34, 197, 94, 0.3);
+}
+
+.status-badge.warning {
+  background: rgba(245, 158, 11, 0.15);
+  color: #ffa500;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.status-badge.info {
+  background: rgba(59, 130, 246, 0.15);
+  color: #00d9ff;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.status-badge.neutral {
+  background: rgba(167, 169, 169, 0.15);
+  color: var(--color-gray-300);
+  border: 1px solid rgba(167, 169, 169, 0.3);
+}
+
+/* Rating Display */
+.rating-display {
+  display: flex;
+  align-items: center;
+  gap: var(--space-8);
+  margin-bottom: var(--space-16);
+}
+
+.rating-number {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--game-accent);
+}
+
+.rating-max {
+  font-size: var(--font-size-xl);
+  color: var(--color-text-secondary);
+}
+
+/* Happiness/Relationship Indicators */
+.relationship-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-12);
+}
+
+@media (min-width: 640px) {
+  .relationship-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.relationship-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--game-border);
+}
+
+.relationship-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.relationship-value {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--game-accent-secondary);
+}
+
+/* Conversation Items */
+.conversation-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: var(--space-12);
+  border-radius: var(--radius-base);
+  border-left: 3px solid var(--game-accent);
+  margin-bottom: var(--space-12);
+}
+
+.conversation-date {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-4);
+}
+
+.conversation-topic {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.conversation-outcome {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Promise Items */
+.promise-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-12);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-base);
+  margin-bottom: var(--space-8);
+}
+
+.promise-text {
+  color: var(--color-text);
+}
+
+/* Club Interest Items */
+.club-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-12);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-base);
+  border: 1px solid var(--game-border);
+  margin-bottom: var(--space-8);
+}
+
+.club-name {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text);
+}
+
+.interest-badge {
+  padding: var(--space-4) var(--space-12);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+
+.interest-high {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ff5555;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.interest-medium {
+  background: rgba(245, 158, 11, 0.15);
+  color: #ffa500;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.interest-low {
+  background: rgba(167, 169, 169, 0.15);
+  color: var(--color-gray-300);
+  border: 1px solid rgba(167, 169, 169, 0.3);
+}
+
+/* Timeline */
+.timeline-item {
+  padding: var(--space-16);
+  border-left: 3px solid var(--game-accent);
+  margin-bottom: var(--space-16);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-base);
+}
+
+.timeline-year {
+  font-size: var(--font-size-sm);
+  color: var(--game-accent);
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-4);
+}
+
+.timeline-club {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+.timeline-stats {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* Achievement List */
+.achievement-list {
+  list-style: none;
+}
+
+.achievement-item {
+  padding: var(--space-12);
+  padding-left: var(--space-32);
+  position: relative;
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-base);
+}
+
+.achievement-item:before {
+  content: "🏆";
+  position: absolute;
+  left: var(--space-12);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .player-header {
+    padding: var(--space-16);
+  }
+  
+  .player-photo {
+    width: 60px;
+    height: 60px;
+    font-size: var(--font-size-2xl);
+  }
+  
+  .player-name {
+    font-size: var(--font-size-xl);
+  }
+  
+  .player-rating {
+    font-size: var(--font-size-lg);
+    padding: var(--space-6) var(--space-12);
+  }
+  
+  .content-area {
+    padding: var(--space-12);
+  }
+  
+  .card {
+    padding: var(--space-16);
+  }
+}
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <!-- Player Header -->
+    <header class="player-header">
+      <div class="player-header-content">
+        <div class="player-photo">MS</div>
+        <div class="player-info">
+          <h1 class="player-name">Marcus Silva</h1>
+          <div class="player-meta">
+            <span class="player-meta-item">ST, CF, LW</span>
+            <span class="player-meta-item">26 years old</span>
+            <span class="player-meta-item">🇧🇷 Brazil</span>
+          </div>
+        </div>
+        <div class="player-rating">84</div>
+      </div>
+    </header>
+
+    <!-- Tab Navigation -->
+    <nav class="tab-nav">
+      <div class="tab-list">
+        <button class="tab-button active" data-tab="overview">Overview</button>
+        <button class="tab-button" data-tab="scout">Scout Report</button>
+        <button class="tab-button" data-tab="analyst">Analyst Report</button>
+        <button class="tab-button" data-tab="coach">Coach Report</button>
+        <button class="tab-button" data-tab="medical">Medical</button>
+        <button class="tab-button" data-tab="plo">PLO Report</button>
+        <button class="tab-button" data-tab="contract">Contract</button>
+        <button class="tab-button" data-tab="transfer">Transfer</button>
+        <button class="tab-button" data-tab="history">History</button>
+      </div>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="content-area">
+      <!-- Overview Panel -->
+      <div id="overview" class="panel active">
+        <div class="overview-grid">
+          <div class="stat-highlight">
+            <div class="stat-label">Current Form</div>
+            <div class="stat-value">Excellent (9/10)</div>
+          </div>
+          <div class="stat-highlight">
+            <div class="stat-label">Market Value</div>
+            <div class="stat-value">£45.5M</div>
+          </div>
+          <div class="stat-highlight">
+            <div class="stat-label">Contract Status</div>
+            <div class="stat-value">Secure - 3 years</div>
+          </div>
+          <div class="stat-highlight">
+            <div class="stat-label">Injury Status</div>
+            <div class="stat-value">Fully Fit</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Key Strengths</h2>
+          <ul class="strengths-list">
+            <li>Elite finishing ability</li>
+            <li>Excellent movement in the box</li>
+            <li>Strong aerial presence</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Season Statistics</h2>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Games Played</span>
+              <span class="metric-value">28</span>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Goals</span>
+              <span class="metric-value">21</span>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Assists</span>
+              <span class="metric-value">6</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scout Report Panel -->
+      <div id="scout" class="panel">
+        <div class="card">
+          <h2 class="card-title">Playing Style</h2>
+          <p style="color: var(--color-text); line-height: 1.6;">A clinical striker who thrives in the penalty area. Silva is a poacher with excellent positioning and finishing. He's most dangerous when receiving through balls or crosses, using his pace and movement to create separation from defenders.</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Key Traits</h2>
+          <div class="trait-list">
+            <span class="trait-badge">Clinical Finisher</span>
+            <span class="trait-badge">Poacher</span>
+            <span class="trait-badge">Aerial Threat</span>
+            <span class="trait-badge">Speed Demon</span>
+            <span class="trait-badge">One-on-One Specialist</span>
+            <span class="trait-badge">Penalty Expert</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Strengths &amp; Weaknesses</h2>
+          <div class="card-section">
+            <h3 class="section-title">Strengths</h3>
+            <ul class="info-list">
+              <li><span>World-class finishing with both feet</span></li>
+              <li><span>Exceptional positioning and movement</span></li>
+              <li><span>Strong in the air despite average height</span></li>
+              <li><span>Clinical in one-on-one situations</span></li>
+              <li><span>High work rate and pressing</span></li>
+            </ul>
+          </div>
+          <div class="card-section">
+            <h3 class="section-title">Weaknesses</h3>
+            <ul class="info-list">
+              <li><span>Limited playmaking ability</span></li>
+              <li><span>Can be isolated if service is poor</span></li>
+              <li><span>Average hold-up play</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Scout Assessment</h2>
+          <div class="rating-display">
+            <span class="rating-number">8.5</span>
+            <span class="rating-max">/10</span>
+          </div>
+          <p style="color: var(--color-text); line-height: 1.6;">Silva is a proven goalscorer at the highest level. While he won't drop deep to create, his movement and finishing make him lethal in the final third. Best suited to a system that creates chances regularly.</p>
+        </div>
+      </div>
+
+      <!-- Analyst Report Panel -->
+      <div id="analyst" class="panel">
+        <div class="card">
+          <h2 class="card-title">Current Season (2024/25)</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Games</th>
+                <th>Goals</th>
+                <th>Assists</th>
+                <th>Pass %</th>
+                <th>Shots/Game</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>28</td>
+                <td>21</td>
+                <td>6</td>
+                <td>78%</td>
+                <td>4.2</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Career Statistics</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Total Games</span>
+              <span class="info-value">312</span>
+            </li>
+            <li>
+              <span class="info-label">Total Goals</span>
+              <span class="info-value">189</span>
+            </li>
+            <li>
+              <span class="info-label">Total Assists</span>
+              <span class="info-value">47</span>
+            </li>
+            <li>
+              <span class="info-label">Goals per Game</span>
+              <span class="info-value">0.61</span>
+            </li>
+          </ul>
+          <div style="margin-top: var(--space-12);">
+            <span class="status-badge success">Improving</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Season-by-Season</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Season</th>
+                <th>Games</th>
+                <th>Goals</th>
+                <th>Assists</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>2024/25</td>
+                <td>28</td>
+                <td>21</td>
+                <td>6</td>
+              </tr>
+              <tr>
+                <td>2023/24</td>
+                <td>38</td>
+                <td>24</td>
+                <td>8</td>
+              </tr>
+              <tr>
+                <td>2022/23</td>
+                <td>35</td>
+                <td>19</td>
+                <td>5</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Key Metrics</h2>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Finishing</span>
+              <span class="metric-value">92/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 92%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Positioning</span>
+              <span class="metric-value">88/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 88%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Pace</span>
+              <span class="metric-value">85/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Stamina</span>
+              <span class="metric-value">83/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 83%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Heading</span>
+              <span class="metric-value">81/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 81%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Strength</span>
+              <span class="metric-value">78/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Dribbling</span>
+              <span class="metric-value">76/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 76%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Passing</span>
+              <span class="metric-value">74/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 74%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Coach Report Panel -->
+      <div id="coach" class="panel">
+        <div class="card">
+          <h2 class="card-title">Personality &amp; Attributes</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Personality Type</span>
+              <span class="info-value">Professional</span>
+            </li>
+            <li>
+              <span class="info-label">Work Rate</span>
+              <span class="info-value">8.5/10</span>
+            </li>
+            <li>
+              <span class="info-label">Leadership</span>
+              <span class="info-value">7/10</span>
+            </li>
+            <li>
+              <span class="info-label">Morale</span>
+              <span class="info-value">High</span>
+            </li>
+            <li>
+              <span class="info-label">Attitude</span>
+              <span class="info-value">Model Professional</span>
+            </li>
+            <li>
+              <span class="info-label">Training Performance</span>
+              <span class="info-value">8/10</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Tactical Fit</h2>
+          <div class="status-badge success" style="margin-bottom: var(--space-12);">Excellent Match</div>
+          <p style="color: var(--color-text); line-height: 1.6;">Perfect for counter-attacking system</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Coach's Recommendation</h2>
+          <p style="color: var(--color-text); line-height: 1.6;">Silva has been exemplary both on and off the pitch. His professionalism sets a great example for younger players, and his work rate in training matches his performances on matchday. He fits our tactical approach perfectly and I'd build the attack around him.</p>
+        </div>
+      </div>
+
+      <!-- Medical Report Panel -->
+      <div id="medical" class="panel">
+        <div class="card">
+          <h2 class="card-title">Current Status</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Fitness Level</span>
+              <span class="info-value">95%</span>
+            </li>
+            <li>
+              <span class="info-label">Condition</span>
+              <span class="info-value">Fresh</span>
+            </li>
+            <li>
+              <span class="info-label">Injury Proneness</span>
+              <span class="info-value">Low</span>
+            </li>
+          </ul>
+          <div style="margin-top: var(--space-16);">
+            <div class="metric-bar">
+              <div class="metric-label">
+                <span class="metric-name">Fitness</span>
+                <span class="metric-value">95%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 95%;"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Current Injuries</h2>
+          <p style="color: var(--color-text);">No current injuries - Fully fit for selection</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Injury History</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Injury Type</th>
+                <th>Days Out</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Aug 2024</td>
+                <td>Hamstring Strain</td>
+                <td>14</td>
+              </tr>
+              <tr>
+                <td>Feb 2024</td>
+                <td>Ankle Sprain</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Sep 2023</td>
+                <td>Groin Strain</td>
+                <td>21</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Physical Attributes</h2>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Stamina</span>
+              <span class="metric-value">83/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 83%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Speed</span>
+              <span class="metric-value">85/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Agility</span>
+              <span class="metric-value">80/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+          <div class="metric-bar">
+            <div class="metric-label">
+              <span class="metric-name">Strength</span>
+              <span class="metric-value">78/100</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 78%;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- PLO Report Panel -->
+      <div id="plo" class="panel">
+        <div class="card">
+          <h2 class="card-title">Overall Happiness</h2>
+          <div class="rating-display">
+            <span class="rating-number">85</span>
+            <span class="rating-max">/100</span>
+            <span style="font-size: var(--font-size-4xl); margin-left: var(--space-8);">😊</span>
+          </div>
+          <div style="margin-top: var(--space-12);">
+            <span class="status-badge success">Stable Morale</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Relationships</h2>
+          <div class="relationship-grid">
+            <div class="relationship-item">
+              <div class="relationship-label">Manager</div>
+              <div class="relationship-value">9/10</div>
+            </div>
+            <div class="relationship-item">
+              <div class="relationship-label">Teammates</div>
+              <div class="relationship-value">8/10</div>
+            </div>
+            <div class="relationship-item">
+              <div class="relationship-label">Fans</div>
+              <div class="relationship-value">9/10</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Concerns &amp; Issues</h2>
+          <p style="color: var(--color-text);">No current concerns - Player is satisfied with all aspects of club life</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Recent Conversations</h2>
+          <div class="conversation-item">
+            <div class="conversation-date">Nov 5, 2025</div>
+            <div class="conversation-topic">Discussed playing time and role in team</div>
+            <div class="conversation-outcome">Positive - Player satisfied with current situation</div>
+          </div>
+          <div class="conversation-item">
+            <div class="conversation-date">Oct 20, 2025</div>
+            <div class="conversation-topic">Contract extension interest</div>
+            <div class="conversation-outcome">Positive - Open to discussions</div>
+          </div>
+          <div class="conversation-item">
+            <div class="conversation-date">Oct 1, 2025</div>
+            <div class="conversation-topic">Champions League ambitions</div>
+            <div class="conversation-outcome">Neutral - Wants to see team progress</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contract Panel -->
+      <div id="contract" class="panel">
+        <div class="card">
+          <h2 class="card-title">Contract Details</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Contract Period</span>
+              <span class="info-value">Jul 1, 2023 - Jun 30, 2027</span>
+            </li>
+            <li>
+              <span class="info-label">Weekly Wage</span>
+              <span class="info-value">£125,000</span>
+            </li>
+            <li>
+              <span class="info-label">Time Remaining</span>
+              <span class="info-value">3 years</span>
+            </li>
+            <li>
+              <span class="info-label">Release Clause</span>
+              <span class="info-value">£65M</span>
+            </li>
+            <li>
+              <span class="info-label">Contract Status</span>
+              <span class="info-value">Satisfied</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Promises</h2>
+          <div class="promise-item">
+            <span class="promise-text">Regular first team football</span>
+            <span class="status-badge success">Kept</span>
+          </div>
+          <div class="promise-item">
+            <span class="promise-text">Champions League qualification</span>
+            <span class="status-badge warning">In Progress</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Bonuses &amp; Incentives</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Per Goal</span>
+              <span class="info-value">£10,000</span>
+            </li>
+            <li>
+              <span class="info-label">Champions League Qualification</span>
+              <span class="info-value">£50,000</span>
+            </li>
+            <li>
+              <span class="info-label">League Title Win</span>
+              <span class="info-value">£100,000</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Transfer Panel -->
+      <div id="transfer" class="panel">
+        <div class="card">
+          <h2 class="card-title">Market Value</h2>
+          <div class="rating-display">
+            <span class="rating-number">£45.5M</span>
+          </div>
+          <div style="margin-top: var(--space-12);">
+            <span class="status-badge success">Rising</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Value History</h2>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Month</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sep 2025</td>
+                <td>£45.5M</td>
+              </tr>
+              <tr>
+                <td>Jul 2025</td>
+                <td>£43.5M</td>
+              </tr>
+              <tr>
+                <td>May 2025</td>
+                <td>£42.0M</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Transfer Status</h2>
+          <div class="status-badge info">Not for Sale</div>
+          <p style="color: var(--color-text); margin-top: var(--space-12);">Club considers player essential to squad</p>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Interested Clubs</h2>
+          <div class="club-item">
+            <span class="club-name">Real Madrid</span>
+            <span class="interest-badge interest-high">High Interest</span>
+          </div>
+          <div class="club-item">
+            <span class="club-name">Bayern Munich</span>
+            <span class="interest-badge interest-high">High Interest</span>
+          </div>
+          <div class="club-item">
+            <span class="club-name">Manchester City</span>
+            <span class="interest-badge interest-medium">Medium Interest</span>
+          </div>
+          <div class="club-item">
+            <span class="club-name">Paris SG</span>
+            <span class="interest-badge interest-medium">Medium Interest</span>
+          </div>
+          <div class="club-item">
+            <span class="club-name">Juventus</span>
+            <span class="interest-badge interest-low">Low Interest</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Recent Bids</h2>
+          <p style="color: var(--color-text);">No recent bids received</p>
+        </div>
+      </div>
+
+      <!-- History Panel -->
+      <div id="history" class="panel">
+        <div class="card">
+          <h2 class="card-title">Career Timeline</h2>
+          <div class="timeline-item">
+            <div class="timeline-year">2023 - Present</div>
+            <div class="timeline-club">Current Club</div>
+            <div class="timeline-stats">89 appearances, 61 goals</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2020 - 2023</div>
+            <div class="timeline-club">FC Porto</div>
+            <div class="timeline-stats">124 appearances, 78 goals</div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018 - 2020</div>
+            <div class="timeline-club">Santos FC</div>
+            <div class="timeline-stats">99 appearances, 50 goals</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Achievements &amp; Honors</h2>
+          <ul class="achievement-list">
+            <li class="achievement-item">Premier League Top Scorer 2023/24</li>
+            <li class="achievement-item">UEFA Champions League Quarter-finalist 2024</li>
+            <li class="achievement-item">Copa America Runner-up 2024</li>
+            <li class="achievement-item">Brazilian Série A Champion 2019</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">International Career</h2>
+          <ul class="info-list">
+            <li>
+              <span class="info-label">Country</span>
+              <span class="info-value">🇧🇷 Brazil</span>
+            </li>
+            <li>
+              <span class="info-label">Caps</span>
+              <span class="info-value">34</span>
+            </li>
+            <li>
+              <span class="info-label">International Goals</span>
+              <span class="info-value">18</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2 class="card-title">Career Milestones</h2>
+          <ul class="achievement-list">
+            <li class="achievement-item">200 Career Goals - October 2025</li>
+            <li class="achievement-item">100 Club Goals - September 2024</li>
+            <li class="achievement-item">50 International Caps (projected 2026)</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    // Tab switching functionality
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const panels = document.querySelectorAll('.panel');
+
+    tabButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        const tabName = button.getAttribute('data-tab');
+        
+        // Remove active class from all buttons and panels
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        panels.forEach(panel => panel.classList.remove('active'));
+        
+        // Add active class to clicked button and corresponding panel
+        button.classList.add('active');
+        document.getElementById(tabName).classList.add('active');
+        
+        // Scroll to top of content area on mobile
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    });
+  </script>
+</body>
+</html>

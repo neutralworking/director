@@ -1,0 +1,7 @@
+```
+Node (PlayerProfile script attached)
+└── VBoxContainer
+    ├── Header (VBoxContainer) - Min Height: 80
+    ├── TabBar (HBoxContainer) - Min Height: 50
+    └── PanelContent (VBoxContainer) - Expand Fill
+```
