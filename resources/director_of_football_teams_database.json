@@ -1,0 +1,2622 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_teams": 92,
+    "total_leagues": 4,
+    "creation_date": "2025",
+    "notes": "Fictional football world inspired by English league structure. Features 92 professional clubs across 4 tiers with detailed characteristics, playing styles, and club legends."
+  },
+  "playing_style_definitions": {
+    "possession": "Team prioritizes keeping the ball with short passing",
+    "tiki_taka": "Extreme possession with intricate passing triangles",
+    "high_press": "Aggressive pressing high up the pitch",
+    "counter_press": "Immediate pressing after losing possession (gegenpressing)",
+    "counter_attack": "Defend deep and break at speed",
+    "direct": "Quick, vertical play with fewer passes",
+    "long_ball": "Route one football with aerial emphasis",
+    "physical": "Emphasis on physicality and set pieces",
+    "technical": "Focus on skilled, technical players",
+    "attacking": "Offensive-minded approach",
+    "defensive_solid": "Organized, compact defending",
+    "wing_play": "Wide play and crossing emphasis",
+    "fast_tempo": "High-energy, quick transitions",
+    "high_intensity": "Relentless energy and running",
+    "set_pieces": "Strong focus on dead-ball situations",
+    "youth_development": "Philosophy of developing young players",
+    "data_driven": "Analytics-based tactical approach",
+    "park_bus": "Ultra-defensive low block",
+    "sustainable": "Eco-conscious approach (unique identifier)",
+    "aggressive": "Combative, physical style"
+  },
+  "leagues": [
+    {
+      "league_id": 1,
+      "league_name": "Premier Division",
+      "tier": 1,
+      "teams": [
+        {
+          "team_id": 1,
+          "name": "Metropolitan Kings",
+          "region": "Greater London",
+          "stature": "elite",
+          "global_reputation": 95,
+          "financial_power": 98,
+          "ownership_type": "foreign_billionaire",
+          "supporter_base": "global",
+          "supporter_loyalty": 85,
+          "supporter_patience": 40,
+          "supporter_expectation": 95,
+          "continental_campaigns": 48,
+          "stadium_capacity": 60000,
+          "training_facilities": 20,
+          "youth_facilities": 20,
+          "ambition": "win_everything",
+          "playing_styles": [
+            "possession",
+            "high_press",
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "Marcus Thornfield",
+            "position": "Striker",
+            "years_active": "2008-2022",
+            "bio": "The club's all-time leading scorer with 312 goals. A clinical finisher who defined an era of dominance, winning 6 league titles and 2 continental championships. His bicycle kick in the 2015 final is considered one of the greatest goals ever scored."
+          }
+        },
+        {
+          "team_id": 2,
+          "name": "North Capital Athletic",
+          "region": "Greater London",
+          "stature": "elite",
+          "global_reputation": 92,
+          "financial_power": 90,
+          "ownership_type": "american_consortium",
+          "supporter_base": "global",
+          "supporter_loyalty": 88,
+          "supporter_patience": 45,
+          "supporter_expectation": 90,
+          "continental_campaigns": 42,
+          "stadium_capacity": 58000,
+          "training_facilities": 19,
+          "youth_facilities": 18,
+          "ambition": "challenge_for_titles",
+          "playing_styles": [
+            "tiki_taka",
+            "technical",
+            "possession"
+          ],
+          "club_legend": {
+            "name": "Alessandro Di Marco",
+            "position": "Attacking Midfielder",
+            "years_active": "2002-2016",
+            "bio": "A magician with the ball at his feet, Di Marco orchestrated the club's most successful period with sublime passing and vision. Won 4 league titles and holds the record for most assists in a single season with 28. His no-look passes became legendary."
+          }
+        },
+        {
+          "team_id": 3,
+          "name": "Northern Industrial FC",
+          "region": "North West",
+          "stature": "elite",
+          "global_reputation": 94,
+          "financial_power": 95,
+          "ownership_type": "middle_eastern_investment",
+          "supporter_base": "global",
+          "supporter_loyalty": 82,
+          "supporter_patience": 35,
+          "supporter_expectation": 95,
+          "continental_campaigns": 38,
+          "stadium_capacity": 55000,
+          "training_facilities": 20,
+          "youth_facilities": 19,
+          "ambition": "win_everything",
+          "playing_styles": [
+            "possession",
+            "high_press",
+            "fast_tempo"
+          ],
+          "club_legend": {
+            "name": "Vincent Roussel",
+            "position": "Central Midfielder",
+            "years_active": "2011-2024",
+            "bio": "Captain for 9 seasons, the midfield general controlled games with his intelligence and range of passing. Led the team to 7 league titles and 3 continental cups. Known for his leadership and ability to dictate tempo from deep positions."
+          }
+        },
+        {
+          "team_id": 4,
+          "name": "Docklands United",
+          "region": "North West",
+          "stature": "elite",
+          "global_reputation": 93,
+          "financial_power": 88,
+          "ownership_type": "american_consortium",
+          "supporter_base": "global",
+          "supporter_loyalty": 95,
+          "supporter_patience": 50,
+          "supporter_expectation": 90,
+          "continental_campaigns": 52,
+          "stadium_capacity": 54000,
+          "training_facilities": 18,
+          "youth_facilities": 17,
+          "ambition": "challenge_for_titles",
+          "playing_styles": [
+            "counter_press",
+            "high_intensity",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Kenneth Morrison",
+            "position": "Defender",
+            "years_active": "1978-1991",
+            "bio": "A colossus at the back who captained the team through their most successful continental era. Winner of 5 league titles and 3 European cups, Morrison was known for his composure under pressure and ability to organize the defense. Never received a red card in 512 appearances."
+          }
+        },
+        {
+          "team_id": 5,
+          "name": "Royal Blues",
+          "region": "Greater London",
+          "stature": "elite",
+          "global_reputation": 91,
+          "financial_power": 92,
+          "ownership_type": "foreign_billionaire",
+          "supporter_base": "international",
+          "supporter_loyalty": 75,
+          "supporter_patience": 30,
+          "supporter_expectation": 92,
+          "continental_campaigns": 35,
+          "stadium_capacity": 40000,
+          "training_facilities": 19,
+          "youth_facilities": 18,
+          "ambition": "challenge_for_titles",
+          "playing_styles": [
+            "counter_attack",
+            "defensive_solid",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Frank Pemberton",
+            "position": "Midfielder",
+            "years_active": "1996-2014",
+            "bio": "The heartbeat of the team for nearly two decades. A box-to-box midfielder with exceptional stamina and goal-scoring ability, scoring 211 goals from midfield. Won 5 league titles and captained the team to their first continental triumph in 2012."
+          }
+        },
+        {
+          "team_id": 6,
+          "name": "Midland Lions",
+          "region": "West Midlands",
+          "stature": "established",
+          "global_reputation": 75,
+          "financial_power": 78,
+          "ownership_type": "foreign_billionaire",
+          "supporter_base": "national",
+          "supporter_loyalty": 88,
+          "supporter_patience": 60,
+          "supporter_expectation": 70,
+          "continental_campaigns": 12,
+          "stadium_capacity": 42000,
+          "training_facilities": 16,
+          "youth_facilities": 15,
+          "ambition": "european_qualification",
+          "playing_styles": [
+            "attacking",
+            "wing_play",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Dwight Collymore",
+            "position": "Striker",
+            "years_active": "1988-2003",
+            "bio": "Prolific striker who scored 218 goals for the club across 15 seasons. His pace and finishing ability made him feared throughout the league. Led the team to their only league title in 1994 and remains beloved for his loyalty during difficult years in the lower divisions."
+          }
+        },
+        {
+          "team_id": 7,
+          "name": "White Hart Athletic",
+          "region": "Greater London",
+          "stature": "established",
+          "global_reputation": 85,
+          "financial_power": 82,
+          "ownership_type": "domestic_businessman",
+          "supporter_base": "international",
+          "supporter_loyalty": 90,
+          "supporter_patience": 55,
+          "supporter_expectation": 80,
+          "continental_campaigns": 28,
+          "stadium_capacity": 62000,
+          "training_facilities": 19,
+          "youth_facilities": 17,
+          "ambition": "challenge_for_titles",
+          "playing_styles": [
+            "attacking",
+            "counter_attack",
+            "wing_play"
+          ],
+          "club_legend": {
+            "name": "James Sterling",
+            "position": "Forward",
+            "years_active": "1989-2001",
+            "bio": "Electric winger-turned-striker who terrorized defenses with his pace and dribbling. Scored 176 goals and provided countless assists. His last-minute winner in the 1997 cup final is etched into club folklore. Known for his spectacular solo goals."
+          }
+        },
+        {
+          "team_id": 8,
+          "name": "Tyneside Giants",
+          "region": "North East",
+          "stature": "established",
+          "global_reputation": 78,
+          "financial_power": 85,
+          "ownership_type": "middle_eastern_investment",
+          "supporter_base": "national",
+          "supporter_loyalty": 98,
+          "supporter_patience": 70,
+          "supporter_expectation": 75,
+          "continental_campaigns": 18,
+          "stadium_capacity": 52000,
+          "training_facilities": 17,
+          "youth_facilities": 16,
+          "ambition": "european_qualification",
+          "playing_styles": [
+            "direct",
+            "physical",
+            "counter_attack"
+          ],
+          "club_legend": {
+            "name": "Alan Patterson",
+            "position": "Striker",
+            "years_active": "1993-2006",
+            "bio": "A local hero who scored 206 goals for his hometown club. His partnership with strike partner Jimmy Cole is legendary. Despite numerous offers from bigger clubs, Patterson stayed loyal and led the team to consecutive top-three finishes in the late 1990s."
+          }
+        },
+        {
+          "team_id": 9,
+          "name": "Eastern Hammers",
+          "region": "Greater London",
+          "stature": "established",
+          "global_reputation": 70,
+          "financial_power": 65,
+          "ownership_type": "domestic_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 92,
+          "supporter_patience": 65,
+          "supporter_expectation": 60,
+          "continental_campaigns": 6,
+          "stadium_capacity": 60000,
+          "training_facilities": 15,
+          "youth_facilities": 14,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct",
+            "physical",
+            "long_ball"
+          ],
+          "club_legend": {
+            "name": "Bobby Fletcher",
+            "position": "Midfielder",
+            "years_active": "1958-1973",
+            "bio": "Played 647 games for the club, a record that still stands. Won the league title in 1968 and led the team to continental glory in 1970. His vision and passing ability were ahead of his time, and he remains the club's greatest ever player."
+          }
+        },
+        {
+          "team_id": 10,
+          "name": "Coastal Seagulls",
+          "region": "South East",
+          "stature": "emerging",
+          "global_reputation": 68,
+          "financial_power": 62,
+          "ownership_type": "foreign_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 80,
+          "supporter_patience": 75,
+          "supporter_expectation": 55,
+          "continental_campaigns": 4,
+          "stadium_capacity": 31000,
+          "training_facilities": 16,
+          "youth_facilities": 16,
+          "ambition": "european_qualification",
+          "playing_styles": [
+            "possession",
+            "technical",
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "Lewis Connolly",
+            "position": "Midfielder",
+            "years_active": "2010-2024",
+            "bio": "Guided the club from the third tier to the top division with his technical brilliance. Scored 89 goals from midfield and captained the team for 8 seasons. His loyalty to the club during their rise has made him an icon among the fanbase."
+          }
+        },
+        {
+          "team_id": 11,
+          "name": "West Country Wanderers",
+          "region": "West Midlands",
+          "stature": "established",
+          "global_reputation": 68,
+          "financial_power": 70,
+          "ownership_type": "chinese_investment",
+          "supporter_base": "regional",
+          "supporter_loyalty": 85,
+          "supporter_patience": 70,
+          "supporter_expectation": 58,
+          "continental_campaigns": 8,
+          "stadium_capacity": 32000,
+          "training_facilities": 15,
+          "youth_facilities": 14,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "counter_attack",
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Steve Griffiths",
+            "position": "Striker",
+            "years_active": "1986-2000",
+            "bio": "The club's record goalscorer with 306 goals. A powerful target man who was nearly unstoppable in his prime. Led the team to the league title in 1989 and top-flight stability throughout the 1990s with his consistent goal-scoring."
+          }
+        },
+        {
+          "team_id": 12,
+          "name": "Thames Cottagers",
+          "region": "Greater London",
+          "stature": "yo_yo_club",
+          "global_reputation": 62,
+          "financial_power": 68,
+          "ownership_type": "american_billionaire",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 70,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 25000,
+          "training_facilities": 14,
+          "youth_facilities": 14,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid",
+            "counter_attack"
+          ],
+          "club_legend": {
+            "name": "Johnny Hayes",
+            "position": "Striker",
+            "years_active": "1999-2011",
+            "bio": "A cult hero who scored 178 goals despite the club's yo-yo existence between divisions. His hat-trick in the playoff final in 2003 secured promotion and remains the club's most celebrated moment. Known for spectacular volleys and fierce loyalty."
+          }
+        },
+        {
+          "team_id": 13,
+          "name": "South London Eagles",
+          "region": "Greater London",
+          "stature": "yo_yo_club",
+          "global_reputation": 60,
+          "financial_power": 55,
+          "ownership_type": "consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 75,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 26000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "counter_attack",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Geoff Richards",
+            "position": "Winger",
+            "years_active": "1968-1982",
+            "bio": "Dazzling winger who made 548 appearances and scored 128 goals. His pace and trickery made him a nightmare for defenders. Captained the team to their highest-ever league finish of 3rd place in 1973 and remains the club's most decorated player."
+          }
+        },
+        {
+          "team_id": 14,
+          "name": "South Coast Cherries",
+          "region": "South West",
+          "stature": "small_club",
+          "global_reputation": 55,
+          "financial_power": 58,
+          "ownership_type": "american_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 78,
+          "supporter_patience": 70,
+          "supporter_expectation": 42,
+          "continental_campaigns": 0,
+          "stadium_capacity": 11000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Ted MacDougall",
+            "position": "Striker",
+            "years_active": "1969-1974",
+            "bio": "Despite only 5 seasons at the club, MacDougall scored an incredible 103 goals. His 9 goals in a single cup match in 1971 remains a record. Instrumental in the club's rise from the lower divisions and is still revered as the greatest player to wear the shirt."
+          }
+        },
+        {
+          "team_id": 15,
+          "name": "Western Bees",
+          "region": "Greater London",
+          "stature": "small_club",
+          "global_reputation": 58,
+          "financial_power": 60,
+          "ownership_type": "fan_owned_model",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 80,
+          "supporter_expectation": 45,
+          "continental_campaigns": 0,
+          "stadium_capacity": 17000,
+          "training_facilities": 14,
+          "youth_facilities": 13,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct",
+            "set_pieces",
+            "data_driven"
+          ],
+          "club_legend": {
+            "name": "Marcus Forss",
+            "position": "Forward",
+            "years_active": "2018-present",
+            "bio": "Still active but already a legend for his role in the club's meteoric rise from the fourth tier to the top division. Scored 67 goals across the journey and embodies the club's analytical, underdog approach. A hero of the modern era."
+          }
+        },
+        {
+          "team_id": 16,
+          "name": "Sherwood Forest FC",
+          "region": "East Midlands",
+          "stature": "fallen_giant",
+          "global_reputation": 65,
+          "financial_power": 62,
+          "ownership_type": "greek_shipping_magnate",
+          "supporter_base": "regional",
+          "supporter_loyalty": 90,
+          "supporter_patience": 60,
+          "supporter_expectation": 55,
+          "continental_campaigns": 25,
+          "stadium_capacity": 30000,
+          "training_facilities": 14,
+          "youth_facilities": 13,
+          "ambition": "mid_table_stability",
+          "playing_styles": [],
+          "club_legend": {
+            "name": "Trevor Francis",
+            "position": "Forward",
+            "years_active": "1971-1979",
+            "bio": "Scored 118 goals and was Britain's first million-pound player. His header in the 1979 Continental Cup final secured the first of back-to-back European triumphs. A silky forward with exceptional technical ability who put the club on the map internationally."
+          }
+        },
+        {
+          "team_id": 17,
+          "name": "Mersey Blues",
+          "region": "North West",
+          "stature": "fallen_giant",
+          "global_reputation": 70,
+          "financial_power": 58,
+          "ownership_type": "struggling_ownership",
+          "supporter_base": "national",
+          "supporter_loyalty": 95,
+          "supporter_patience": 65,
+          "supporter_expectation": 62,
+          "continental_campaigns": 15,
+          "stadium_capacity": 39000,
+          "training_facilities": 14,
+          "youth_facilities": 15,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Dixie Dean",
+            "position": "Striker",
+            "years_active": "1925-1937",
+            "bio": "Scored an astonishing 349 goals for the club, including a record 60 in a single league season in 1927-28 that still stands today. Won 2 league titles and remains not just a club legend but a footballing immortal. His goal-scoring record may never be matched."
+          }
+        },
+        {
+          "team_id": 18,
+          "name": "East Midlands Foxes",
+          "region": "East Midlands",
+          "stature": "yo_yo_club",
+          "global_reputation": 68,
+          "financial_power": 60,
+          "ownership_type": "thai_ownership",
+          "supporter_base": "regional",
+          "supporter_loyalty": 92,
+          "supporter_patience": 75,
+          "supporter_expectation": 52,
+          "continental_campaigns": 7,
+          "stadium_capacity": 32000,
+          "training_facilities": 15,
+          "youth_facilities": 14,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "counter_attack",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Jamie Vardy",
+            "position": "Striker",
+            "years_active": "2012-2024",
+            "bio": "Non-league to title winner in an incredible story. Scored 190 goals and was the driving force behind the miraculous 2016 league title - considered the greatest sporting upset of all time. His pace, work-rate and clinical finishing made him a legend."
+          }
+        },
+        {
+          "team_id": 19,
+          "name": "Port City Saints",
+          "region": "South East",
+          "stature": "yo_yo_club",
+          "global_reputation": 60,
+          "financial_power": 52,
+          "ownership_type": "serbian_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 85,
+          "supporter_patience": 65,
+          "supporter_expectation": 48,
+          "continental_campaigns": 4,
+          "stadium_capacity": 32000,
+          "training_facilities": 15,
+          "youth_facilities": 16,
+          "ambition": "survival",
+          "playing_styles": [
+            "possession",
+            "youth_development"
+          ],
+          "club_legend": {
+            "name": "Matthew Le Tissier",
+            "position": "Attacking Midfielder",
+            "years_active": "1986-2002",
+            "bio": "One-club man who made 540 appearances and scored 209 goals. A genius with the ball, capable of moments of magic that defied belief. Turned down moves to bigger clubs to remain loyal. His goal against Newcastle in 1994 is regarded as one of the best ever scored."
+          }
+        },
+        {
+          "team_id": 20,
+          "name": "Suffolk Tractor Boys",
+          "region": "East of England",
+          "stature": "promoted_club",
+          "global_reputation": 52,
+          "financial_power": 48,
+          "ownership_type": "american_group",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 80,
+          "supporter_expectation": 40,
+          "continental_campaigns": 3,
+          "stadium_capacity": 30000,
+          "training_facilities": 12,
+          "youth_facilities": 12,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Paul Mariner",
+            "position": "Striker",
+            "years_active": "1976-1984",
+            "bio": "Scored 135 goals and led the club to their only league title in 1982 and a continental cup victory in 1981. A powerful, intelligent striker whose aerial ability was exceptional. His partnership with other forwards created one of the most feared attacks in the country."
+          }
+        }
+      ]
+    },
+    {
+      "league_id": 2,
+      "league_name": "Championship",
+      "tier": 2,
+      "teams": [
+        {
+          "team_id": 21,
+          "name": "Steel City Blades",
+          "region": "Yorkshire",
+          "stature": "fallen_giant",
+          "global_reputation": 62,
+          "financial_power": 55,
+          "ownership_type": "saudi_ownership",
+          "supporter_base": "regional",
+          "supporter_loyalty": 90,
+          "supporter_patience": 55,
+          "supporter_expectation": 75,
+          "continental_campaigns": 5,
+          "stadium_capacity": 32000,
+          "training_facilities": 13,
+          "youth_facilities": 13,
+          "ambition": "immediate_promotion",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Billy Sharp",
+            "position": "Striker",
+            "years_active": "2007-2023 (multiple spells)",
+            "bio": "Local boy who scored over 130 goals across multiple spells with the club. Led them from the third tier back to the top division. His emotional return after personal tragedy made him a beloved figure. Embodies loyalty and dedication."
+          }
+        },
+        {
+          "team_id": 22,
+          "name": "White Rose United",
+          "region": "Yorkshire",
+          "stature": "fallen_giant",
+          "global_reputation": 72,
+          "financial_power": 68,
+          "ownership_type": "american_consortium",
+          "supporter_base": "national",
+          "supporter_loyalty": 95,
+          "supporter_patience": 40,
+          "supporter_expectation": 85,
+          "continental_campaigns": 22,
+          "stadium_capacity": 37000,
+          "training_facilities": 15,
+          "youth_facilities": 14,
+          "ambition": "immediate_promotion",
+          "playing_styles": [
+            "attacking",
+            "wing_play",
+            "high_intensity"
+          ],
+          "club_legend": {
+            "name": "Billy Bremner",
+            "position": "Midfielder",
+            "years_active": "1959-1976",
+            "bio": "Fiery captain who led the club to 2 league titles and multiple trophies in their golden era. Made 772 appearances with incredible passion and skill. His leadership and competitive spirit defined a generation. Regarded as the club's greatest ever player."
+          }
+        },
+        {
+          "team_id": 23,
+          "name": "Clarets FC",
+          "region": "North West",
+          "stature": "yo_yo_club",
+          "global_reputation": 58,
+          "financial_power": 50,
+          "ownership_type": "american_sports_group",
+          "supporter_base": "local",
+          "supporter_loyalty": 92,
+          "supporter_patience": 70,
+          "supporter_expectation": 70,
+          "continental_campaigns": 1,
+          "stadium_capacity": 22000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "physical",
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Jimmy McIlroy",
+            "position": "Inside Forward",
+            "years_active": "1950-1963",
+            "bio": "Elegant playmaker who made 497 appearances and won the league title in 1960. His skill and vision were exceptional for his era. Instrumental in the club's most successful period and remains an icon among supporters."
+          }
+        },
+        {
+          "team_id": 24,
+          "name": "Riverside Athletic",
+          "region": "North East",
+          "stature": "championship_mainstay",
+          "global_reputation": 58,
+          "financial_power": 52,
+          "ownership_type": "local_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 65,
+          "supporter_expectation": 65,
+          "continental_campaigns": 5,
+          "stadium_capacity": 34000,
+          "training_facilities": 14,
+          "youth_facilities": 15,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "possession",
+            "youth_development"
+          ],
+          "club_legend": {
+            "name": "Juninho",
+            "position": "Attacking Midfielder",
+            "years_active": "1995-2000 (multiple spells)",
+            "bio": "Brazilian magician who mesmerized fans with his free-kicks and creativity. Scored 30 goals and became the club's first global superstar. His loyalty in returning multiple times despite relegation made him a legend. His free-kick technique was world-class."
+          }
+        },
+        {
+          "team_id": 25,
+          "name": "Yellow Canaries",
+          "region": "East of England",
+          "stature": "yo_yo_club",
+          "global_reputation": 56,
+          "financial_power": 48,
+          "ownership_type": "american_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 90,
+          "supporter_patience": 75,
+          "supporter_expectation": 65,
+          "continental_campaigns": 2,
+          "stadium_capacity": 27000,
+          "training_facilities": 13,
+          "youth_facilities": 14,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "possession",
+            "technical",
+            "youth_development"
+          ],
+          "club_legend": {
+            "name": "Grant Holt",
+            "position": "Striker",
+            "years_active": "2009-2013",
+            "bio": "Non-league journeyman who became a top-flight star. Scored 78 goals in 168 games and led the club back to the top division with back-to-back promotions. His physicality and work ethic made him a fan favorite and embodies the club's underdog spirit."
+          }
+        },
+        {
+          "team_id": 26,
+          "name": "Golden Hornets",
+          "region": "East of England",
+          "stature": "yo_yo_club",
+          "global_reputation": 54,
+          "financial_power": 52,
+          "ownership_type": "italian_family",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 60,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 22000,
+          "training_facilities": 14,
+          "youth_facilities": 13,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "counter_attack",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Luther Blissett",
+            "position": "Striker",
+            "years_active": "1976-1983, 1984-1992",
+            "bio": "Scored 186 goals across two spells and helped the club reach their highest-ever finish and a cup final. His pace and finishing ability were exceptional. Had a brief stint at Barcelona between his club spells, making him an international star."
+          }
+        },
+        {
+          "team_id": 27,
+          "name": "Pride of the Rams",
+          "region": "East Midlands",
+          "stature": "fallen_giant",
+          "global_reputation": 60,
+          "financial_power": 45,
+          "ownership_type": "local_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 70,
+          "supporter_expectation": 60,
+          "continental_campaigns": 8,
+          "stadium_capacity": 33000,
+          "training_facilities": 12,
+          "youth_facilities": 13,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "Kevin Hector",
+            "position": "Forward",
+            "years_active": "1966-1982",
+            "bio": "The club's all-time leading appearance maker with 589 games and 201 goals. Won two league titles in the 1970s during the club's golden era. His intelligent movement and clinical finishing made him one of the era's best strikers."
+          }
+        },
+        {
+          "team_id": 28,
+          "name": "Baggies United",
+          "region": "West Midlands",
+          "stature": "yo_yo_club",
+          "global_reputation": 58,
+          "financial_power": 50,
+          "ownership_type": "chinese_investment",
+          "supporter_base": "regional",
+          "supporter_loyalty": 85,
+          "supporter_patience": 65,
+          "supporter_expectation": 68,
+          "continental_campaigns": 0,
+          "stadium_capacity": 26000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Tony Brown",
+            "position": "Forward",
+            "years_active": "1963-1981",
+            "bio": "Club's all-time record scorer with 279 goals in 720 appearances. Won the league title, cup, and continental trophy. His consistency over 18 seasons and versatility made him irreplaceable. Nicknamed 'Bomber' for his powerful shooting."
+          }
+        },
+        {
+          "team_id": 29,
+          "name": "North End Lilywhites",
+          "region": "North West",
+          "stature": "historic_club",
+          "global_reputation": 52,
+          "financial_power": 42,
+          "ownership_type": "local_family",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 80,
+          "supporter_expectation": 55,
+          "continental_campaigns": 0,
+          "stadium_capacity": 24000,
+          "training_facilities": 12,
+          "youth_facilities": 12,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Tom Finney",
+            "position": "Winger",
+            "years_active": "1946-1960",
+            "bio": "One of football's all-time greats who stayed loyal to his hometown club despite offers from elite teams. Scored 210 goals in 473 games. His dribbling, pace, and sportsmanship were legendary. Knighted for services to football. A true one-club man."
+          }
+        },
+        {
+          "team_id": 30,
+          "name": "Capital City Dragons",
+          "region": "Wales",
+          "stature": "regional_power",
+          "global_reputation": 56,
+          "financial_power": 48,
+          "ownership_type": "malaysian_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 90,
+          "supporter_patience": 65,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 33000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Robert Earnshaw",
+            "position": "Striker",
+            "years_active": "1998-2004, 2011-2014",
+            "bio": "Scored 86 goals in two spells with the club. The first player to score hat-tricks in all four divisions of English football. His pace and finishing made him a nightmare for defenders. Remains the club's most successful striker."
+          }
+        },
+        {
+          "team_id": 31,
+          "name": "Swans of the Bay",
+          "region": "Wales",
+          "stature": "regional_power",
+          "global_reputation": 58,
+          "financial_power": 46,
+          "ownership_type": "american_consortium",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 70,
+          "supporter_expectation": 60,
+          "continental_campaigns": 3,
+          "stadium_capacity": 21000,
+          "training_facilities": 13,
+          "youth_facilities": 13,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "possession",
+            "technical",
+            "tiki_taka"
+          ],
+          "club_legend": {
+            "name": "Leon Britton",
+            "position": "Midfielder",
+            "years_active": "2002-2018",
+            "bio": "Made 536 appearances across multiple spells. The heartbeat of the team's possession-based philosophy from the lower divisions to the top flight. His pass completion rates were consistently above 90%. Embodies the club's patient, technical style."
+          }
+        },
+        {
+          "team_id": 32,
+          "name": "City of Bristol Reds",
+          "region": "South West",
+          "stature": "championship_mainstay",
+          "global_reputation": 50,
+          "financial_power": 44,
+          "ownership_type": "local_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 27000,
+          "training_facilities": 12,
+          "youth_facilities": 12,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "attacking",
+            "wing_play"
+          ],
+          "club_legend": {
+            "name": "John Atyeo",
+            "position": "Striker",
+            "years_active": "1951-1966",
+            "bio": "Club's all-time record scorer with an incredible 351 goals in 645 games. One-club man who turned down bigger clubs to stay loyal. His goal-scoring record stood for decades. A local hero who defined loyalty and excellence."
+          }
+        },
+        {
+          "team_id": 33,
+          "name": "Sky Blues United",
+          "region": "West Midlands",
+          "stature": "fallen_giant",
+          "global_reputation": 54,
+          "financial_power": 42,
+          "ownership_type": "london_hedge_fund",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 75,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 32000,
+          "training_facilities": 11,
+          "youth_facilities": 11,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Clarrie Bourton",
+            "position": "Forward",
+            "years_active": "1931-1937",
+            "bio": "Scored 180 goals in just 176 appearances - an astonishing ratio. His 49 goals in the 1931-32 season remains a club record. Brief career but explosive impact. His goal-scoring exploits are the stuff of legend."
+          }
+        },
+        {
+          "team_id": 34,
+          "name": "Rangers of the West",
+          "region": "Greater London",
+          "stature": "yo_yo_club",
+          "global_reputation": 52,
+          "financial_power": 48,
+          "ownership_type": "consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 65,
+          "supporter_expectation": 60,
+          "continental_campaigns": 0,
+          "stadium_capacity": 18000,
+          "training_facilities": 12,
+          "youth_facilities": 11,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "Rodney Marsh",
+            "position": "Forward",
+            "years_active": "1966-1972",
+            "bio": "Flamboyant striker who scored 106 goals in 211 games. His skill, flair and showmanship made him a cult hero. Led the team to a cup final and third-place finish. One of the most naturally gifted players to wear the shirt."
+          }
+        },
+        {
+          "team_id": 35,
+          "name": "Riversiders FC",
+          "region": "North West",
+          "stature": "fallen_giant",
+          "global_reputation": 60,
+          "financial_power": 45,
+          "ownership_type": "indian_poultry_company",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 60,
+          "supporter_expectation": 65,
+          "continental_campaigns": 4,
+          "stadium_capacity": 31000,
+          "training_facilities": 12,
+          "youth_facilities": 13,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "counter_attack"
+          ],
+          "club_legend": {
+            "name": "Alan Shearer",
+            "position": "Striker",
+            "years_active": "1988-1992",
+            "bio": "Scored 112 goals in 138 games before his record-breaking move. Explosive striker who became one of England's greatest ever. His time at the club launched a legendary career. Fans still reminisce about his devastating finishing."
+          }
+        },
+        {
+          "team_id": 36,
+          "name": "Tigers of the Humber",
+          "region": "Yorkshire",
+          "stature": "yo_yo_club",
+          "global_reputation": 52,
+          "financial_power": 44,
+          "ownership_type": "turkish_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 70,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 25000,
+          "training_facilities": 12,
+          "youth_facilities": 11,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Dean Windass",
+            "position": "Striker",
+            "years_active": "1991-1995, 2007-2009",
+            "bio": "Local hero who scored 95 goals across two spells. His volleyed winner in the 2008 playoff final at Wembley is the club's most celebrated moment, securing promotion to the top flight. Passionate, committed, and beloved by fans."
+          }
+        },
+        {
+          "team_id": 37,
+          "name": "Millwall Lions",
+          "region": "Greater London",
+          "stature": "gritty_club",
+          "global_reputation": 48,
+          "financial_power": 38,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 95,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 20000,
+          "training_facilities": 11,
+          "youth_facilities": 10,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "physical",
+            "direct",
+            "aggressive"
+          ],
+          "club_legend": {
+            "name": "Teddy Sheringham",
+            "position": "Striker",
+            "years_active": "1983-1991, 2004-2008",
+            "bio": "Scored 111 goals in two spells before becoming a top-flight and international star. His intelligent play and finishing ability were exceptional. Returned at age 38 to help the club again, showing his loyalty. One of the club's greatest exports."
+          }
+        },
+        {
+          "team_id": 38,
+          "name": "Green Army Plymouth",
+          "region": "South West",
+          "stature": "small_club",
+          "global_reputation": 45,
+          "financial_power": 36,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 90,
+          "supporter_patience": 85,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 18000,
+          "training_facilities": 10,
+          "youth_facilities": 10,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Paul Mariner",
+            "position": "Striker",
+            "years_active": "1973-1976",
+            "bio": "Scored 61 goals in 135 games before moving to bigger clubs. His powerful play and aerial ability made him a fan favorite. Went on to become an international star. Remains one of the club's most successful exports."
+          }
+        },
+        {
+          "team_id": 39,
+          "name": "Hatters Town",
+          "region": "East of England",
+          "stature": "small_club",
+          "global_reputation": 48,
+          "financial_power": 40,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 80,
+          "supporter_expectation": 52,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 11,
+          "youth_facilities": 10,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Mick Harford",
+            "position": "Striker",
+            "years_active": "1984-1990, 1991-1992",
+            "bio": "Powerful target man who scored 101 goals in two spells. His aerial dominance and physical presence terrorized defenders. Led the team to the top division and a cup final. Beloved for his commitment and later returned as manager."
+          }
+        },
+        {
+          "team_id": 40,
+          "name": "Potters United",
+          "region": "West Midlands",
+          "stature": "yo_yo_club",
+          "global_reputation": 56,
+          "financial_power": 48,
+          "ownership_type": "local_family",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 65,
+          "supporter_expectation": 60,
+          "continental_campaigns": 0,
+          "stadium_capacity": 30000,
+          "training_facilities": 13,
+          "youth_facilities": 12,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "physical",
+            "direct",
+            "long_ball"
+          ],
+          "club_legend": {
+            "name": "Stanley Matthews",
+            "position": "Winger",
+            "years_active": "1932-1947, 1961-1965",
+            "bio": "One of football's all-time greats who played until age 50. Made 380 appearances across two spells. His dribbling skills were legendary. First ever Footballer of the Year and European Footballer of the Year. A footballing immortal and club icon."
+          }
+        },
+        {
+          "team_id": 41,
+          "name": "Pompey Blues",
+          "region": "South East",
+          "stature": "fallen_giant",
+          "global_reputation": 58,
+          "financial_power": 42,
+          "ownership_type": "fan_owned",
+          "supporter_base": "regional",
+          "supporter_loyalty": 95,
+          "supporter_patience": 80,
+          "supporter_expectation": 60,
+          "continental_campaigns": 0,
+          "stadium_capacity": 21000,
+          "training_facilities": 11,
+          "youth_facilities": 11,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Jimmy Dickinson",
+            "position": "Defender",
+            "years_active": "1946-1965",
+            "bio": "Mr. Portsmouth - made 764 appearances, a record that will likely never be broken. One-club man who won two league titles in the 1940s/50s. His loyalty, consistency and leadership were exceptional. The stadium is named in his honor."
+          }
+        },
+        {
+          "team_id": 42,
+          "name": "Royals FC",
+          "region": "South East",
+          "stature": "yo_yo_club",
+          "global_reputation": 52,
+          "financial_power": 38,
+          "ownership_type": "chinese_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 70,
+          "supporter_expectation": 55,
+          "continental_campaigns": 0,
+          "stadium_capacity": 24000,
+          "training_facilities": 12,
+          "youth_facilities": 12,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "possession"
+          ],
+          "club_legend": {
+            "name": "Robin Friday",
+            "position": "Forward",
+            "years_active": "1974-1977",
+            "bio": "Maverick genius who scored 53 goals in 121 games. His skill was extraordinary but his lifestyle turbulent. Regarded as one of the most naturally gifted players in club history. His acrobatic goal against other top teams is iconic. A cult hero."
+          }
+        },
+        {
+          "team_id": 43,
+          "name": "Wednesday Owls",
+          "region": "Yorkshire",
+          "stature": "fallen_giant",
+          "global_reputation": 58,
+          "financial_power": 44,
+          "ownership_type": "thai_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 90,
+          "supporter_patience": 65,
+          "supporter_expectation": 62,
+          "continental_campaigns": 2,
+          "stadium_capacity": 34000,
+          "training_facilities": 12,
+          "youth_facilities": 11,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "David Hirst",
+            "position": "Striker",
+            "years_active": "1986-1997",
+            "bio": "Scored 149 goals in 361 games. Powerful striker with devastating shot power. His goal against Arsenal is considered one of the hardest strikes ever recorded. Terrorized defenses throughout the 1990s and is revered by fans."
+          }
+        },
+        {
+          "team_id": 44,
+          "name": "Black Cats United",
+          "region": "North East",
+          "stature": "fallen_giant",
+          "global_reputation": 62,
+          "financial_power": 48,
+          "ownership_type": "american_consortium",
+          "supporter_base": "regional",
+          "supporter_loyalty": 95,
+          "supporter_patience": 55,
+          "supporter_expectation": 75,
+          "continental_campaigns": 0,
+          "stadium_capacity": 49000,
+          "training_facilities": 12,
+          "youth_facilities": 13,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "passionate"
+          ],
+          "club_legend": {
+            "name": "Charlie Hurley",
+            "position": "Defender",
+            "years_active": "1957-1969",
+            "bio": "Made 401 appearances and captained the team to their last major trophy in 1973. Dominant center-back who was voted the club's Player of the Century. His leadership and defensive prowess made him a legend. The King of Black Cats."
+          }
+        }
+      ]
+    },
+    {
+      "league_id": 3,
+      "league_name": "League One",
+      "tier": 3,
+      "teams": [
+        {
+          "team_id": 45,
+          "name": "Birmingham Blues",
+          "region": "West Midlands",
+          "stature": "fallen_giant",
+          "global_reputation": 56,
+          "financial_power": 52,
+          "ownership_type": "american_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 50,
+          "supporter_expectation": 80,
+          "continental_campaigns": 4,
+          "stadium_capacity": 30000,
+          "training_facilities": 12,
+          "youth_facilities": 12,
+          "ambition": "immediate_promotion",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Trevor Francis",
+            "position": "Forward",
+            "years_active": "1970-1979",
+            "bio": "Scored 119 goals before becoming Britain's first £1m player. Blessed with pace and skill, he was unstoppable in his prime. His goals in cup runs created legendary moments. Left for European glory but remains a club icon."
+          }
+        },
+        {
+          "team_id": 46,
+          "name": "Trotters Athletic",
+          "region": "North West",
+          "stature": "fallen_giant",
+          "global_reputation": 54,
+          "financial_power": 40,
+          "ownership_type": "local_businessman",
+          "supporter_base": "regional",
+          "supporter_loyalty": 88,
+          "supporter_patience": 70,
+          "supporter_expectation": 70,
+          "continental_campaigns": 2,
+          "stadium_capacity": 28000,
+          "training_facilities": 11,
+          "youth_facilities": 11,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Nat Lofthouse",
+            "position": "Striker",
+            "years_active": "1946-1960",
+            "bio": "The Lion of Vienna scored 285 goals in 503 games. One-club man who turned down moves abroad. His physical style and goal-scoring prowess made him a legend. Won the cup in dramatic fashion and is immortalized at the stadium."
+          }
+        },
+        {
+          "team_id": 47,
+          "name": "Latics FC",
+          "region": "North West",
+          "stature": "fallen_club",
+          "global_reputation": 52,
+          "financial_power": 38,
+          "ownership_type": "bahraini_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 70,
+          "supporter_expectation": 68,
+          "continental_campaigns": 0,
+          "stadium_capacity": 25000,
+          "training_facilities": 11,
+          "youth_facilities": 10,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Paul Jewell",
+            "position": "Striker",
+            "years_active": "1984-1994",
+            "bio": "Scored 95 goals and became a club icon both as player and manager. His goal-scoring in the lower divisions helped stabilize the club. Later managed them to a cup triumph against all odds, cementing legendary status."
+          }
+        },
+        {
+          "team_id": 48,
+          "name": "Tykes United",
+          "region": "Yorkshire",
+          "stature": "journeyman_club",
+          "global_reputation": 46,
+          "financial_power": 35,
+          "ownership_type": "american_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 60,
+          "continental_campaigns": 0,
+          "stadium_capacity": 24000,
+          "training_facilities": 10,
+          "youth_facilities": 10,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Neil Redfearn",
+            "position": "Midfielder",
+            "years_active": "1990-1998, 2003-2004",
+            "bio": "Made 400+ appearances across two spells. A tenacious midfielder who captained the team through their most successful era, reaching the top division. His leadership and work ethic exemplified the club's values. Later returned as manager."
+          }
+        },
+        {
+          "team_id": 49,
+          "name": "Posh United",
+          "region": "East of England",
+          "stature": "yo_yo_club",
+          "global_reputation": 44,
+          "financial_power": 34,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 75,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 15000,
+          "training_facilities": 10,
+          "youth_facilities": 10,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "attacking",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Tommy Robson",
+            "position": "Striker",
+            "years_active": "1968-1981",
+            "bio": "Scored 154 goals in 482 games. Held the club's appearance and goal-scoring records for decades. His loyalty through promotions and relegations made him beloved. A one-club man who defined an era of Posh football."
+          }
+        },
+        {
+          "team_id": 50,
+          "name": "Oxford City",
+          "region": "South East",
+          "stature": "historic_club",
+          "global_reputation": 46,
+          "financial_power": 36,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 60,
+          "continental_campaigns": 0,
+          "stadium_capacity": 12500,
+          "training_facilities": 10,
+          "youth_facilities": 9,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "John Aldridge",
+            "position": "Striker",
+            "years_active": "1983-1984, 2009-2010",
+            "bio": "Scored 90 goals in just 141 games in his first spell. His prolific scoring earned a move to bigger clubs where he became an international star. Briefly returned as player-manager at age 50, showing his love for the club."
+          }
+        },
+        {
+          "team_id": 51,
+          "name": "Red Imps",
+          "region": "East Midlands",
+          "stature": "small_club",
+          "global_reputation": 42,
+          "financial_power": 34,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 80,
+          "supporter_expectation": 55,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 9,
+          "youth_facilities": 9,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Graham Taylor",
+            "position": "Defender",
+            "years_active": "1962-1968",
+            "bio": "Made 189 appearances before becoming one of England's most successful managers. His tactical intelligence was evident even as a player. Later managed the club to promotion, cementing his legendary status on both sides."
+          }
+        },
+        {
+          "team_id": 52,
+          "name": "Valley Reds",
+          "region": "Greater London",
+          "stature": "fallen_club",
+          "global_reputation": 50,
+          "financial_power": 38,
+          "ownership_type": "american_investors",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 70,
+          "supporter_expectation": 65,
+          "continental_campaigns": 0,
+          "stadium_capacity": 27000,
+          "training_facilities": 11,
+          "youth_facilities": 11,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "possession",
+            "technical"
+          ],
+          "club_legend": {
+            "name": "Sam Bartram",
+            "position": "Goalkeeper",
+            "years_active": "1934-1956",
+            "bio": "Made 623 appearances, a goalkeeping record that stood for decades. One-club man renowned for his shot-stopping and bravery. His loyalty through relegation and wartime football made him a legend. Voted the club's greatest ever player."
+          }
+        },
+        {
+          "team_id": 53,
+          "name": "Chairboys United",
+          "region": "South East",
+          "stature": "small_club",
+          "global_reputation": 40,
+          "financial_power": 32,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 80,
+          "supporter_expectation": 52,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 9,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Adebayo Akinfenwa",
+            "position": "Striker",
+            "years_active": "2016-2022",
+            "bio": "The Beast scored 61 goals and became a global cult hero due to his physique and personality. His social media presence brought worldwide attention to the small club. His playoff final winner in 2020 is legendary. A modern icon."
+          }
+        },
+        {
+          "team_id": 54,
+          "name": "U's United",
+          "region": "East of England",
+          "stature": "small_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 85,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 8000,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Micky Cook",
+            "position": "Defender",
+            "years_active": "1969-1984",
+            "bio": "Made 613 appearances, the club's all-time record. Reliable defender who served through the club's most successful period. His consistency and loyalty over 15 seasons made him a legend. Embodied commitment and professionalism."
+          }
+        },
+        {
+          "team_id": 55,
+          "name": "Brewers FC",
+          "region": "East Midlands",
+          "stature": "small_club",
+          "global_reputation": 40,
+          "financial_power": 32,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 78,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 6900,
+          "training_facilities": 9,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Darren Stride",
+            "position": "Midfielder",
+            "years_active": "2003-2008",
+            "bio": "Made 244 appearances in five seasons. Captain who led the club from non-league to the Football League. His leadership during the historic rise was inspirational. Scored crucial goals in their greatest achievements."
+          }
+        },
+        {
+          "team_id": 56,
+          "name": "Millers United",
+          "region": "Yorkshire",
+          "stature": "yo_yo_club",
+          "global_reputation": 44,
+          "financial_power": 34,
+          "ownership_type": "local_chairman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 12000,
+          "training_facilities": 10,
+          "youth_facilities": 9,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Ronnie Moore",
+            "position": "Striker",
+            "years_active": "1981-1991",
+            "bio": "Scored 171 goals in 391 appearances. Prolific striker whose goals fired the club to multiple promotions. Later returned as manager and achieved more success. His goal-scoring records stood for decades. Mr. Millers."
+          }
+        },
+        {
+          "team_id": 57,
+          "name": "Cobblers Town",
+          "region": "East Midlands",
+          "stature": "journeyman_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 80,
+          "supporter_expectation": 52,
+          "continental_campaigns": 0,
+          "stadium_capacity": 7800,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Jack English",
+            "position": "Striker",
+            "years_active": "1947-1960",
+            "bio": "Scored 143 goals in 410 games. His goals during the 1950s kept the club competitive. One-club man whose loyalty and consistency made him beloved. Held the club's appearance record for decades."
+          }
+        },
+        {
+          "team_id": 58,
+          "name": "Shrews Town",
+          "region": "West Midlands",
+          "stature": "small_club",
+          "global_reputation": 36,
+          "financial_power": 28,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 85,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Arthur Rowley",
+            "position": "Striker",
+            "years_active": "1958-1965",
+            "bio": "Scored 152 goals despite joining at age 32. His 434 career goals in league football remains an English record. Brief but brilliant spell that brought unprecedented success. A goal-scoring machine who became a club legend."
+          }
+        },
+        {
+          "team_id": 59,
+          "name": "Grecians FC",
+          "region": "South West",
+          "stature": "small_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "fan_trust",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 85,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 8800,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "possession",
+            "youth_development"
+          ],
+          "club_legend": {
+            "name": "Alan Banks",
+            "position": "Defender",
+            "years_active": "1969-1984",
+            "bio": "Made 495 appearances, the club's appearance record. Solid defender who captained the team through their most stable era. His 15-year career epitomized loyalty and consistency. Revered for his commitment to the club."
+          }
+        },
+        {
+          "team_id": 60,
+          "name": "Orient FC",
+          "region": "Greater London",
+          "stature": "small_club",
+          "global_reputation": 40,
+          "financial_power": 32,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 80,
+          "supporter_expectation": 55,
+          "continental_campaigns": 0,
+          "stadium_capacity": 9300,
+          "training_facilities": 9,
+          "youth_facilities": 8,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "attacking"
+          ],
+          "club_legend": {
+            "name": "Peter Allen",
+            "position": "Winger",
+            "years_active": "1965-1978",
+            "bio": "Made 432 appearances and scored 91 goals. Tricky winger whose pace and skill thrilled fans through the 1970s. Helped the club reach their highest-ever position. His loyalty and flair made him an icon."
+          }
+        },
+        {
+          "team_id": 61,
+          "name": "Seasiders FC",
+          "region": "North West",
+          "stature": "fallen_club",
+          "global_reputation": 48,
+          "financial_power": 36,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 70,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 17000,
+          "training_facilities": 10,
+          "youth_facilities": 9,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Jimmy Armfield",
+            "position": "Right-Back",
+            "years_active": "1954-1971",
+            "bio": "One-club man who made 627 appearances. Captained England and was one of the finest full-backs of his generation. Led the club to their greatest achievements. Later managed the club. Mr. Blackpool - a true legend."
+          }
+        },
+        {
+          "team_id": 62,
+          "name": "Red Dragons AFC",
+          "region": "Wales",
+          "stature": "sleeping_giant",
+          "global_reputation": 50,
+          "financial_power": 55,
+          "ownership_type": "hollywood_celebrities",
+          "supporter_base": "international",
+          "supporter_loyalty": 92,
+          "supporter_patience": 60,
+          "supporter_expectation": 75,
+          "continental_campaigns": 0,
+          "stadium_capacity": 12600,
+          "training_facilities": 12,
+          "youth_facilities": 11,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Dixie McNeil",
+            "position": "Striker",
+            "years_active": "1975-1983",
+            "bio": "Scored 202 goals, the club's all-time record. Prolific striker whose goals defined an era. His partnership with other forwards was legendary. Remains the benchmark for all strikers at the club."
+          }
+        },
+        {
+          "team_id": 63,
+          "name": "Borough FC",
+          "region": "East of England",
+          "stature": "small_club",
+          "global_reputation": 36,
+          "financial_power": 28,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 75,
+          "supporter_patience": 80,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 7800,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Chris Holroyd",
+            "position": "Striker",
+            "years_active": "2008-2012",
+            "bio": "Scored 51 goals in 140 games during the club's rapid rise through the divisions. His pace and finishing were crucial in back-to-back promotions. Brief but impactful spell that fans still celebrate."
+          }
+        },
+        {
+          "team_id": 64,
+          "name": "Gas FC",
+          "region": "South West",
+          "stature": "journeyman_club",
+          "global_reputation": 42,
+          "financial_power": 34,
+          "ownership_type": "local_family",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 55,
+          "continental_campaigns": 0,
+          "stadium_capacity": 12000,
+          "training_facilities": 9,
+          "youth_facilities": 9,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Geoff Bradford",
+            "position": "Striker",
+            "years_active": "1949-1964",
+            "bio": "Scored 242 goals in 461 games, the club's all-time leading scorer. One-club man who turned down bigger moves. His consistency and loyalty over 15 seasons made him a legend. His records still stand today."
+          }
+        },
+        {
+          "team_id": 65,
+          "name": "Cod Army",
+          "region": "North West",
+          "stature": "small_club",
+          "global_reputation": 38,
+          "financial_power": 32,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 78,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5300,
+          "training_facilities": 9,
+          "youth_facilities": 9,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Jamie Vardy",
+            "position": "Striker",
+            "years_active": "2011-2012",
+            "bio": "Scored 31 goals in 36 games in one sensational season before moving up the pyramid. His explosive performances here launched him toward becoming a top-division champion. Brief but spectacular spell that put the club on the map."
+          }
+        },
+        {
+          "team_id": 66,
+          "name": "Robins Town",
+          "region": "South West",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 26,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 85,
+          "supporter_expectation": 45,
+          "continental_campaigns": 0,
+          "stadium_capacity": 7100,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Dave Lewis",
+            "position": "Defender",
+            "years_active": "1968-1983",
+            "bio": "Made 507 appearances, the club's record. Dependable defender who captained the team for many years. His loyalty through good times and bad made him a hero. Epitomized commitment to the club."
+          }
+        },
+        {
+          "team_id": 67,
+          "name": "Valiants FC",
+          "region": "West Midlands",
+          "stature": "small_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 19000,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Roy Sproson",
+            "position": "Defender",
+            "years_active": "1950-1972",
+            "bio": "Made 842 appearances, one of the highest in English football history. One-club man who played for 22 seasons. His longevity and loyalty were extraordinary. A stand is named in his honor. True club legend."
+          }
+        },
+        {
+          "team_id": 68,
+          "name": "County Hatters",
+          "region": "North West",
+          "stature": "historic_club",
+          "global_reputation": 40,
+          "financial_power": 34,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10800,
+          "training_facilities": 9,
+          "youth_facilities": 8,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Jack Connor",
+            "position": "Striker",
+            "years_active": "1951-1956",
+            "bio": "Scored 132 goals in just 272 games. Prolific striker whose goals fired the club to promotion. Brief but explosive career that made him a legend. His goal-scoring ratio remains among the best in club history."
+          }
+        }
+      ]
+    },
+    {
+      "league_id": 4,
+      "league_name": "League Two",
+      "tier": 4,
+      "teams": [
+        {
+          "team_id": 69,
+          "name": "Peninsula City",
+          "region": "North West",
+          "stature": "nouveau_riche",
+          "global_reputation": 42,
+          "financial_power": 48,
+          "ownership_type": "celebrity_owned",
+          "supporter_base": "local",
+          "supporter_loyalty": 70,
+          "supporter_patience": 60,
+          "supporter_expectation": 70,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5100,
+          "training_facilities": 11,
+          "youth_facilities": 10,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "attacking",
+            "high_tempo"
+          ],
+          "club_legend": {
+            "name": "Gary Jones",
+            "position": "Midfielder",
+            "years_active": "2008-2015",
+            "bio": "Scored 86 goals from midfield in 277 games. Captain who led the club's rise from non-league through three promotions. His leadership and goal-scoring from midfield were exceptional. Embodies the club's remarkable journey."
+          }
+        },
+        {
+          "team_id": 70,
+          "name": "Magpies County",
+          "region": "East Midlands",
+          "stature": "historic_club",
+          "global_reputation": 42,
+          "financial_power": 36,
+          "ownership_type": "local_businessmen",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 75,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 20000,
+          "training_facilities": 9,
+          "youth_facilities": 9,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Tommy Lawton",
+            "position": "Striker",
+            "years_active": "1947-1952",
+            "bio": "England international who scored 90 goals in 151 games. Exceptional header of the ball and clinical finisher. His decision to drop down to play here shocked football but brought star quality to the club."
+          }
+        },
+        {
+          "team_id": 71,
+          "name": "Boundary Athletic",
+          "region": "North West",
+          "stature": "fallen_club",
+          "global_reputation": 40,
+          "financial_power": 28,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 70,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 13500,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Ian Lowe",
+            "position": "Defender",
+            "years_active": "1972-1985",
+            "bio": "Made 525 appearances, the club's record. Solid defender who captained the team through their best years in the 1970s. His consistency and leadership over 13 seasons made him legendary. True one-club man."
+          }
+        },
+        {
+          "team_id": 72,
+          "name": "Bantams City",
+          "region": "Yorkshire",
+          "stature": "fallen_club",
+          "global_reputation": 44,
+          "financial_power": 34,
+          "ownership_type": "german_investors",
+          "supporter_base": "local",
+          "supporter_loyalty": 88,
+          "supporter_patience": 70,
+          "supporter_expectation": 62,
+          "continental_campaigns": 0,
+          "stadium_capacity": 25000,
+          "training_facilities": 9,
+          "youth_facilities": 9,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Bobby Campbell",
+            "position": "Striker",
+            "years_active": "1981-1988",
+            "bio": "Scored 143 goals in 407 games. Prolific striker whose goals led the club to multiple promotions and their greatest-ever achievements. His consistency and work ethic made him beloved. Club's leading scorer."
+          }
+        },
+        {
+          "team_id": 73,
+          "name": "Robins United",
+          "region": "South West",
+          "stature": "fallen_club",
+          "global_reputation": 40,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 75,
+          "supporter_expectation": 58,
+          "continental_campaigns": 0,
+          "stadium_capacity": 15000,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Don Rogers",
+            "position": "Winger",
+            "years_active": "1963-1972",
+            "bio": "Scored 104 goals from the wing in 391 games. Exciting winger whose pace and skill thrilled crowds. Led the club to cup glory in 1969. His performances attracted attention from bigger clubs but he stayed loyal."
+          }
+        },
+        {
+          "team_id": 74,
+          "name": "Red Devils Town",
+          "region": "South East",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 28,
+          "ownership_type": "turkish_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 72,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 6100,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Glen Morris",
+            "position": "Goalkeeper",
+            "years_active": "2007-2012",
+            "bio": "Made 239 appearances during the club's rise from non-league. His shot-stopping and consistency were vital in back-to-back promotions. Brief but crucial spell that saw him become a cult hero."
+          }
+        },
+        {
+          "team_id": 75,
+          "name": "Stags FC",
+          "region": "East Midlands",
+          "stature": "small_club",
+          "global_reputation": 36,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 80,
+          "supporter_expectation": 52,
+          "continental_campaigns": 0,
+          "stadium_capacity": 9200,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Sandy Pate",
+            "position": "Striker",
+            "years_active": "1930-1936",
+            "bio": "Scored 127 goals in just 144 games. Phenomenal goal-scoring ratio that remains unmatched. Brief career but explosive impact. His 55 goals in the 1931-32 season is a club record that will likely never be broken."
+          }
+        },
+        {
+          "team_id": 76,
+          "name": "County Exiles",
+          "region": "Wales",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 28,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 80,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 7850,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Robbie Willmott",
+            "position": "Midfielder",
+            "years_active": "2017-present",
+            "bio": "Scored 45 goals in 280+ appearances. Creative midfielder whose skill and set-piece delivery have made him a modern legend. His consistency and commitment through difficult periods has made him beloved. Still active."
+          }
+        },
+        {
+          "team_id": 77,
+          "name": "U's Town",
+          "region": "East of England",
+          "stature": "small_club",
+          "global_reputation": 36,
+          "financial_power": 28,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 78,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Martyn King",
+            "position": "Midfielder",
+            "years_active": "1971-1988",
+            "bio": "Made 613 appearances, the club's record. Versatile midfielder who served the club for 17 years. His dedication through relegations and promotions made him an icon. Embodied loyalty and perseverance."
+          }
+        },
+        {
+          "team_id": 78,
+          "name": "Mariners Town",
+          "region": "East Midlands",
+          "stature": "historic_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 80,
+          "supporter_expectation": 54,
+          "continental_campaigns": 0,
+          "stadium_capacity": 9000,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Pat Glover",
+            "position": "Striker",
+            "years_active": "1930-1939",
+            "bio": "Scored 180 goals in 383 games. Prolific pre-war striker whose records stood for decades. His consistency across nine seasons made him a legend. Led the club to their highest-ever league position."
+          }
+        },
+        {
+          "team_id": 79,
+          "name": "Sulphurites Town",
+          "region": "Yorkshire",
+          "stature": "minnow",
+          "global_reputation": 30,
+          "financial_power": 24,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 75,
+          "supporter_patience": 85,
+          "supporter_expectation": 42,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5000,
+          "training_facilities": 6,
+          "youth_facilities": 6,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Simon Weaver",
+            "position": "Manager/Former Player",
+            "years_active": "2009-present (as manager)",
+            "bio": "The longest-serving manager in English football who led the club from non-league to the Football League. His tactical acumen and loyalty are legendary. Transformed the club's fortunes and remains at the helm."
+          }
+        },
+        {
+          "team_id": 80,
+          "name": "Rovers of the Wirral",
+          "region": "North West",
+          "stature": "journeyman_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_family",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 78,
+          "supporter_expectation": 54,
+          "continental_campaigns": 0,
+          "stadium_capacity": 16000,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "playoff_contention",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Harold Bell",
+            "position": "Forward",
+            "years_active": "1931-1946",
+            "bio": "Scored 104 goals in 312 games. Pre-war forward whose loyalty through difficult times made him a legend. His consistency across 15 seasons was remarkable. One-club man who epitomized dedication."
+          }
+        },
+        {
+          "team_id": 81,
+          "name": "Saddlers FC",
+          "region": "West Midlands",
+          "stature": "small_club",
+          "global_reputation": 36,
+          "financial_power": 28,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 80,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 11300,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Colin Taylor",
+            "position": "Midfielder",
+            "years_active": "1958-1973",
+            "bio": "Made 571 appearances, the club's record. Consistent midfielder who served for 15 seasons. His dedication through thick and thin made him beloved. Epitomized loyalty and commitment to the club."
+          }
+        },
+        {
+          "team_id": 82,
+          "name": "Alex Railway",
+          "region": "North West",
+          "stature": "academy_club",
+          "global_reputation": 38,
+          "financial_power": 28,
+          "ownership_type": "local_trust",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 85,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10153,
+          "training_facilities": 7,
+          "youth_facilities": 12,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "possession",
+            "youth_development",
+            "technical"
+          ],
+          "club_legend": {
+            "name": "Steve Walters",
+            "position": "Defender",
+            "years_active": "1982-1993",
+            "bio": "Academy product who made 433 appearances. Solid defender who captained the team and represented his country. His development through the youth system and subsequent loyalty made him a legend. Embodies the club's philosophy."
+          }
+        },
+        {
+          "team_id": 83,
+          "name": "Dons AFC",
+          "region": "Greater London",
+          "stature": "phoenix_club",
+          "global_reputation": 36,
+          "financial_power": 30,
+          "ownership_type": "fan_owned",
+          "supporter_base": "local",
+          "supporter_loyalty": 95,
+          "supporter_patience": 85,
+          "supporter_expectation": 50,
+          "continental_campaigns": 0,
+          "stadium_capacity": 9300,
+          "training_facilities": 8,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "possession"
+          ],
+          "club_legend": {
+            "name": "Neal Ardley",
+            "position": "Midfielder/Manager",
+            "years_active": "2004-2007 (player), 2012-2019 (manager)",
+            "bio": "Academy graduate who returned to guide the club from the lowest levels to three promotions. His emotional connection and tactical ability made him a legend. Embodies the phoenix club's remarkable journey."
+          }
+        },
+        {
+          "team_id": 84,
+          "name": "Rovers Doncaster",
+          "region": "Yorkshire",
+          "stature": "yo_yo_club",
+          "global_reputation": 38,
+          "financial_power": 30,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 75,
+          "supporter_expectation": 56,
+          "continental_campaigns": 0,
+          "stadium_capacity": 15000,
+          "training_facilities": 8,
+          "youth_facilities": 8,
+          "ambition": "promotion_challenge",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Alick Jeffrey",
+            "position": "Forward",
+            "years_active": "1953-1964",
+            "bio": "Scored 126 goals in 249 games. Talented forward who turned down moves to bigger clubs. His skill and loyalty made him a legend. Regarded as one of the most naturally gifted players in club history."
+          }
+        },
+        {
+          "team_id": 85,
+          "name": "Gills FC",
+          "region": "South East",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 26,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 78,
+          "supporter_patience": 80,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 11500,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Brian Yeo",
+            "position": "Striker",
+            "years_active": "1963-1975",
+            "bio": "Scored 136 goals in 481 games. Prolific striker whose goals across 12 seasons made him a legend. His consistency and loyalty were exceptional. Club's all-time leading appearance maker and top scorer."
+          }
+        },
+        {
+          "team_id": 86,
+          "name": "Shrimps FC",
+          "region": "North West",
+          "stature": "minnow",
+          "global_reputation": 30,
+          "financial_power": 24,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 88,
+          "supporter_expectation": 40,
+          "continental_campaigns": 0,
+          "stadium_capacity": 6400,
+          "training_facilities": 6,
+          "youth_facilities": 6,
+          "ambition": "survival",
+          "playing_styles": [
+            "defensive_solid"
+          ],
+          "club_legend": {
+            "name": "Jim Bentley",
+            "position": "Defender/Manager",
+            "years_active": "2002-2011 (player), 2011-2019 (manager)",
+            "bio": "Made 340 appearances then managed for 8 years. His 19-year association with the club saw him lead them to their first Football League promotion. True club legend who gave everything to the Shrimps."
+          }
+        },
+        {
+          "team_id": 87,
+          "name": "Bluebirds AFC",
+          "region": "North West",
+          "stature": "minnow",
+          "global_reputation": 28,
+          "financial_power": 22,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 88,
+          "supporter_expectation": 38,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5000,
+          "training_facilities": 6,
+          "youth_facilities": 6,
+          "ambition": "survival",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Colin Cowperthwaite",
+            "position": "Striker",
+            "years_active": "1977-1992",
+            "bio": "Scored 282 goals in 704 games - both club records. Phenomenal longevity and consistency across 15 seasons. His goal-scoring prowess defined an era. Beloved for his loyalty and remains the club's greatest player."
+          }
+        },
+        {
+          "team_id": 88,
+          "name": "Cumbrians United",
+          "region": "North West",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 26,
+          "ownership_type": "local_consortium",
+          "supporter_base": "local",
+          "supporter_loyalty": 85,
+          "supporter_patience": 82,
+          "supporter_expectation": 48,
+          "continental_campaigns": 0,
+          "stadium_capacity": 18000,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Allan Ross",
+            "position": "Striker",
+            "years_active": "1963-1979",
+            "bio": "Scored 228 goals in 466 games, both club records. Prolific striker across 16 seasons. His consistency and loyalty through promotions and relegations made him legendary. One-club man who remains the benchmark."
+          }
+        },
+        {
+          "team_id": 89,
+          "name": "Stanley FC",
+          "region": "North West",
+          "stature": "minnow",
+          "global_reputation": 32,
+          "financial_power": 24,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 82,
+          "supporter_patience": 88,
+          "supporter_expectation": 42,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5500,
+          "training_facilities": 6,
+          "youth_facilities": 6,
+          "ambition": "survival",
+          "playing_styles": [
+            "physical",
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Paul Mullin",
+            "position": "Striker",
+            "years_active": "2014-2016",
+            "bio": "Scored 49 goals in 88 games across two explosive seasons. Prolific striker whose goals fired the club back into the Football League. Brief but impactful spell that saved the club's league status. Cult hero."
+          }
+        },
+        {
+          "team_id": 90,
+          "name": "United of Sutton",
+          "region": "Greater London",
+          "stature": "minnow",
+          "global_reputation": 28,
+          "financial_power": 22,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 75,
+          "supporter_patience": 88,
+          "supporter_expectation": 38,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5000,
+          "training_facilities": 6,
+          "youth_facilities": 5,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct",
+            "physical"
+          ],
+          "club_legend": {
+            "name": "Matthew Gray",
+            "position": "Defender",
+            "years_active": "2003-2018",
+            "bio": "Made 425 appearances across 15 seasons. Defensive rock who captained the club from non-league to the Football League. His leadership and consistency were exceptional. Embodies the club's remarkable journey upward."
+          }
+        },
+        {
+          "team_id": 91,
+          "name": "Green Rovers",
+          "region": "South West",
+          "stature": "eco_club",
+          "global_reputation": 32,
+          "financial_power": 28,
+          "ownership_type": "green_energy_tycoon",
+          "supporter_base": "local",
+          "supporter_loyalty": 70,
+          "supporter_patience": 80,
+          "supporter_expectation": 46,
+          "continental_campaigns": 0,
+          "stadium_capacity": 5100,
+          "training_facilities": 9,
+          "youth_facilities": 7,
+          "ambition": "mid_table_stability",
+          "playing_styles": [
+            "possession",
+            "sustainable"
+          ],
+          "club_legend": {
+            "name": "Adrian Randall",
+            "position": "Striker",
+            "years_active": "1998-2004",
+            "bio": "Scored 77 goals in 217 games during the club's rise from non-league. His finishing ability and work ethic made him a hero. Led the club to the Football League for the first time. Pioneer of the green revolution."
+          }
+        },
+        {
+          "team_id": 92,
+          "name": "Dale FC",
+          "region": "North West",
+          "stature": "small_club",
+          "global_reputation": 34,
+          "financial_power": 26,
+          "ownership_type": "local_businessman",
+          "supporter_base": "local",
+          "supporter_loyalty": 80,
+          "supporter_patience": 82,
+          "supporter_expectation": 46,
+          "continental_campaigns": 0,
+          "stadium_capacity": 10000,
+          "training_facilities": 7,
+          "youth_facilities": 7,
+          "ambition": "survival",
+          "playing_styles": [
+            "direct"
+          ],
+          "club_legend": {
+            "name": "Reg Jenkins",
+            "position": "Striker",
+            "years_active": "1964-1973",
+            "bio": "Scored 119 goals in 302 games. Prolific striker during the club's most stable period. His consistency across nine seasons made him beloved. Remains one of the club's all-time leading scorers."
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -111,6 +111,35 @@ func _select_scorer(team: Team) -> Player:
 
     return team.players[team.players.size() - 1]  # Fallback to last player
 
+func decide_player_action(player: Player) -> String:
+	"""
+	Simple example: decides what a player does when they get the ball.
+	"""
+	var weights = {
+		"safe_pass": player.get_action_weight("pass_safe"),
+		"killer_pass": player.get_action_weight("pass_killer"),
+		"dribble": player.get_action_weight("dribble"),
+	}
+	
+	# Pick action based on weights
+	var chosen_action = pick_weighted_action(weights)
+	return chosen_action
+
+func pick_weighted_action(weights: Dictionary) -> String:
+	var total = 0.0
+	for weight in weights.values():
+		total += weight
+	
+	var rand = randf() * total
+	var cumulative = 0.0
+	for action in weights.keys():
+		cumulative += weights[action]
+		if rand <= cumulative:
+			return action
+	
+	return weights.keys()[0]  # Fallback
+
+
 func _simulate_cards(home_team: Team, away_team: Team, yellow_cards: Array, red_cards: Array):
     var all_players = home_team.players + away_team.players
     for player in all_players:
