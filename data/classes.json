@@ -15,7 +15,7 @@
           "Drive": { "flat": 5, "percent": 0.0 },
           "Leadership": { "flat": 7, "percent": 0.0 },
           "Synergy": {
-            "Timing": { "flat": 1, "percent": 0.04 }
+            "Tempo": { "flat": 1, "percent": 0.04 }
           }
         }
       },
@@ -26,7 +26,7 @@
           "Anticipation": { "flat": 4, "percent": 0.0 },
           "Composure": { "flat": 6, "percent": 0.0 },
           "Decisions": { "flat": 6, "percent": 0.0 },
-          "Timing": { "flat": 5, "percent": 0.0 },
+          "Tempo": { "flat": 5, "percent": 0.0 },
           "Synergy": {
             "Vision": { "flat": 1, "percent": 0.04 }
           }
@@ -53,10 +53,10 @@
         "bonuses": {
           "Aggression": { "flat": 5, "percent": 0.0 },
           "Duels": { "flat": 6, "percent": 0.0 },
-          "Shielding": { "flat": 7, "percent": 0.0 },
+          "Strength": { "flat": 7, "percent": 0.0 },
           "Throwing": { "flat": 3, "percent": 0.0 },
           "Synergy": {
-            "Strength": { "flat": 1, "percent": 0.04 }
+            "Shielding": { "flat": 1, "percent": 0.04 }
           }
         }
       },
