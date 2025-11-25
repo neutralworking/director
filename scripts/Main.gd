@@ -19,9 +19,41 @@ func _ready():
 	# Initialize game
 	_schedule_initial_events()
 	_update_hud()
+	
+	# Initialize UI
+	_setup_ui()
+	
+	# Generate Squad
+	CharacterManager.generate_initial_squad(25)
 
 	print("Director of Football - Game Started!")
 	print("Welcome! Use the buttons to advance time and manage your club.")
+
+func _setup_ui():
+	# Create ScreenManager
+	var screen_manager = load("res://scripts/ui/ScreenManager.gd").new()
+	screen_manager.name = "ScreenManager"
+	add_child(screen_manager)
+	
+	# Load Screens
+	var home_scene = load("res://scenes/ui/HomeScreen.tscn").instantiate()
+	var squad_scene = load("res://scenes/ui/SquadScreen.tscn").instantiate()
+	
+	# Connect Signals
+	home_scene.squad_requested.connect(func(): 
+		screen_manager.push_screen(squad_scene)
+		squad_scene.on_enter()  # Refresh player list
+	)
+	
+	squad_scene.player_selected.connect(func(player):
+		var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
+		player_screen.set_player(player)
+		screen_manager.push_screen(player_screen)
+	)
+	
+	# Push Home Screen
+	screen_manager.push_screen(home_scene)
+
 
 func _on_time_advance_requested(days: int, hours: int):
 	advance_time(days, hours)

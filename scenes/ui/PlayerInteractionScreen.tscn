@@ -1,0 +1,117 @@
+[gd_scene load_steps=2 format=3 uid="uid://playerinteraction123"]
+
+[ext_resource type="Script" path="res://scripts/ui/PlayerInteractionScreen.gd" id="1_script"]
+
+[node name="PlayerInteractionScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "< Back"
+
+[node name="PlayerName" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Player Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="InfoCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Content" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/InfoCard"]
+layout_mode = 2
+text = "Position • Age • #
+Archetype: Name
+Traits: Trait1, Trait2"
+
+[node name="MoraleCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/MoraleCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MoraleCard/VBox"]
+layout_mode = 2
+text = "❤️ Morale & Opinion"
+
+[node name="Content" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/MoraleCard/VBox"]
+layout_mode = 2
+text = "Morale: 75/100 (Happy)
+Opinion of You: +35"
+
+[node name="RelationshipsCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/RelationshipsCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/RelationshipsCard/VBox"]
+layout_mode = 2
+text = "🔗 Key Relationships"
+
+[node name="Content" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/RelationshipsCard/VBox"]
+layout_mode = 2
+text = "No significant relationships"
+
+[node name="ContractCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer/ContractCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/ContractCard/VBox"]
+layout_mode = 2
+text = "📊 Contract & Status"
+
+[node name="Content" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/ContractCard/VBox"]
+layout_mode = 2
+text = "Squad Role: Rotation
+Playing Time: Regular"
+
+[node name="ActionsContainer" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="DiscussHappinessButton" type="Button" parent="VBoxContainer/ActionsContainer"]
+layout_mode = 2
+text = "💬 Discuss Happiness"
+
+[node name="SetGoalsButton" type="Button" parent="VBoxContainer/ActionsContainer"]
+layout_mode = 2
+text = "📈 Set Goals"
+
+[node name="SquadRoleButton" type="Button" parent="VBoxContainer/ActionsContainer"]
+layout_mode = 2
+text = "🎯 Discuss Squad Role"
+
+[connection signal="pressed" from="VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/ActionsContainer/DiscussHappinessButton" to="." method="_on_discuss_happiness_pressed"]
+[connection signal="pressed" from="VBoxContainer/ActionsContainer/SetGoalsButton" to="." method="_on_set_goals_pressed"]
+[connection signal="pressed" from="VBoxContainer/ActionsContainer/SquadRoleButton" to="." method="_on_squad_role_pressed"]

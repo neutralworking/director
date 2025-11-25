@@ -1,9 +1,45 @@
 extends Node
 
-class_name CharacterManager
+# class_name CharacterManager
+
+const ArchetypeDataConst = preload("res://scripts/character/archetype.gd")
 
 var archetypes: Dictionary = {}  # Cache: archetype_id -> ArchetypeData
 var beliefs: Dictionary = {}     # Cache: belief_id -> belief info
+var players: Array = []          # List of active Player nodes
+
+func get_all_players() -> Array:
+	return players
+
+func generate_random_player():
+	var player_script = load("res://scripts/character/player.gd")
+	var new_player = player_script.new()
+	
+	var player_id = "player_" + str(players.size())
+	new_player.character_name = "Player " + str(randi() % 1000)
+	new_player.position_on_field = ["GK", "DEF", "MID", "FWD"].pick_random()
+	new_player.age = randi_range(18, 35)
+	new_player.shirt_number = (players.size() % 99) + 1
+	new_player.morale = randi_range(60, 90)
+	
+	# Initialize character_data for relationships
+	var CharacterDataScript = load("res://scripts/character/character_data.gd")
+	new_player.character_data = CharacterDataScript.new(player_id, new_player.character_name)
+	
+	# Pick random archetype
+	if archetypes.size() > 0:
+		new_player.archetype_id = archetypes.keys().pick_random()
+		new_player.archetype = get_archetype(new_player.archetype_id)
+		if new_player.archetype:
+			new_player._generate_traits_from_archetype()
+	
+	players.append(new_player)
+	return new_player
+
+func generate_initial_squad(count: int = 20):
+	for i in range(count):
+		generate_random_player()
+
 
 func _ready() -> void:
 	load_archetypes()
@@ -22,7 +58,7 @@ func load_archetypes() -> void:
 	
 	# Parse each archetype from JSON into ArchetypeData resources
 	for archetype_dict in json["archetypes"]:
-		var archetype = ArchetypeData.new()
+		var archetype = ArchetypeDataConst.new()
 		archetype.id = archetype_dict["id"]
 		archetype.name = archetype_dict["name"]
 		archetype.mbti = archetype_dict["mbti"]
@@ -68,7 +104,7 @@ func load_beliefs() -> void:
 			"description": belief_dict["description"]
 		}
 
-func get_archetype(archetype_id: String) -> ArchetypeData:
+func get_archetype(archetype_id: String):
 	if archetype_id not in archetypes:
 		push_error("Archetype not found: " + archetype_id)
 		return null

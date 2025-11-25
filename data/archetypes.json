@@ -1,0 +1,35 @@
+{
+    "archetypes": [
+        {
+            "id": "istp_ninja",
+            "name": "The Ninja",
+            "mbti": "ISTP",
+            "faction_belief": "pragmatism",
+            "flavor": {
+                "summary": "Quiet and deadly.",
+                "vibe": "Cool"
+            },
+            "match_engine_weights": {
+                "tempo": 0.8,
+                "risk_tolerance": 0.7,
+                "expressiveness": 0.6,
+                "work_rate": 0.5,
+                "tactical_discipline": 0.4
+            },
+            "management_traits": {
+                "loyalty": 0.6,
+                "professionalism": 0.8,
+                "controversy": 0.2,
+                "ambition": 0.7
+            },
+            "chemistry": {
+                "conflicts_with": [],
+                "synergizes_with": []
+            },
+            "player_examples": []
+        }
+    ],
+    "global_definitions": {
+        "beliefs": []
+    }
+}
