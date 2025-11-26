@@ -1,0 +1,164 @@
+[gd_scene load_steps=2 format=3 uid="uid://coachprofile456"]
+
+[ext_resource type="Script" path="res://scripts/ui/CoachProfileScreen.gd" id="1_script"]
+
+[node name="CoachProfileScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "< Back"
+
+[node name="CoachNameLabel" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Head Coach"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HireCoachButton" type="Button" parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "Hire Coach"
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="BasicInfoCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard/VBox"]
+layout_mode = 2
+text = "📋 Basic Information"
+
+[node name="InfoLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard/VBox"]
+layout_mode = 2
+text = "Age: 42
+Nationality: Spanish
+Reputation: 65/100"
+
+[node name="ArchetypeCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard/VBox"]
+layout_mode = 2
+text = "🎯 Archetype & Style"
+
+[node name="ArchetypeLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard/VBox"]
+layout_mode = 2
+text = "The System
+Tactical Style: Control"
+autowrap_mode = 3
+
+[node name="AttributesCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/AttributesCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/AttributesCard/VBox"]
+layout_mode = 2
+text = "📊 Attributes"
+
+[node name="AttributesLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/AttributesCard/VBox"]
+layout_mode = 2
+text = "Tactics: 19
+Relationships: 9"
+
+[node name="TacticalCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/TacticalCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/TacticalCard/VBox"]
+layout_mode = 2
+text = "⚽ Tactical Requirements"
+
+[node name="TacticalLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/TacticalCard/VBox"]
+layout_mode = 2
+text = "Required: Passing, Vision, Technique"
+autowrap_mode = 3
+
+[node name="RelationshipCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/RelationshipCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/RelationshipCard/VBox"]
+layout_mode = 2
+text = "🤝 Director Relationship"
+
+[node name="RelationshipLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/RelationshipCard/VBox"]
+layout_mode = 2
+text = "Relationship: 72/100
+Status: Solid"
+
+[node name="StaffCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/StaffCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/StaffCard/VBox"]
+layout_mode = 2
+text = "👥 Coaching Staff"
+
+[node name="StaffContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/StaffCard/VBox"]
+layout_mode = 2
+
+[node name="ContractCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/ContractCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ContractCard/VBox"]
+layout_mode = 2
+text = "💼 Contract"
+
+[node name="ContractLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ContractCard/VBox"]
+layout_mode = 2
+text = "Weekly Wage: £75k
+Contract: 2.5 years"
+
+[connection signal="pressed" from="VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]

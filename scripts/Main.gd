@@ -7,18 +7,12 @@ var current_date := {"year": 2025, "month": 10, "day": 29, "hour": 9}
 # Node references (Godot 4+)
 @onready var dof_manager = $DOFManager
 @onready var time_system = $TimeProgressionSystem
-@onready var main_hud = $MainHUD
 @onready var event_system = $EventQueueSystem
 
 func _ready():
-	# Connect HUD signals
-	main_hud.connect("time_advance_requested", Callable(self, "_on_time_advance_requested"))
-	main_hud.connect("skip_to_event_requested", Callable(self, "_on_skip_to_event_requested"))
-	main_hud.connect("menu_requested", Callable(self, "_on_menu_requested"))
-	
+	print("Main._ready() called!")
 	# Initialize game
 	_schedule_initial_events()
-	_update_hud()
 	
 	# Initialize UI
 	_setup_ui()
@@ -30,19 +24,36 @@ func _ready():
 	print("Welcome! Use the buttons to advance time and manage your club.")
 
 func _setup_ui():
+	print("Setting up UI...")
+	
 	# Create ScreenManager
 	var screen_manager = load("res://scripts/ui/ScreenManager.gd").new()
 	screen_manager.name = "ScreenManager"
+	screen_manager.set_anchors_preset(Control.PRESET_FULL_RECT)
 	add_child(screen_manager)
+	print("ScreenManager created")
 	
 	# Load Screens
 	var home_scene = load("res://scenes/ui/HomeScreen.tscn").instantiate()
 	var squad_scene = load("res://scenes/ui/SquadScreen.tscn").instantiate()
+	var profile_scene = load("res://scenes/ui/DirectorProfileScreen.tscn").instantiate()
+	var coach_scene = load("res://scenes/ui/CoachProfileScreen.tscn").instantiate()
+	print("Screens loaded")
 	
 	# Connect Signals
 	home_scene.squad_requested.connect(func(): 
 		screen_manager.push_screen(squad_scene)
 		squad_scene.on_enter()  # Refresh player list
+	)
+	
+	home_scene.profile_requested.connect(func():
+		screen_manager.push_screen(profile_scene)
+		profile_scene.on_enter()  # Refresh profile
+	)
+	
+	home_scene.coach_requested.connect(func():
+		screen_manager.push_screen(coach_scene)
+		coach_scene.on_enter()  # Refresh coach info
 	)
 	
 	squad_scene.player_selected.connect(func(player):
@@ -53,6 +64,7 @@ func _setup_ui():
 	
 	# Push Home Screen
 	screen_manager.push_screen(home_scene)
+	print("Home screen pushed, UI setup complete")
 
 
 func _on_time_advance_requested(days: int, hours: int):
@@ -97,12 +109,12 @@ func _handle_current_events():
 	if current_events.size() == 0:
 		return
 
-	main_hud.set_buttons_enabled(false)
+	# main_hud.set_buttons_enabled(false)  # Old UI removed
 
 	for event in current_events:
 		await _process_event(event)
 
-	main_hud.set_buttons_enabled(true)
+	# main_hud.set_buttons_enabled(true)  # Old UI removed
 
 func _process_event(event: Dictionary):
 	print("Processing event: ", event["type"])
@@ -156,7 +168,7 @@ func _update_hud():
 		current_date["year"], 
 		current_date["hour"]
 	]
-	main_hud.update_date_display(date_string)
+	# main_hud.update_date_display(date_string)  # Old UI removed
 	var events_text = "Upcoming Events:\n"
 	var next_events = []
 	var temp_date = current_date.duplicate()
@@ -180,7 +192,7 @@ func _update_hud():
 
 	else:
 		events_text += "No events scheduled"
-	main_hud.update_events_display(events_text)
+	# main_hud.update_events_display(events_text)  # Old UI removed
 
 func _get_event_type_name(event_type: int) -> String:
 	match event_type:

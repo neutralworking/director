@@ -1,0 +1,163 @@
+[gd_scene load_steps=2 format=3 uid="uid://directorprofile123"]
+
+[ext_resource type="Script" path="res://scripts/ui/DirectorProfileScreen.gd" id="1_script"]
+
+[node name="DirectorProfileScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.08, 0.08, 0.1, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "< Back"
+
+[node name="DirectorNameLabel" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Director Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="BasicInfoCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard/VBox"]
+layout_mode = 2
+text = "📋 Basic Information"
+
+[node name="InfoLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/BasicInfoCard/VBox"]
+layout_mode = 2
+text = "Age: 37
+Nationality: English
+Reputation: 0/100"
+
+[node name="ArchetypeCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard/VBox"]
+layout_mode = 2
+text = "🎯 Archetype & Background"
+
+[node name="ArchetypeLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/ArchetypeCard/VBox"]
+layout_mode = 2
+text = "The Scout
+Background: Elite Scout"
+autowrap_mode = 3
+
+[node name="StrengthsCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/StrengthsCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/StrengthsCard/VBox"]
+layout_mode = 2
+text = "💪 Strengths"
+
+[node name="StrengthsLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/StrengthsCard/VBox"]
+layout_mode = 2
+text = "Sharp Eye
+Future Focused"
+autowrap_mode = 3
+
+[node name="FlawCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/FlawCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/FlawCard/VBox"]
+layout_mode = 2
+text = "⚠️ Fatal Flaw"
+
+[node name="FlawLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/FlawCard/VBox"]
+layout_mode = 2
+text = "Impatient"
+autowrap_mode = 3
+
+[node name="StatsCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/StatsCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/StatsCard/VBox"]
+layout_mode = 2
+text = "📊 Attributes"
+
+[node name="StatsLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/StatsCard/VBox"]
+layout_mode = 2
+text = "Talent ID: 16
+Potential ID: 17
+Negotiation: 8"
+
+[node name="CareerCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/CareerCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/CareerCard/VBox"]
+layout_mode = 2
+text = "🏆 Career Record"
+
+[node name="CareerLabel" type="Label" parent="VBoxContainer/ScrollContainer/VBox/CareerCard/VBox"]
+layout_mode = 2
+text = "Clubs: 1
+Trophies: 0
+Transfer Profit: £0M"
+
+[node name="BadgesCard" type="PanelContainer" parent="VBoxContainer/ScrollContainer/VBox"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/BadgesCard"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/ScrollContainer/VBox/BadgesCard/VBox"]
+layout_mode = 2
+text = "🎖️ Badges & Achievements"
+
+[node name="BadgesContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBox/BadgesCard/VBox"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]

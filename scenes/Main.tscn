@@ -1,19 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://bl5lujtdkc0k0"]
+[gd_scene load_steps=5 format=3 uid="uid://bl5lujtdkc0k0"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_kotkm"]
-[ext_resource type="PackedScene" uid="uid://cwvdh3oil1inq" path="res://scenes/MainHUD.tscn" id="2_sjvly"]
 [ext_resource type="Script" path="res://scripts/EventQueueSystem.gd" id="3_upx0b"]
 [ext_resource type="Script" path="res://scripts/DOFManager.gd" id="4_g8ps0"]
 [ext_resource type="Script" path="res://scripts/TimeProgressionSystem.gd" id="5_884q3"]
-[ext_resource type="PackedScene" uid="uid://bqn8t4khp1515" path="res://scenes/DOFProfile.tscn" id="6_yn3sa"]
 
 [node name="Main" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_kotkm")
-
-[node name="MainHUD" parent="." instance=ExtResource("2_sjvly")]
-layout_mode = 1
 
 [node name="TimeProgressionSystem" type="Node" parent="."]
 script = ExtResource("5_884q3")
@@ -33,6 +32,3 @@ script = ExtResource("4_g8ps0")
 
 [node name="EventQueueSystem" type="Node" parent="."]
 script = ExtResource("3_upx0b")
-
-[node name="DOFProfilePanel" parent="." instance=ExtResource("6_yn3sa")]
-layout_mode = 0
