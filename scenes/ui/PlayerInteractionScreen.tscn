@@ -108,19 +108,5 @@ Playing Time: Regular"
 layout_mode = 2
 theme_override_constants/separation = 10
 
-[node name="DiscussHappinessButton" type="Button" parent="VBoxContainer/ActionsContainer"]
-layout_mode = 2
-text = "💬 Discuss Happiness"
-
-[node name="SetGoalsButton" type="Button" parent="VBoxContainer/ActionsContainer"]
-layout_mode = 2
-text = "📈 Set Goals"
-
-[node name="SquadRoleButton" type="Button" parent="VBoxContainer/ActionsContainer"]
-layout_mode = 2
-text = "🎯 Discuss Squad Role"
-
 [connection signal="pressed" from="VBoxContainer/Header/BackButton" to="." method="_on_back_button_pressed"]
-[connection signal="pressed" from="VBoxContainer/ActionsContainer/DiscussHappinessButton" to="." method="_on_discuss_happiness_pressed"]
-[connection signal="pressed" from="VBoxContainer/ActionsContainer/SetGoalsButton" to="." method="_on_set_goals_pressed"]
-[connection signal="pressed" from="VBoxContainer/ActionsContainer/SquadRoleButton" to="." method="_on_squad_role_pressed"]
+

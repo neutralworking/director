@@ -60,7 +60,13 @@ custom_minimum_size = Vector2(0, 60)
 layout_mode = 2
 text = "Head Coach"
 
+[node name="LeagueButton" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+text = "League"
+
 [connection signal="pressed" from="VBoxContainer/SquadButton" to="." method="_on_squad_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/InboxButton" to="." method="_on_inbox_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/ProfileButton" to="." method="_on_profile_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/CoachButton" to="." method="_on_coach_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/LeagueButton" to="." method="_on_league_button_pressed"]

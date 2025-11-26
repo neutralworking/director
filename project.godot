@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 CharacterManager="*res://scripts/character/character_manager.gd"
 CoachManager="*res://scripts/managers/coach_manager.gd"
+LeagueManager="*res://scripts/managers/LeagueManager.gd"
 
 [display]
 

@@ -1,6 +1,6 @@
 extends Node
 
-# class_name Player
+class_name Player
 
 @export var character_name: String = "Unknown"
 @export var archetype_id: String  # e.g., "istp_ninja"
@@ -19,6 +19,7 @@ var playing_time_expectation: String = "Regular"  # Guaranteed/Regular/Rotation/
 var archetype # : ArchetypeData
 var character_manager # : CharacterManager
 var character_data # : CharacterData # The relationship/personality data
+var transfer_data # : PlayerTransferData # Transfer market specific data
 
 func _ready() -> void:
 	character_manager = get_tree().root.get_child(0).get_node("CharacterManager")
@@ -27,6 +28,12 @@ func _ready() -> void:
 		return
 	
 	load_archetype()
+	
+	# Initialize transfer data if not already present
+	if transfer_data == null:
+		var transfer_data_script = load("res://scripts/character/player_transfer_data.gd")
+		if transfer_data_script:
+			transfer_data = transfer_data_script.new()
 
 func load_archetype() -> void:
 	archetype = character_manager.get_archetype(archetype_id)

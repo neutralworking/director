@@ -12,10 +12,19 @@ signal request_pop()
 @onready var actions_container = $VBoxContainer/ActionsContainer
 
 var current_player = null
+var is_own_player: bool = true  # Default to own player for now
 
-func set_player(player):
+func set_player(player, is_users_player: bool = true):
 	current_player = player
-	_refresh_display()
+	is_own_player = is_users_player
+	# Only refresh if the node is ready
+	if is_node_ready():
+		_refresh_display()
+
+func _ready():
+	# If player was set before _ready, refresh now
+	if current_player:
+		_refresh_display()
 
 func _refresh_display():
 	if not current_player:
@@ -35,7 +44,26 @@ func _refresh_display():
 		info_text += "Archetype: %s (%s)\n" % [current_player.archetype.name, current_player.archetype.mbti]
 	
 	if current_player.traits.size() > 0:
-		info_text += "Traits: " + ", ".join(current_player.traits)
+		info_text += "Traits: " + ", ".join(current_player.traits) + "\n"
+
+	# Scouting & Analyst Data
+	if current_player.transfer_data:
+		var discovered_traits = []
+		for t in current_player.transfer_data.scouting_traits:
+			if current_player.transfer_data.scouting_traits[t].get("discovered", false):
+				discovered_traits.append(t)
+		
+		if discovered_traits.size() > 0:
+			info_text += "Scouted Traits: " + ", ".join(discovered_traits) + "\n"
+			
+		var discovered_metrics = []
+		for m in current_player.transfer_data.analyst_metrics:
+			if current_player.transfer_data.analyst_metrics[m].get("discovered", false):
+				var val = current_player.transfer_data.analyst_metrics[m].get("value", 0)
+				discovered_metrics.append("%s: %.2f" % [m, val])
+				
+		if discovered_metrics.size() > 0:
+			info_text += "Metrics: " + ", ".join(discovered_metrics) + "\n"
 	
 	if info_card and info_card.has_node("Content"):
 		info_card.get_node("Content").text = info_text
@@ -74,11 +102,72 @@ func _refresh_display():
 	var contract_text = "Squad Role: %s\n" % current_player.squad_role
 	contract_text += "Playing Time: %s" % current_player.playing_time_expectation
 	
+	# Transfer Value
+	if current_player.transfer_data:
+		var calc_script = load("res://scripts/systems/TransferMarket/transfer_value_calculator.gd")
+		if calc_script:
+			var val = calc_script.calculate_value(current_player)
+			# Format as currency (e.g. $1.5M)
+			var val_str = "$%.1fM" % (val / 1000000.0)
+			if val < 1000000:
+				val_str = "$%dK" % (val / 1000.0)
+			contract_text += "\nEst. Value: %s" % val_str
+	
 	if current_player.interested_clubs.size() > 0:
 		contract_text += "\n\n%d clubs interested" % current_player.interested_clubs.size()
 	
 	if contract_card and contract_card.has_node("VBox/Content"):
 		contract_card.get_node("VBox/Content").text = contract_text
+	
+	# Update Action Buttons
+	_update_action_buttons()
+
+func _update_action_buttons():
+	# Safety check - ensure container exists
+	if not actions_container:
+		return
+		
+	# Clear existing action buttons
+	for child in actions_container.get_children():
+		child.queue_free()
+	
+	if is_own_player:
+		# Own player actions
+		var discuss_btn = Button.new()
+		discuss_btn.text = "💬 Discuss Happiness"
+		discuss_btn.pressed.connect(_on_discuss_happiness_pressed)
+		actions_container.add_child(discuss_btn)
+		
+		var goals_btn = Button.new()
+		goals_btn.text = "📈 Set Goals"
+		goals_btn.pressed.connect(_on_set_goals_pressed)
+		actions_container.add_child(goals_btn)
+		
+		var role_btn = Button.new()
+		role_btn.text = "🎯 Discuss Squad Role"
+		role_btn.pressed.connect(_on_squad_role_pressed)
+		actions_container.add_child(role_btn)
+	else:
+		# Other team's player actions
+		var offer_btn = Button.new()
+		offer_btn.text = "💰 Make Offer"
+		offer_btn.pressed.connect(_on_make_offer_pressed)
+		actions_container.add_child(offer_btn)
+		
+		var agent_btn = Button.new()
+		agent_btn.text = "🤝 Contact Agent"
+		agent_btn.pressed.connect(_on_contact_agent_pressed)
+		actions_container.add_child(agent_btn)
+		
+		var compare_btn = Button.new()
+		compare_btn.text = "📊 Compare"
+		compare_btn.pressed.connect(_on_compare_pressed)
+		actions_container.add_child(compare_btn)
+		
+		var scout_btn = Button.new()
+		scout_btn.text = "🔍 Scout"
+		scout_btn.pressed.connect(_on_scout_pressed)
+		actions_container.add_child(scout_btn)
 
 func _on_back_button_pressed():
 	request_pop.emit()
@@ -94,6 +183,22 @@ func _on_set_goals_pressed():
 func _on_squad_role_pressed():
 	# TODO: Show squad role dialog
 	print("Discuss squad role with " + current_player.character_name)
+
+func _on_make_offer_pressed():
+	# TODO: Show transfer offer dialog
+	print("Making offer for " + current_player.character_name)
+
+func _on_contact_agent_pressed():
+	# TODO: Show agent contact dialog
+	print("Contacting agent for " + current_player.character_name)
+
+func _on_compare_pressed():
+	# TODO: Show comparison screen
+	print("Compare " + current_player.character_name)
+
+func _on_scout_pressed():
+	# TODO: Show scouting assignment dialog
+	print("Scouting " + current_player.character_name)
 
 func on_enter():
 	_refresh_display()

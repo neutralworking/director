@@ -29,26 +29,29 @@ flowchart TD
 
 # Reference to the agent class
 var agent_script = preload("res://Agent.gd")
-var player_score = (club_needs_weight * club_needs_score) +
-                   (attributes_weight * attributes_score) +
-                   (potential_weight * potential_score) +
-                   (availability_weight * availability_score) +
-                   (cost_weight * cost_score) +
-                   (scouting_report_quality_weight * scouting_report_quality_score) +
-                   (market_conditions_weight * market_conditions_score)
+
+# Placeholder for transfer window status
+var transfer_enabled: bool = true
 
 # Function to attempt a player transfer
 func attempt_transfer(player, club):
     if transfer_enabled:
-        var agent = player.agent
-        var base_transfer_fee = calculate_base_transfer_fee(player)
-        var agent_fee = base_transfer_fee * (agent.fee_percentage / 100)
+        # Check if player has an agent, if not create a dummy one or handle it
+        # For now assuming player.agent exists or we mock it
+        var agent = player.get("agent") 
+        if agent == null:
+            # Create a dummy agent structure if not present for now
+            agent = { "fee_percentage": 10, "reputation": 50, "prefers_club": func(c): return false }
+            
+        # Use the new calculator
+        var base_transfer_fee = TransferValueCalculator.calculate_value(player, club)
+        var agent_fee = base_transfer_fee * (agent.fee_percentage / 100.0)
         
         # Adjust transfer fee based on agent reputation
-        var adjusted_transfer_fee = base_transfer_fee * (1 + (agent.reputation / 100))
+        var adjusted_transfer_fee = base_transfer_fee * (1.0 + (agent.reputation / 100.0))
         
         # Check if the agent prefers the club
-        if agent.prefers_club(club.name):
+        if agent.has_method("prefers_club") and agent.prefers_club(club.name):
             adjusted_transfer_fee *= 0.9  # Give a discount if the agent prefers the club
         
         # Simulate negotiation

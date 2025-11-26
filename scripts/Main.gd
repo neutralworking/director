@@ -56,6 +56,34 @@ func _setup_ui():
 		coach_scene.on_enter()  # Refresh coach info
 	)
 	
+	# League Navigation
+	var league_scene = load("res://scenes/ui/LeagueTableScreen.tscn").instantiate()
+	var club_squad_scene = load("res://scenes/ui/ClubSquadScreen.tscn").instantiate()
+	
+	home_scene.league_requested.connect(func():
+		screen_manager.push_screen(league_scene)
+		league_scene.on_enter()
+	)
+	
+	league_scene.club_selected.connect(func(club):
+		club_squad_scene.set_club(club)
+		screen_manager.push_screen(club_squad_scene)
+	)
+	
+	league_scene.back_requested.connect(func():
+		screen_manager.pop_screen()
+	)
+	
+	club_squad_scene.player_selected.connect(func(player):
+		var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
+		player_screen.set_player(player, false)  # false = not user's player
+		screen_manager.push_screen(player_screen)
+	)
+	
+	club_squad_scene.back_requested.connect(func():
+		screen_manager.pop_screen()
+	)
+	
 	squad_scene.player_selected.connect(func(player):
 		var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
 		player_screen.set_player(player)
