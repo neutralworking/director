@@ -1,9 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://bl5lujtdkc0k0"]
+[gd_scene load_steps=8 format=3 uid="uid://bl5lujtdkc0k0"]
 
 [ext_resource type="Script" path="res://scripts/Main.gd" id="1_kotkm"]
 [ext_resource type="Script" path="res://scripts/EventQueueSystem.gd" id="3_upx0b"]
 [ext_resource type="Script" path="res://scripts/DOFManager.gd" id="4_g8ps0"]
 [ext_resource type="Script" path="res://scripts/TimeProgressionSystem.gd" id="5_884q3"]
+[ext_resource type="Script" path="res://scripts/systems/TransferMarket/transfer_manager.gd" id="6_transfer"]
+[ext_resource type="Script" path="res://scripts/systems/inbox_system.gd" id="7_inbox"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_topbar"]
+bg_color = Color(0.15, 0.15, 0.18, 1)
+border_width_bottom = 2
+border_color = Color(0.3, 0.3, 0.35, 1)
 
 [node name="Main" type="Control"]
 layout_mode = 3
@@ -17,10 +24,14 @@ script = ExtResource("1_kotkm")
 [node name="TimeProgressionSystem" type="Node" parent="."]
 script = ExtResource("5_884q3")
 
+[node name="TransferManager" type="Node" parent="."]
+script = ExtResource("6_transfer")
+
+[node name="InboxSystem" type="Node" parent="."]
+script = ExtResource("7_inbox")
+
 [node name="DOFManager" type="Node" parent="."]
 script = ExtResource("4_g8ps0")
-
-[node name="TransferManager" type="Node" parent="DOFManager"]
 
 [node name="SquadManager" type="Node" parent="DOFManager"]
 
@@ -32,3 +43,41 @@ script = ExtResource("4_g8ps0")
 
 [node name="EventQueueSystem" type="Node" parent="."]
 script = ExtResource("3_upx0b")
+
+[node name="HUD" type="CanvasLayer" parent="."]
+
+[node name="TopBar" type="Panel" parent="HUD"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_topbar")
+
+[node name="DateLabel" type="Label" parent="HUD/TopBar"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -15.0
+offset_right = 300.0
+offset_bottom = 15.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 24
+text = "Date: 01/07/2024"
+
+[node name="ContinueButton" type="Button" parent="HUD/TopBar"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -30.0
+offset_right = -30.0
+offset_bottom = 30.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Continue ▶"

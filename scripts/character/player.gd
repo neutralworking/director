@@ -16,6 +16,12 @@ var interested_clubs: Array = []
 var squad_role: String = "Rotation"  # Starter/Rotation/Backup/Youth
 var playing_time_expectation: String = "Regular"  # Guaranteed/Regular/Rotation/Backup
 
+# V2 Transfer Attributes
+var recent_form: Dictionary = { "goals": 0, "assists": 0, "avg_rating": 7.0 }
+var happiness: int = 75  # 0-100, distinct from morale (long term vs short term)
+var is_forcing_move: bool = false
+var physical_profile: String = "Balanced"  # "Speedster", "Powerhouse", "Technician", "Balanced"
+
 var archetype # : ArchetypeData
 var character_manager # : CharacterManager
 var character_data # : CharacterData # The relationship/personality data

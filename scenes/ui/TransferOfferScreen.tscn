@@ -1,0 +1,168 @@
+[gd_scene load_steps=2 format=3 uid="uid://transfer_offer_screen"]
+
+[ext_resource type="Script" path="res://scripts/ui/TransferOfferScreen.gd" id="1_script"]
+
+[node name="TransferOfferScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.1, 0.1, 0.12, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Header" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Transfer Offer"
+horizontal_alignment = 1
+
+[node name="PlayerName" type="Label"  parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "Player Name"
+horizontal_alignment = 1
+
+[node name="SellingClub" type="Label" parent="VBoxContainer/Header"]
+layout_mode = 2
+text = "To: Club Name"
+horizontal_alignment = 1
+
+[node name="PlayerInfo" type="VBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="InfoLabel" type="Label" parent="VBoxContainer/PlayerInfo"]
+layout_mode = 2
+text = "Player Info"
+horizontal_alignment = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 15
+
+[node name="BaseFeeContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BaseFeeContainer"]
+layout_mode = 2
+text = "Base Fee:"
+
+[node name="Slider" type="HSlider" parent="VBoxContainer/ScrollContainer/VBoxContainer/BaseFeeContainer"]
+layout_mode = 2
+min_value = 100000.0
+max_value = 50000000.0
+step = 100000.0
+
+[node name="Value" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/BaseFeeContainer"]
+layout_mode = 2
+text = "$10.0M"
+horizontal_alignment = 1
+
+[node name="PaymentContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/PaymentContainer"]
+layout_mode = 2
+text = "Payment Structure:"
+
+[node name="InstallmentsToggle" type="CheckBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/PaymentContainer"]
+layout_mode = 2
+text = "Pay in installments"
+
+[node name="YearsInput" type="SpinBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/PaymentContainer"]
+layout_mode = 2
+min_value = 1.0
+max_value = 5.0
+value = 3.0
+
+[node name="ClausesContainer" type="VBoxContainer" parent="VBoxContainer/ScrollContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer"]
+layout_mode = 2
+text = "Clauses:"
+
+[node name="SellonToggle" type="CheckBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer"]
+layout_mode = 2
+text = "Sell-on clause"
+
+[node name="SellonPercent" type="SpinBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer"]
+layout_mode = 2
+max_value = 50.0
+value = 20.0
+suffix = "%"
+
+[node name="BuybackToggle" type="CheckBox" parent="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer"]
+layout_mode = 2
+text = "Buyback clause"
+
+[node name="BuybackValue" type="LineEdit" parent="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer"]
+layout_mode = 2
+placeholder_text = "Buyback price"
+
+[node name="Summary" type="PanelContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="VBoxContainer/Summary"]
+layout_mode = 2
+
+[node name="OfferValue" type="Label" parent="VBoxContainer/Summary/VBox"]
+layout_mode = 2
+text = "Offer Value: $0M"
+
+[node name="ClubValuation" type="Label" parent="VBoxContainer/Summary/VBox"]
+layout_mode = 2
+text = "Their Valuation: ~$0M"
+
+[node name="Status" type="Label" parent="VBoxContainer/Summary/VBox"]
+layout_mode = 2
+text = "Status: TBD"
+
+[node name="ButtonContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="CancelButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Cancel"
+
+[node name="MeetValuationButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Meet Valuation"
+
+[node name="SubmitButton" type="Button" parent="VBoxContainer/ButtonContainer"]
+layout_mode = 2
+text = "Submit Offer"
+
+[connection signal="value_changed" from="VBoxContainer/ScrollContainer/VBoxContainer/BaseFeeContainer/Slider" to="." method="_on_slider_changed"]
+[connection signal="toggled" from="VBoxContainer/ScrollContainer/VBoxContainer/PaymentContainer/InstallmentsToggle" to="." method="_on_toggle_changed"]
+[connection signal="toggled" from="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer/SellonToggle" to="." method="_on_toggle_changed"]
+[connection signal="toggled" from="VBoxContainer/ScrollContainer/VBoxContainer/ClausesContainer/BuybackToggle" to="." method="_on_toggle_changed"]
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/CancelButton" to="." method="_on_cancel_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/MeetValuationButton" to="." method="_on_meet_valuation_pressed"]
+[connection signal="pressed" from="VBoxContainer/ButtonContainer/SubmitButton" to="." method="_on_submit_pressed"]

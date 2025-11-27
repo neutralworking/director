@@ -185,8 +185,25 @@ func _on_squad_role_pressed():
 	print("Discuss squad role with " + current_player.character_name)
 
 func _on_make_offer_pressed():
-	# TODO: Show transfer offer dialog
-	print("Making offer for " + current_player.character_name)
+	# Get the selling club (need to find which club owns this player)
+	var selling_club = _find_player_club(current_player)
+	if not selling_club:
+		print("Error: Could not find player's club")
+		return
+		
+	var transfer_screen = load("res://scenes/ui/TransferOfferScreen.tscn").instantiate()
+	transfer_screen.set_transfer_context(current_player, selling_club)
+	request_push.emit(transfer_screen)
+
+func _find_player_club(player):
+	# Search all clubs in the league to find which one owns this player
+	if not LeagueManager.active_league:
+		return null
+		
+	for club in LeagueManager.active_league.clubs:
+		if club.squad.has(player):
+			return club
+	return null
 
 func _on_contact_agent_pressed():
 	# TODO: Show agent contact dialog

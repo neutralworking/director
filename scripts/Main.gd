@@ -8,6 +8,8 @@ var current_date := {"year": 2025, "month": 10, "day": 29, "hour": 9}
 @onready var dof_manager = $DOFManager
 @onready var time_system = $TimeProgressionSystem
 @onready var event_system = $EventQueueSystem
+@onready var transfer_manager = $TransferManager
+var screen_manager
 
 func _ready():
 	print("Main._ready() called!")
@@ -22,76 +24,120 @@ func _ready():
 
 	print("Director of Football - Game Started!")
 	print("Welcome! Use the buttons to advance time and manage your club.")
+	
+	# Connect Persistent UI
+	$HUD/TopBar/ContinueButton.pressed.connect(func(): 
+		print("Continue button pressed!")
+		if screen_manager:
+			screen_manager.go_home()
+		advance_time(1, 0)
+	)
 
 func _setup_ui():
 	print("Setting up UI...")
 	
 	# Create ScreenManager
-	var screen_manager = load("res://scripts/ui/ScreenManager.gd").new()
+	screen_manager = load("res://scripts/ui/ScreenManager.gd").new()
 	screen_manager.name = "ScreenManager"
+	# Set anchors to fill screen BELOW the top bar (80px)
 	screen_manager.set_anchors_preset(Control.PRESET_FULL_RECT)
+	screen_manager.offset_top = 80
 	add_child(screen_manager)
 	print("ScreenManager created")
 	
 	# Load Screens
+	# Load Screens
 	var home_scene = load("res://scenes/ui/HomeScreen.tscn").instantiate()
-	var squad_scene = load("res://scenes/ui/SquadScreen.tscn").instantiate()
-	var profile_scene = load("res://scenes/ui/DirectorProfileScreen.tscn").instantiate()
-	var coach_scene = load("res://scenes/ui/CoachProfileScreen.tscn").instantiate()
 	print("Screens loaded")
 	
 	# Connect Signals
+	# Connect Signals
 	home_scene.squad_requested.connect(func(): 
+		var squad_scene = load("res://scenes/ui/SquadScreen.tscn").instantiate()
+		squad_scene.player_selected.connect(func(player):
+			var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
+			player_screen.set_player(player)
+			screen_manager.push_screen(player_screen)
+		)
 		screen_manager.push_screen(squad_scene)
-		squad_scene.on_enter()  # Refresh player list
+		squad_scene.on_enter()
+	)
+	
+	home_scene.continue_requested.connect(func():
+		screen_manager.go_home() # Return to home screen
+		advance_time(1, 0) # Advance 1 day
 	)
 	
 	home_scene.profile_requested.connect(func():
+		var profile_scene = load("res://scenes/ui/DirectorProfileScreen.tscn").instantiate()
 		screen_manager.push_screen(profile_scene)
-		profile_scene.on_enter()  # Refresh profile
+		profile_scene.on_enter()
+	)
+	
+	# Inbox Navigation
+	home_scene.inbox_requested.connect(func():
+		var inbox_scene = load("res://scenes/ui/InboxScreen.tscn").instantiate()
+		
+		inbox_scene.request_pop.connect(func():
+			screen_manager.pop_screen()
+		)
+		
+		inbox_scene.negotiation_requested.connect(func(pending):
+			print("Main: Negotiation requested for %s" % pending.player_name)
+			var transfer_scene = load("res://scenes/ui/TransferOfferScreen.tscn").instantiate()
+			transfer_scene.setup_negotiation(pending)
+			screen_manager.push_screen(transfer_scene)
+		)
+		
+		screen_manager.push_screen(inbox_scene)
+		inbox_scene.on_enter()
 	)
 	
 	home_scene.coach_requested.connect(func():
+		var coach_scene = load("res://scenes/ui/CoachProfileScreen.tscn").instantiate()
 		screen_manager.push_screen(coach_scene)
-		coach_scene.on_enter()  # Refresh coach info
+		coach_scene.on_enter()
 	)
 	
 	# League Navigation
-	var league_scene = load("res://scenes/ui/LeagueTableScreen.tscn").instantiate()
-	var club_squad_scene = load("res://scenes/ui/ClubSquadScreen.tscn").instantiate()
-	
 	home_scene.league_requested.connect(func():
+		var league_scene = load("res://scenes/ui/LeagueTableScreen.tscn").instantiate()
+		var club_squad_scene = load("res://scenes/ui/ClubSquadScreen.tscn").instantiate()
+		
+		league_scene.club_selected.connect(func(club):
+			club_squad_scene.set_club(club)
+			screen_manager.push_screen(club_squad_scene)
+		)
+		
+		league_scene.back_requested.connect(func():
+			screen_manager.pop_screen()
+		)
+		
+		club_squad_scene.player_selected.connect(func(player):
+			var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
+			player_screen.set_player(player, false)
+			screen_manager.push_screen(player_screen)
+		)
+		
+		club_squad_scene.back_requested.connect(func():
+			screen_manager.pop_screen()
+		)
+		
 		screen_manager.push_screen(league_scene)
 		league_scene.on_enter()
 	)
 	
-	league_scene.club_selected.connect(func(club):
-		club_squad_scene.set_club(club)
-		screen_manager.push_screen(club_squad_scene)
-	)
-	
-	league_scene.back_requested.connect(func():
-		screen_manager.pop_screen()
-	)
-	
-	club_squad_scene.player_selected.connect(func(player):
-		var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
-		player_screen.set_player(player, false)  # false = not user's player
-		screen_manager.push_screen(player_screen)
-	)
-	
-	club_squad_scene.back_requested.connect(func():
-		screen_manager.pop_screen()
-	)
-	
-	squad_scene.player_selected.connect(func(player):
-		var player_screen = load("res://scenes/ui/PlayerInteractionScreen.tscn").instantiate()
-		player_screen.set_player(player)
-		screen_manager.push_screen(player_screen)
-	)
-	
 	# Push Home Screen
 	screen_manager.push_screen(home_scene)
+	
+	# Connect Inbox updates to Home Screen
+	var inbox_system = $InboxSystem
+	if inbox_system:
+		inbox_system.messages_updated.connect(func():
+			if screen_manager.current_screen == home_scene:
+				home_scene.update_inbox_status()
+		)
+	
 	print("Home screen pushed, UI setup complete")
 
 
@@ -105,6 +151,7 @@ func _on_menu_requested(menu_type: String):
 	_open_menu(menu_type)
 
 func advance_time(days := 0, hours := 0):
+	print("Advancing time by %d days, %d hours" % [days, hours])
 	current_date["hour"] += hours
 	while current_date["hour"] >= 24:
 		current_date["hour"] -= 24
@@ -120,6 +167,15 @@ func advance_time(days := 0, hours := 0):
 		current_date["month"] -= 12
 		current_date["year"] += 1
 
+	# Sync with TimeProgressionSystem
+	if time_system:
+		# Update the TimeProgressionSystem's date object
+		time_system.current_date.day = current_date["day"]
+		time_system.current_date.month = current_date["month"]
+		time_system.current_date.year = current_date["year"]
+		# Emit the signal so TransferManager picks it up
+		time_system.date_changed.emit(time_system.current_date)
+
 	await _handle_current_events()
 	_update_hud()
 
@@ -133,7 +189,7 @@ func skip_to_next_event():
 		_show_message("No upcoming events scheduled.")
 
 func _handle_current_events():
-	var current_events = event_system.get_events(current_date)
+	var current_events = event_system.get_events_for_date(current_date)
 	if current_events.size() == 0:
 		return
 
@@ -190,13 +246,14 @@ func _schedule_initial_events():
 	)
 
 func _update_hud():
-	var date_string = "Date: %02d/%02d/%d %02d:00" % [
+	var date_string = "Date: %02d/%02d/%d" % [
 		current_date["day"], 
 		current_date["month"], 
-		current_date["year"], 
-		current_date["hour"]
+		current_date["year"]
 	]
-	# main_hud.update_date_display(date_string)  # Old UI removed
+	
+	if has_node("HUD/TopBar/DateLabel"):
+		$HUD/TopBar/DateLabel.text = date_string
 	var events_text = "Upcoming Events:\n"
 	var next_events = []
 	var temp_date = current_date.duplicate()

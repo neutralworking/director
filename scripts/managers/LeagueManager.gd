@@ -22,10 +22,47 @@ func generate_test_league():
 	var club_script = load("res://scripts/classes/Club.gd")
 	for name in club_names:
 		var club = club_script.new(name, randi_range(4000, 9000))
+		_configure_club_transfer_attributes(club)
 		_generate_dummy_squad(club)
 		active_league.clubs.append(club)
 		
 	print("Test league generated with %d clubs" % active_league.clubs.size())
+
+func _configure_club_transfer_attributes(club):
+	# Hardcoded philosophies for testing
+	var philosophies = {
+		"Arsenal": "Balanced",
+		"Man City": "Win Now",
+		"Chelsea": "Win Now",
+		"Liverpool": "Balanced",
+		"Tottenham": "Academy",
+		"Brighton": "Academy",
+		"Brentford": "Academy",
+		"Man Utd": "Win Now",
+		"Newcastle": "Win Now"
+	}
+	
+	club.philosophy = philosophies.get(club.name, "Balanced")
+	
+	# Set rivalries
+	var rivalries = {
+		"Arsenal": ["Tottenham", "Man Utd", "Chelsea"],
+		"Tottenham": ["Arsenal", "Chelsea"],
+		"Man Utd": ["Liverpool", "Man City"],
+		"Liverpool": ["Man Utd", "Everton"],
+		"Man City": ["Man Utd", "Liverpool"],
+		"Chelsea": ["Arsenal", "Tottenham"]
+	}
+	
+	club.rival_clubs = rivalries.get(club.name, [])
+	
+	# Randomize some needs for variety
+	var positions = ["GK", "CB", "LB", "RB", "CDM", "CM", "CAM", "LW", "RW", "ST"]
+	var high_need_pos = positions.pick_random()
+	var low_need_pos = positions.pick_random()
+	
+	club.squad_needs[high_need_pos] = randi_range(8, 10)
+	club.squad_needs[low_need_pos] = randi_range(1, 3)
 
 func _generate_dummy_squad(club):
 	# Generate 20-25 players for the club

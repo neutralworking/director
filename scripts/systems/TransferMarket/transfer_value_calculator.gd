@@ -15,7 +15,7 @@ const CONTRACT_LONG_TERM = 3 # years
 const CONTRACT_MULTIPLIER_LONG = 1.3
 const CONTRACT_MULTIPLIER_SHORT = 0.7
 
-static func calculate_value(player, buyer_club = null, seller_club = null) -> float:
+static func calculate_value(player, buyer_club = null, _seller_club = null) -> float:
 	if player.transfer_data == null:
 		return 0.0
 		
