@@ -1,6 +1,6 @@
 extends Node
 
-class_name Club
+class_name ClubFinancialStrength
 
 # Basic financial attributes
 var debt: float
