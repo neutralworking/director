@@ -107,6 +107,7 @@ func _create_inbox_message(pending: Resource):
 				pending.player_name,
 				pending.offer.base_fee / 1000000.0
 			]
+			_execute_transfer(pending)
 		"REJECTED":
 			message_type = "TRANSFER_REJECTED"
 			title = "❌ Transfer Rejected"
@@ -129,6 +130,39 @@ func _create_inbox_message(pending: Resource):
 		"player_name": pending.player_name,
 		"club_name": pending.selling_club_name
 	})
+
+func _execute_transfer(pending: Resource):
+	var player = pending.player_ref.get_ref()
+	var selling_club = pending.selling_club_ref.get_ref()
+	var buying_club = pending.buying_club_ref.get_ref()
+	
+	if not player or not selling_club or not buying_club:
+		push_warning("Transfer execution failed: Invalid references")
+		return
+		
+	# 1. Move Player
+	if selling_club.squad.has(player):
+		selling_club.squad.erase(player)
+		buying_club.squad.append(player)
+		print("Transfer Executed: %s moved from %s to %s" % [player.character_name, selling_club.name, buying_club.name])
+	else:
+		push_warning("Transfer execution warning: Player not found in selling club squad")
+		# Fallback: Add to buying club anyway if not there
+		if not buying_club.squad.has(player):
+			buying_club.squad.append(player)
+			
+	# 2. Update Player Data (if needed)
+	# player.club = buying_club # If player has a club reference
+	
+	# 3. Financials (Basic implementation)
+	var fee = pending.offer.base_fee
+	if buying_club.budget >= fee:
+		buying_club.budget -= fee
+		selling_club.budget += fee
+	else:
+		print("Warning: Buying club cannot afford transfer fee (Budget: %d, Fee: %d)" % [buying_club.budget, fee])
+		# Proceeding anyway for now, allowing debt
+
 
 func _calculate_response_time(evaluation: Dictionary, player, club) -> int:
 	var ratio = evaluation.ratio
